@@ -1,5 +1,5 @@
 {
-  "total": 130,
+  "total": 143,
   "categories": [
     {
       "id": "basic",
@@ -1523,6 +1523,149 @@
       "source": "Egonex-AI",
       "stars": "⭐ 85.7k",
       "updated": "2026-10-09"
+    },
+    {
+      "id": 132,
+      "name": "Graphify",
+      "cat": "dev",
+      "icon": "G",
+      "repo": "https://github.com/Graphify-Labs/graphify",
+      "desc": "把代码、文档、SQL、配置、PDF 变成可查询知识图谱：本地确定性 AST 解析，每条边可解释，无需向量库",
+      "source": "Graphify-Labs",
+      "stars": "⭐ 125k，YC S26",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 133,
+      "name": "Archify",
+      "cat": "frontend",
+      "icon": "A",
+      "repo": "https://github.com/tt-a1i/archify",
+      "desc": "把任何想法、方案或代码库变成漂亮的交互式 HTML 图（架构/流程/时序/数据流/生命周期），可探索、可分享",
+      "source": "tt-a1i",
+      "stars": "⭐ 81k，GitHub Trending 周榜第一",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 134,
+      "name": "Impeccable",
+      "cat": "frontend",
+      "icon": "I",
+      "repo": "https://github.com/pbakaus/impeccable",
+      "desc": "让 AI 编码 Agent 更懂设计的技能：1 个 skill + 24 个命令 + 实时浏览器迭代 + 59 条确定性检测规则",
+      "source": "pbakaus / Paul Bakaus",
+      "stars": "⭐ 78.9k",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 135,
+      "name": "Caveman",
+      "cat": "basic",
+      "icon": "C",
+      "repo": "https://github.com/JuliusBrussee/caveman",
+      "desc": "让 Agent「说穴居人话」省 token：输出压缩 + 代理压缩，整段会话省 33% 输入 token，答案不变",
+      "source": "JuliusBrussee",
+      "stars": "⭐ 111k",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 136,
+      "name": "awesome-claude-skills",
+      "cat": "basic",
+      "icon": "A",
+      "repo": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "desc": "1000+ 生产级 Claude Skill / 插件精选清单，覆盖文档、开发、数据、营销、协作等全场景",
+      "source": "ComposioHQ",
+      "stars": "⭐ 76.7k",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 137,
+      "name": "Character Prompt Studio",
+      "cat": "content",
+      "icon": "C",
+      "repo": "https://github.com/joshesye/Character-Prompt-Studio",
+      "desc": "把一句灵感或一张参考图整理成可用生图提示词：外貌/服装/构图/材质/光影，含 3397 条分类词库",
+      "source": "joshesye",
+      "stars": "⭐ 18",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 138,
+      "name": "cy-carousel",
+      "cat": "content",
+      "icon": "C",
+      "repo": "https://github.com/chengyi-ai/cy-carousel-skill",
+      "desc": "给一个选题，查证/找素材/排版/检查/打包，交付封面 + 10 页（1440×1920）成套可直接发布的图文轮播",
+      "source": "chengyi-ai",
+      "stars": "⭐ 129",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 139,
+      "name": "i-have-adhd",
+      "cat": "basic",
+      "icon": "I",
+      "repo": "https://github.com/ayghri/i-have-adhd",
+      "desc": "让编码 Agent 别把答案埋没：先给动作、编号步骤、结尾一个下一步，去掉寒暄和总结",
+      "source": "ayghri",
+      "stars": "⭐ 56.3k",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 140,
+      "name": "claude-hud",
+      "cat": "automation",
+      "icon": "C",
+      "repo": "https://github.com/jarrodwatts/claude-hud",
+      "desc": "Claude Code 状态栏插件：实时显示上下文用量、速率限制、活跃工具、运行中的 Agent 和 todo 进度",
+      "source": "jarrodwatts",
+      "stars": "⭐ 28.4k",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 141,
+      "name": "last30days",
+      "cat": "search",
+      "icon": "L",
+      "repo": "https://github.com/mvanhorn/last30days-skill",
+      "desc": "跨 Reddit/X/YouTube/TikTok/HN/Polymarket/GitHub 等平台，调研任何话题最近 30 天真实讨论，综合成带引用的简报",
+      "source": "mvanhorn",
+      "stars": "⭐ 63.9k",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 142,
+      "name": "emilkowalski/skills",
+      "cat": "frontend",
+      "icon": "E",
+      "repo": "https://github.com/emilkowalski/skills",
+      "desc": "Vercel/Linear 设计工程师 Emil Kowalski 的界面与动画技能包：让 Agent 选对缓动/时长/属性，做出「顺滑」的交互",
+      "source": "emilkowalski",
+      "stars": "⭐ 45k",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 143,
+      "name": "marketingskills",
+      "cat": "business",
+      "icon": "M",
+      "repo": "https://github.com/coreyhaines31/marketingskills",
+      "desc": "面向营销的 AI Agent 技能合集：CRO、文案、SEO、分析、增长工程，40+ 个可复用营销技能",
+      "source": "coreyhaines31 / Corey Haines",
+      "stars": "⭐ 32.8k",
+      "updated": "2026-10-15"
+    },
+    {
+      "id": 144,
+      "name": "figma-design-skill",
+      "cat": "frontend",
+      "icon": "F",
+      "repo": "https://github.com/phoenixlucky/figma-design-skill",
+      "desc": "把 Claude 官方 UI kit 的设计细节（token/组件几何/动效/硬规则）取到手，照着改或做页面，交付可运行代码而非设计赏析",
+      "source": "phoenixlucky",
+      "stars": null,
+      "updated": "2026-10-15"
     }
   ]
 }

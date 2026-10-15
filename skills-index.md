@@ -1,8 +1,8 @@
 ---
 title:   "The King Skills — AI 一键安装索引"
-version: "1.7"
+version: "1.8"
 updated: "2026-10-09"
-total:   142
+total:   143
 ---
 
 # 🎯 The King Skills — AI 一键安装索引
@@ -892,6 +892,32 @@ CLI：npx impeccable detect <目录|文件|URL>，可接 CI（--json）。Apache
 - find-animation-opportunities（找该动的地方 + 不该动的地方）、animation-vocabulary（用对术语）
 - apple-design、write-swift、pick-ui-library、prototype、mobile-native、break-ui、ask-sonner
 适合去 AI 味、打磨前端手感。MIT。
+```
+
+---
+
+### 144 — figma-design-skill（Figma / 设计规范提取）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | phoenixlucky |
+| **分类** | 前端与设计 |
+| **一句话** | 把 Claude 官方 UI kit 的设计细节（token/组件几何/动效/硬规则）取到手，照着改或做页面，交付可运行代码而非设计赏析 |
+
+**安装指令：**
+
+```
+安装 figma-design-skill。
+来源：https://github.com/phoenixlucky/figma-design-skill
+安装方式：git clone https://github.com/phoenixlucky/figma-design-skill.git
+装到全局 skills 根下（如 %APPDATA%\reasonix\skills\figma-design-skill\），技能名 figma-design-skill。
+
+安装后，Agent 以 Claude 官方 UI kit 为蓝本产出页面/改稿：
+- 主蓝本 references/anthropic-mcp-apps-design.md：颜色 37 / 字体 29 / 几何 15 个变量（Light/Dark 双 mode）+ 官方九条硬规则
+- 次选蓝本（社区逆向 Storybook，标来源、冲突以官方为准）；browser-recipes.md 为代码口径权威
+- 通过本地 Chrome MCP 实读 Figma 变量面板与 Design 面板 DOM，画布只能截图（无需 Figma 官方 MCP / access token）
+- 产出页面代码（CSS 变量 + 带出处注释的字面量）/ 改稿 diff / 映射表 / 细节表
+覆盖场景：贴 Figma 或网页版设计系统链接提 token、对齐配色/字号/圆角/层级/动效。MIT。
 ```
 
 ---
@@ -2992,6 +3018,7 @@ MIT 开源。要求 Claude Code v2.1.260+、Node.js 18+（或 Bun）。
 133. Archify — tt-a1i（⭐ 81k），把想法/方案/代码库变成交互式 HTML 图
 134. Impeccable — pbakaus（⭐ 78.9k），AI 设计语言（24 命令 + 59 条检测规则）
 142. emilkowalski/skills — emilkowalski（⭐ 45k），Emil 设计工程技能（动画/手势/评审）
+144. figma-design-skill — phoenixlucky，提取 Claude UI kit 设计规范并出页面代码
 
 【内容创作】
 7. baoyu-skills — JimLiu（⭐ 25.6k），20 个视觉设计 Skill
