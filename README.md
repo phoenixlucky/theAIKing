@@ -1,25 +1,25 @@
 <p align="center">
-  <h1 align="center">👑 The King Skills</h1>
+  <h1 align="center">👑 The AI King</h1>
   <p align="center">
-    <b>AI Agent Skill 一站式索引</b><br>
-    精选 125 个热门 Skill，覆盖 13 大分类，让 AI Agent 秒变全能助手
+    <b>AI Agent Skill / 插件 / LSP 一站式索引</b><br>
+    精选 143 个 Skill + 22 个插件（共 165 个条目），覆盖 14 大分类，让 AI Agent 秒变全能助手
   </p>
 </p>
 
 <p align="center">
-  <a href="https://github.com/phoenixlucky/theKingSkills">
-    <img src="https://img.shields.io/badge/Skills-125-2563eb?style=for-the-badge&logo=openai" alt="Skills">
+  <a href="https://github.com/phoenixlucky/theAIKing">
+    <img src="https://img.shields.io/badge/Items-165-2563eb?style=for-the-badge&logo=openai" alt="Items">
   </a>
-  <a href="https://github.com/phoenixlucky/theKingSkills">
-    <img src="https://img.shields.io/badge/Categories-13-059669?style=for-the-badge&logo=libretranslate" alt="Categories">
+  <a href="https://github.com/phoenixlucky/theAIKing">
+    <img src="https://img.shields.io/badge/Categories-14-059669?style=for-the-badge&logo=libretranslate" alt="Categories">
   </a>
-  <a href="https://phoenixlucky.github.io/theKingSkills/">
+  <a href="https://phoenixlucky.github.io/theAIKing/">
     <img src="https://img.shields.io/badge/Website-Online-7c3aed?style=for-the-badge&logo=githubpages" alt="Website">
   </a>
   <a href="./skills-index.md">
     <img src="https://img.shields.io/badge/Core-skills--index.md-eab308?style=for-the-badge&logo=markdown" alt="Core">
   </a>
-  <a href="https://github.com/phoenixlucky/theKingSkills/blob/main/LICENSE">
+  <a href="https://github.com/phoenixlucky/theAIKing/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-dc2626?style=for-the-badge" alt="License">
   </a>
 </p>
@@ -41,7 +41,7 @@
 
 ## 📖 项目介绍
 
-**The King Skills** 是一份面向 **AI Agent（Claude Code / CodeX / Reasonix 等）** 的 Skill 索引清单。
+**The AI King** 是一份面向 **AI Agent（Claude Code / CodeX / Reasonix 等）** 的 Skill、插件与 LSP 索引清单。
 
 ### 🎯 解决什么问题？
 
@@ -53,7 +53,7 @@
 
 | 特性 | 说明 |
 |:-----|:------|
-| **📦 精选收录** | 125 个 Skill，从 ⭐ 21 万+ 到实用小工具，宁缺毋滥 |
+| **📦 精选收录** | 143 个 Skill + 22 个插件，共 165 个条目，从 ⭐ 26 万+ 到实用小工具，宁缺毋滥 |
 | **🔌 零存储** | 只存索引，不存源文件，永远指向最新版 |
 | **🤖 AI 原生** | `skills-index.md` 专为 AI Agent 直接读取而设计 |
 | **🌐 可视化网站** | 在线筛选、勾选、一键生成安装指令 |
@@ -78,8 +78,9 @@
 | 🕷️ **数据采集与爬虫** | 11 | Firecrawl (⭐ 140k)、Crawl4AI (⭐ 70k)、MediaCrawler (⭐ 54.6k)、Scrapy 等 |
 | 🖥️ **终端与自动化** | 4 | Peekaboo、tmux、scrcpy (⭐ 140k) |
 | 🎵 **生活与媒体** | 16 | family-lovers-skill、Weather、Whisper、Spotify、Gemini 等 |
+| 🔱 **DeepSeek Harness 插件** | 22 | dsh-market、DSH-better-sidebar、modlens、OpenViking、乔木 RSS 等 |
 
-> 👉 完整 125 个 Skill 详情见 [`skills-index.md`](./skills-index.md)
+> 👉 完整 165 个条目详情见 [`skills-index.md`](./skills-index.md)
 
 ---
 
@@ -104,7 +105,7 @@
 
 ### 方式一：🌐 网站批量选择（推荐）
 
-访问 **[theKingSkills 在线工具](https://phoenixlucky.github.io/theKingSkills/)**
+访问 **[theAIKing 在线工具](https://phoenixlucky.github.io/theAIKing/)**
 
 ```
 ① 筛选分类 → ② 勾选 Skill → ③ 生成安装指令 → ④ 复制给 AI Agent
@@ -129,7 +130,7 @@
 ## 📂 项目结构
 
 ```
-theKingSkills/
+theAIKing/
 ├── README.md                         # 项目说明（本文件）
 ├── skills-index.md                   # 🌟 核心索引（AI 直接读取的唯一入口）
 ├── CLAUDE.md                         # Claude Code 项目约定
@@ -138,7 +139,7 @@ theKingSkills/
 │   ├── index.html                    # 首页（全部 Skill 总览 + ⚡ Reasonix 推荐筛选）
 │   ├── css/style.css                 # 样式
 │   ├── js/script.js                  # 交互逻辑（筛选 / 搜索 / 生成）
-│   └── data/skills.json              # 125 个 Skill 结构化数据
+│   └── data/skills.json              # 165 个条目（Skill + 插件）结构化数据
 └── archive/                          # 旧版弹窗安装向导（已归档）
     └── install-king-skills.bat
     └── install-king-skills.ps1
@@ -183,7 +184,7 @@ flowchart LR
 
 | 方式 | 说明 |
 |:-----|:------|
-| 🐛 **提 Issue** | 发现 Bug 或有建议，[提交 Issue](https://github.com/phoenixlucky/theKingSkills/issues) |
+| 🐛 **提 Issue** | 发现 Bug 或有建议，[提交 Issue](https://github.com/phoenixlucky/theAIKing/issues) |
 | 📦 **推荐 Skill** | 有好的 Skill 推荐？告诉我们来源和理由 |
 | 🔀 **提交 PR** | 直接提交 PR 补充新 Skill 或改进文档 |
 | ⭐ **加星支持** | 点亮 Star，让更多人发现这个项目 |
@@ -192,5 +193,5 @@ flowchart LR
 
 <p align="center">
   Made with ❤️ by <a href="https://github.com/phoenixlucky">phoenixlucky</a><br>
-  <sub>本索引由 theKingSkills 项目维护 · 欢迎提交 Issue 和 PR 补充更多热门 Skill</sub>
+  <sub>本索引由 theAIKing 项目维护 · 欢迎提交 Issue 和 PR 补充更多热门 Skill</sub>
 </p>

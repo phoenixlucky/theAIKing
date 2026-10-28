@@ -1,4 +1,4 @@
-/* ===== The King Skills — Main Script ===== */
+/* ===== The AI King — Main Script ===== */
 
 (async function () {
   'use strict';
@@ -6,20 +6,27 @@
   // 当前 Reasonix 编译器已安装的 Skill（对应 skills.json 的 id）
   const REASONIX_INSTALLED_IDS = new Set([5, 9, 11, 20, 21, 22, 23, 24, 36, 84, 100]);
   const INSTALLED_CAT = 'installed';
+  const LSP_CAT = 'lsp';
 
   // ---- State ----
   let data = null;          // { total, categories, skills }
-  let selected = new Set(); // skill ids
+  let lspData = null;       // { total, items }
+  const selected = new Set(); // 's<id>' / 'l<id>'
   let currentCat = 'all';
+
+  const keyOf = (type, id) => `${type}${id}`;
 
   // ---- DOM refs ----
   const $ = (s) => document.querySelector(s);
-  const $$ = (s) => document.querySelectorAll(s);
 
   const filterBar    = $('#filterBar');
   const searchInput  = $('#searchInput');
   const skillsGrid   = $('#skillsGrid');
   const totalCount   = $('#totalCount');
+  const skillCountEl = $('#skillCount');
+  const pluginCountEl = $('#pluginCount');
+  const lspTotalEl   = $('#lspTotalCount');
+  const categoryCountEl = $('#categoryCount');
   const selectedCount = $('#selectedCount');
   const generateBtn  = $('#generateBtn');
   const selectAllBtn = $('#selectAllBtn');
@@ -42,64 +49,112 @@
   // ---- Load data ----
   async function loadData() {
     try {
-      const resp = await fetch('data/skills.json?v=628dede2');
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      data = await resp.json();
+      const [skillsResp, lspResp] = await Promise.all([
+        fetch('data/skills.json?v=292178a7'),
+        fetch('data/lsp.json?v=1'),
+      ]);
+      if (!skillsResp.ok) throw new Error(`HTTP ${skillsResp.status}`);
+      if (!lspResp.ok) throw new Error(`HTTP ${lspResp.status}`);
+      data = await skillsResp.json();
+      lspData = await lspResp.json();
       totalCount.textContent = data.total;
     } catch (e) {
-      skillsGrid.innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><p>加载技能数据失败：${e.message}。请确保通过本地服务器访问（如 Live Server）。</p></div>`;
+      skillsGrid.innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><p>加载数据失败：${e.message}。请确保通过本地服务器访问（如 Live Server）。</p></div>`;
       throw e;
+    }
+  }
+
+  // ---- Color helper ----
+  function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r},${g},${b},${alpha})`;
+  }
+
+  function repoLabel(url) {
+    try {
+      return new URL(url).hostname;
+    } catch {
+      return '';
     }
   }
 
   // ---- Render filters ----
   function renderFilters() {
-    const cats = data.categories;
-    let html = `<button class="filter-btn${currentCat === 'all' ? ' active' : ''}" data-cat="all">🏠 全部</button>`;
-    // 「⚡ reasonix 推荐」筛选：当前编译器已装的 Skill，与其他分类筛选功能一致
-    html += `<button class="filter-btn${currentCat === INSTALLED_CAT ? ' active' : ''}" data-cat="${INSTALLED_CAT}">⚡ Reasonix 推荐</button>`;
-    for (const c of cats) {
-      html += `<button class="filter-btn" data-cat="${c.id}">${c.icon} ${c.name}</button>`;
+    const counts = {};
+    for (const s of data.skills) counts[s.cat] = (counts[s.cat] ?? 0) + 1;
+    const installedCount = data.skills.filter(s => REASONIX_INSTALLED_IDS.has(s.id)).length;
+    const cats = data.categories.filter(c => counts[c.id]);
+
+    const summary = $('#filterSummary');
+    const pluginCount = data.skills.filter(s => s.cat === 'dsh').length;
+    const skillCount = data.total - pluginCount;
+
+    if (summary) {
+      summary.textContent = `${cats.length} 个分类 · ${skillCount} 个 Skill · ${pluginCount} 个插件 · ${lspData.total} 个 LSP`;
     }
+    if (totalCount) totalCount.textContent = data.total;
+    if (skillCountEl) skillCountEl.textContent = skillCount;
+    if (pluginCountEl) pluginCountEl.textContent = pluginCount;
+    if (lspTotalEl) lspTotalEl.textContent = lspData.total;
+    if (categoryCountEl) categoryCountEl.textContent = cats.length;
+
+    let html = `<button class="filter-btn scope${currentCat === 'all' ? ' active' : ''}" data-cat="all" aria-pressed="${currentCat === 'all'}"><span class="filter-ico">🏠</span>全部<span class="filter-count">${data.total}</span></button>`;
+    // 「⚡ reasonix 推荐」筛选：当前编译器已装的 Skill，与其他分类筛选功能一致
+    html += `<button class="filter-btn scope${currentCat === INSTALLED_CAT ? ' active' : ''}" data-cat="${INSTALLED_CAT}" aria-pressed="${currentCat === INSTALLED_CAT}"><span class="filter-ico">⚡</span>Reasonix 推荐<span class="filter-count">${installedCount}</span></button>`;
+    html += `<span class="filter-divider" aria-hidden="true"></span>`;
+
+    for (const c of cats) {
+      const color = c.color || '#4f46e5';
+      const active = currentCat === c.id;
+      html += `<button class="filter-btn cat${active ? ' active' : ''}" data-cat="${c.id}" aria-pressed="${active}" style="--cat-color:${color};--cat-bg:${hexToRgba(color, .1)};--cat-border:${hexToRgba(color, .28)}"><span class="filter-ico">${c.icon}</span>${c.name}<span class="filter-count">${counts[c.id]}</span></button>`;
+    }
+
+    // LSP 推荐：作为独立板块并入分类筛选
+    const lspColor = '#0e7490';
+    const lspActive = currentCat === LSP_CAT;
+    html += `<span class="filter-divider" aria-hidden="true"></span>`;
+    html += `<button class="filter-btn cat lsp-chip${lspActive ? ' active' : ''}" data-cat="${LSP_CAT}" aria-pressed="${lspActive}" style="--cat-color:${lspColor};--cat-bg:${hexToRgba(lspColor, .1)};--cat-border:${hexToRgba(lspColor, .28)}"><span class="filter-ico">🧩</span>语言服务器 LSP<span class="filter-count">${lspData.total}</span></button>`;
+
     filterBar.innerHTML = html;
 
     filterBar.addEventListener('click', (e) => {
       const btn = e.target.closest('.filter-btn');
       if (!btn) return;
-      filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      filterBar.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       currentCat = btn.dataset.cat;
+      outputSection.style.display = 'none';
       renderGrid();
     });
   }
 
-  // ---- Color helper ----
-  function hexToRgba(hex, alpha) {
-    const r = parseInt(hex.slice(1,3), 16);
-    const g = parseInt(hex.slice(3,5), 16);
-    const b = parseInt(hex.slice(5,7), 16);
-    return `rgba(${r},${g},${b},${alpha})`;
-  }
-
-  // ---- Render skill cards ----
-  function renderGrid() {
+  // ---- Visible items for the current filter + search ----
+  function getVisible() {
     const keyword = searchInput.value.trim().toLowerCase();
-    let skills = data.skills;
 
-    // Build category lookup
-    const catMap = {};
-    for (const c of data.categories) {
-      catMap[c.id] = c;
+    if (currentCat === LSP_CAT) {
+      const items = lspData.items.filter(i =>
+        !keyword ||
+        i.lsp.toLowerCase().includes(keyword) ||
+        i.lang.toLowerCase().includes(keyword) ||
+        i.desc.toLowerCase().includes(keyword) ||
+        i.category.toLowerCase().includes(keyword)
+      );
+      return { type: 'lsp', items };
     }
 
-    // Filter by category（installed = 当前 Reasonix 编译器已装的 Skill）
+    let skills = data.skills;
     if (currentCat === INSTALLED_CAT) {
       skills = skills.filter(s => REASONIX_INSTALLED_IDS.has(s.id));
     } else if (currentCat !== 'all') {
       skills = skills.filter(s => s.cat === currentCat);
     }
-
-    // Filter by search
     if (keyword) {
       skills = skills.filter(s =>
         s.name.toLowerCase().includes(keyword) ||
@@ -107,42 +162,67 @@
         s.source.toLowerCase().includes(keyword)
       );
     }
-
-    // Update select-all button text based on visible skills state
-    updateSelectAllBtn(skills);
-
-    // Sort: golden (own) skills first, then by id
+    // 本站原创条目置顶，其余按 id
     const isOwnSkill = (s) => s.source === 'phoenixlucky';
-    skills.sort((a, b) => (isOwnSkill(b) - isOwnSkill(a)) || (a.id - b.id));
+    skills = [...skills].sort((a, b) => (isOwnSkill(b) - isOwnSkill(a)) || (a.id - b.id));
+    return { type: 'skill', items: skills };
+  }
 
-    if (skills.length === 0) {
-      skillsGrid.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><p>没有匹配的 Skill</p></div>`;
+  function visibleKeys(visible) {
+    const prefix = visible.type === 'lsp' ? 'l' : 's';
+    return visible.items.map(item => keyOf(prefix, item.id));
+  }
+
+  // ---- Render cards ----
+  function renderGrid() {
+    const visible = getVisible();
+    const keys = visibleKeys(visible);
+
+    if (visible.items.length === 0) {
+      skillsGrid.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><p>没有匹配的内容</p></div>`;
+      updateSelectAllBtn(keys);
       updateStats();
       return;
     }
 
     let html = '';
+    if (visible.type === 'lsp') {
+      html = renderLspCards(visible.items);
+    } else {
+      html = renderSkillCards(visible.items);
+    }
+
+    skillsGrid.innerHTML = html;
+    updateSelectAllBtn(keys);
+    updateStats();
+  }
+
+  function renderSkillCards(skills) {
+    const catMap = {};
+    for (const c of data.categories) catMap[c.id] = c;
+
+    let html = '';
     for (const s of skills) {
-      const isSelected = selected.has(s.id);
+      const key = keyOf('s', s.id);
+      const isSelected = selected.has(key);
       const starBadge = s.stars ? `<span class="skill-stars">${s.stars}</span>` : '';
       const cat = catMap[s.cat];
       const catTag = cat ? (() => {
         const c = cat.color || '#4f46e5';
-        const bg = hexToRgba(c, 0.15);
-        const bd = hexToRgba(c, 0.3);
-        return `<span class="skill-cat" style="--cat-color:${c};--cat-bg:${bg};--cat-border:${bd}">${cat.icon} ${cat.name}</span>`;
+        return `<span class="skill-cat" style="--cat-color:${c};--cat-bg:${hexToRgba(c, 0.15)};--cat-border:${hexToRgba(c, 0.3)}">${cat.icon} ${cat.name}</span>`;
       })() : '';
-      const repoLink = s.repo && !s.repo.startsWith('搜索') 
+      const repoLink = s.repo && !s.repo.startsWith('搜索')
         ? (() => {
-            const host = new URL(s.repo).hostname;
+            const host = repoLabel(s.repo);
             const label = host === 'clawhub.ai' ? 'ClawHub' : (s.source && s.source.includes('Hermes') ? 'Hermes' : 'GitHub');
             return `<a href="${s.repo}" class="skill-repo" target="_blank" rel="noopener" title="${s.repo}">${label} ↗</a>`;
           })()
         : '';
       const isOwn = s.source === 'phoenixlucky';
       const ownBadge = isOwn ? '<span class="skill-badge">👑 精选</span>' : '';
+
       html += `
-        <div class="skill-card ${isSelected ? 'selected' : ''}${isOwn ? ' skill-card--own' : ''}" data-id="${s.id}">
+        <div class="skill-card ${isSelected ? 'selected' : ''}${isOwn ? ' skill-card--own' : ''}" data-key="${key}">
           <div class="skill-check">${isSelected ? '✓' : ''}</div>
           <div class="skill-body">
             <div class="skill-header">
@@ -160,70 +240,123 @@
         </div>
       `;
     }
-    skillsGrid.innerHTML = html;
-
-    updateStats();
+    return html;
   }
 
-  // ---- Toggle skill selection ----
-  function toggleSkill(id) {
-    if (selected.has(id)) {
-      selected.delete(id);
-    } else {
-      selected.add(id);
+  function renderLspCards(items) {
+    let html = '';
+    for (const item of items) {
+      const key = keyOf('l', item.id);
+      const isSelected = selected.has(key);
+      const langColor = '#0e7490';
+      const stars = '⭐'.repeat(Math.max(0, Math.min(5, item.rating)));
+
+      html += `
+        <div class="skill-card lsp-card ${isSelected ? 'selected' : ''}" data-key="${key}">
+          <div class="skill-check">${isSelected ? '✓' : ''}</div>
+          <div class="skill-body">
+            <div class="lsp-top">
+              <span class="skill-icon">${item.icon}</span>
+              <div class="lsp-title">
+                <span class="skill-name">${item.lsp}</span>
+                <span class="lsp-meta">
+                  <span class="skill-cat lsp-lang" style="--cat-color:${langColor};--cat-bg:${hexToRgba(langColor, 0.12)};--cat-border:${hexToRgba(langColor, 0.28)}">${item.lang}</span>
+                  <span class="lsp-rating" title="推荐程度 ${item.rating}/5">${stars}</span>
+                  <span class="skill-source">${item.category}</span>
+                </span>
+              </div>
+              <a href="${item.repo}" class="skill-repo" target="_blank" rel="noopener" title="${item.repo}">${repoLabel(item.repo)} ↗</a>
+            </div>
+            <div class="skill-desc">${item.desc}</div>
+            <div class="lsp-install">$ ${item.install}</div>
+          </div>
+        </div>
+      `;
     }
-    // Re-render just the affected card
-    const card = skillsGrid.querySelector(`.skill-card[data-id="${id}"]`);
+    return html;
+  }
+
+  // ---- Toggle one card ----
+  function toggleKey(key) {
+    if (selected.has(key)) selected.delete(key);
+    else selected.add(key);
+
+    const card = skillsGrid.querySelector(`.skill-card[data-key="${key}"]`);
     if (card) {
       card.classList.toggle('selected');
-      const check = card.querySelector('.skill-check');
-      check.textContent = selected.has(id) ? '✓' : '';
+      card.querySelector('.skill-check').textContent = selected.has(key) ? '✓' : '';
     }
     updateStats();
     outputSection.style.display = 'none';
   }
 
-  // ---- Update stats ----
+  // ---- Stats ----
   function updateStats() {
     selectedCount.textContent = selected.size;
   }
 
+  function updateSelectAllBtn(keys) {
+    if (!keys.length) {
+      selectAllBtn.textContent = '✅ 全选';
+      return;
+    }
+    const allSelected = keys.every(k => selected.has(k));
+    selectAllBtn.textContent = allSelected ? '取消全选' : '✅ 全选';
+  }
+
   // ---- Generate install instructions ----
   function generateInstructions() {
-    const ids = [...selected].sort((a, b) => a - b);
-    if (ids.length === 0) {
-      showToast('请先勾选至少一个 Skill');
+    if (selected.size === 0) {
+      showToast('请先勾选至少一项');
       return;
     }
 
-    const skills = ids.map(id => data.skills.find(s => s.id === id)).filter(Boolean);
+    const skillIds = [...selected]
+      .filter(k => k.startsWith('s'))
+      .map(k => Number(k.slice(1)))
+      .sort((a, b) => a - b);
+    const lspIds = [...selected]
+      .filter(k => k.startsWith('l'))
+      .map(k => Number(k.slice(1)))
+      .sort((a, b) => a - b);
 
-    // Build category groups
-    const catMap = {};
-    for (const c of data.categories) {
-      catMap[c.id] = c;
+    const skills = skillIds.map(id => data.skills.find(s => s.id === id)).filter(Boolean);
+    const lspItems = lspIds.map(id => lspData.items.find(i => i.id === id)).filter(Boolean);
+
+    let text = '请依次阅读并安装以下内容。\n具体项目\n\n';
+
+    if (skills.length) {
+      const catMap = {};
+      for (const c of data.categories) catMap[c.id] = c;
+
+      const groups = {};
+      for (const s of skills) {
+        const catName = catMap[s.cat] ? catMap[s.cat].name : s.cat;
+        if (!groups[catName]) groups[catName] = [];
+        groups[catName].push(s);
+      }
+
+      for (const [catName, items] of Object.entries(groups)) {
+        text += `【${catName}】\n`;
+        for (const s of items) {
+          const star = s.stars ? `（${s.stars}）` : '';
+          const repo = s.repo && !s.repo.startsWith('搜索') ? `\n   地址：${s.repo}` : '';
+          text += `${s.name} — ${s.source}${star}，${s.desc}${repo}\n`;
+        }
+        text += '\n';
+      }
     }
 
-    const groups = {};
-    for (const s of skills) {
-      const catName = catMap[s.cat] ? catMap[s.cat].name : s.cat;
-      if (!groups[catName]) groups[catName] = [];
-      groups[catName].push(s);
-    }
-
-    let text = '请依次阅读并安装以下 Skill。\n具体技能\n\n';
-
-    for (const [catName, items] of Object.entries(groups)) {
-      text += `【${catName}】\n`;
-      for (const s of items) {
-        const star = s.stars ? `（${s.stars}）` : '';
-        const repo = s.repo && !s.repo.startsWith('搜索') ? `\n   地址：${s.repo}` : '';
-        text += `${s.name} — ${s.source}${star}，${s.desc}${repo}\n`;
+    if (lspItems.length) {
+      text += '【语言服务器（LSP）】\n';
+      for (const i of lspItems) {
+        text += `${i.lsp} — ${i.lang}（推荐 ${i.rating}/5，${i.category}）\n`;
+        text += `   说明：${i.desc}\n   安装：${i.install}\n   地址：${i.repo}\n`;
       }
       text += '\n';
     }
 
-    text += '请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。\n';
+    text += '请根据上面每一项的「安装指令」完成安装，如果存在，则覆盖安装。\n';
 
     outputText.value = text;
     outputSection.style.display = 'block';
@@ -236,7 +369,6 @@
       await navigator.clipboard.writeText(outputText.value);
       showToast('✅ 已复制到剪贴板');
     } catch {
-      // Fallback
       outputText.select();
       document.execCommand('copy');
       showToast('✅ 已复制到剪贴板');
@@ -245,63 +377,31 @@
 
   // ---- Select All / Deselect All ----
   function toggleSelectAll() {
-    const keyword = searchInput.value.trim().toLowerCase();
-    let visible = data.skills;
-    if (currentCat === INSTALLED_CAT) {
-      visible = visible.filter(s => REASONIX_INSTALLED_IDS.has(s.id));
-    } else if (currentCat !== 'all') {
-      visible = visible.filter(s => s.cat === currentCat);
-    }
-    if (keyword) {
-      visible = visible.filter(s =>
-        s.name.toLowerCase().includes(keyword) ||
-        s.desc.toLowerCase().includes(keyword) ||
-        s.source.toLowerCase().includes(keyword)
-      );
-    }
+    const keys = visibleKeys(getVisible());
+    if (!keys.length) return;
 
-    const visibleIds = new Set(visible.map(s => s.id));
-    const allSelected = [...visibleIds].every(id => selected.has(id));
-
-    if (allSelected && [...visibleIds].some(id => selected.has(id))) {
-      // Deselect all visible
-      for (const id of visibleIds) selected.delete(id);
-      selectAllBtn.textContent = '✅ 全选';
+    const allSelected = keys.every(k => selected.has(k));
+    if (allSelected) {
+      for (const k of keys) selected.delete(k);
     } else {
-      // Select all visible
-      for (const id of visibleIds) selected.add(id);
-      selectAllBtn.textContent = '取消全选';
+      for (const k of keys) selected.add(k);
     }
 
     renderGrid();
     outputSection.style.display = 'none';
   }
 
-  // ---- Update select-all button text ----
-  function updateSelectAllBtn(visibleSkills) {
-    if (visibleSkills.length === 0) {
-      selectAllBtn.textContent = '✅ 全选';
-      return;
-    }
-    const allSelected = visibleSkills.every(s => selected.has(s.id));
-    selectAllBtn.textContent = allSelected ? '取消全选' : '✅ 全选';
-  }
-
   // ---- Clear selection ----
   function clearSelection() {
     selected.clear();
-    skillsGrid.querySelectorAll('.skill-card').forEach(c => {
-      c.classList.remove('selected');
-      c.querySelector('.skill-check').textContent = '';
-    });
-    selectAllBtn.textContent = '✅ 全选';
-    updateStats();
+    renderGrid();
     outputSection.style.display = 'none';
     showToast('已清除所有选择');
   }
 
   // ---- Search ----
   searchInput.addEventListener('input', () => {
+    outputSection.style.display = 'none';
     renderGrid();
   });
 
@@ -317,13 +417,12 @@
       copyBtn.addEventListener('click', copyOutput);
       clearBtn.addEventListener('click', clearSelection);
 
-      // Click skill card to toggle selection
+      // Click card to toggle selection
       skillsGrid.addEventListener('click', (e) => {
         if (e.target.closest('a')) return;
         const card = e.target.closest('.skill-card');
-        if (!card) return;
-        const id = parseInt(card.dataset.id);
-        toggleSkill(id);
+        if (!card || !card.dataset.key) return;
+        toggleKey(card.dataset.key);
       });
 
       // Keyboard shortcut: Ctrl+Enter to generate
@@ -335,188 +434,6 @@
       });
     } catch (e) {
       console.error('Init failed:', e);
-    }
-  }
-
-  init();
-})();
-
-/* ===== The King Skills — LSP 推荐（独立板块，独立勾选与安装指令） ===== */
-(async function () {
-  'use strict';
-
-  // ---- State ----
-  let lspData = null;       // { total, items }
-  const selected = new Set(); // lsp ids
-
-  // ---- DOM refs ----
-  const $ = (s) => document.querySelector(s);
-
-  const lspGrid         = $('#lspGrid');
-  const lspTotalCount   = $('#lspTotalCount');
-  const lspSelectedCount = $('#lspSelectedCount');
-  const lspSelectAllBtn = $('#lspSelectAllBtn');
-  const lspGenerateBtn  = $('#lspGenerateBtn');
-  const lspClearBtn     = $('#lspClearBtn');
-  const lspOutputSection = $('#lspOutputSection');
-  const lspOutputText   = $('#lspOutputText');
-  const lspCopyBtn      = $('#lspCopyBtn');
-  const toast           = $('#toast');
-
-  let toastTimer = null;
-
-  function showToast(msg) {
-    clearTimeout(toastTimer);
-    toast.textContent = msg;
-    toast.classList.add('show');
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
-  }
-
-  function repoLabel(url) {
-    try {
-      return new URL(url).hostname;
-    } catch {
-      return '';
-    }
-  }
-
-  // ---- Load data ----
-  async function loadData() {
-    try {
-      const resp = await fetch('data/lsp.json?v=1');
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      lspData = await resp.json();
-      lspTotalCount.textContent = lspData.total;
-    } catch (e) {
-      lspGrid.innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><p>加载 LSP 数据失败：${e.message}</p></div>`;
-      throw e;
-    }
-  }
-
-  function ratingStars(n) {
-    const full = Math.max(0, Math.min(5, n));
-    return `<span class="lsp-rating" title="推荐程度 ${full}/5">${'⭐'.repeat(full)}</span>`;
-  }
-
-  // ---- Render LSP cards ----
-  function renderGrid() {
-    let html = '';
-    for (const item of lspData.items) {
-      const isSelected = selected.has(item.id);
-      html += `
-        <div class="skill-card lsp-card ${isSelected ? 'selected' : ''}" data-id="${item.id}">
-          <div class="skill-check">${isSelected ? '✓' : ''}</div>
-          <div class="skill-body">
-            <div class="skill-header">
-              <span class="skill-icon">${item.icon}</span>
-              <span class="skill-name">${item.lsp}</span>
-              <span class="skill-cat lsp-lang">${item.lang}</span>
-              ${ratingStars(item.rating)}
-              <span class="skill-source">${item.category}</span>
-              <a href="${item.repo}" class="skill-repo" target="_blank" rel="noopener" title="${item.repo}">${repoLabel(item.repo)} ↗</a>
-            </div>
-            <div class="skill-desc">${item.desc}</div>
-            <div class="lsp-install">$ ${item.install}</div>
-          </div>
-        </div>
-      `;
-    }
-    lspGrid.innerHTML = html;
-    updateStats();
-  }
-
-  function updateStats() {
-    lspSelectedCount.textContent = selected.size;
-    const allSelected = lspData.items.length > 0 && selected.size === lspData.items.length;
-    lspSelectAllBtn.textContent = allSelected ? '取消全选' : '✅ 全选';
-  }
-
-  function toggleItem(id) {
-    if (selected.has(id)) selected.delete(id);
-    else selected.add(id);
-
-    const card = lspGrid.querySelector(`.skill-card[data-id="${id}"]`);
-    if (card) {
-      card.classList.toggle('selected');
-      card.querySelector('.skill-check').textContent = selected.has(id) ? '✓' : '';
-    }
-    updateStats();
-    lspOutputSection.style.display = 'none';
-  }
-
-  function toggleSelectAll() {
-    const allSelected = lspData.items.length > 0 && selected.size === lspData.items.length;
-    selected.clear();
-    if (!allSelected) {
-      for (const item of lspData.items) selected.add(item.id);
-    }
-    renderGrid();
-    lspOutputSection.style.display = 'none';
-  }
-
-  function clearSelection() {
-    selected.clear();
-    renderGrid();
-    lspOutputSection.style.display = 'none';
-    showToast('已清除所有 LSP 选择');
-  }
-
-  function generateInstructions() {
-    const ids = [...selected].sort((a, b) => a - b);
-    if (ids.length === 0) {
-      showToast('请先勾选至少一个 LSP');
-      return;
-    }
-
-    const items = ids.map(id => lspData.items.find(i => i.id === id)).filter(Boolean);
-
-    let text = '请为当前项目配置并安装以下语言服务器（LSP），以便获得类型分析、跳转与重构能力。\n';
-    text += '如果对应语言服务器已安装，请检查版本并升级到最新版。\n\n';
-
-    for (const i of items) {
-      text += `【${i.lang}】${i.lsp}（推荐程度 ${i.rating}/5）\n`;
-      text += `   说明：${i.desc}\n`;
-      text += `   安装：${i.install}\n`;
-      text += `   地址：${i.repo}\n\n`;
-    }
-
-    text += '安装完成后，请根据所用 AI Agent / 编辑器的配置方式启用这些 LSP，并确认能正常启动。\n';
-
-    lspOutputText.value = text;
-    lspOutputSection.style.display = 'block';
-    lspOutputSection.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  async function copyOutput() {
-    try {
-      await navigator.clipboard.writeText(lspOutputText.value);
-      showToast('✅ 已复制到剪贴板');
-    } catch {
-      lspOutputText.select();
-      document.execCommand('copy');
-      showToast('✅ 已复制到剪贴板');
-    }
-  }
-
-  // ---- Init ----
-  async function init() {
-    try {
-      await loadData();
-      renderGrid();
-
-      lspGrid.addEventListener('click', (e) => {
-        if (e.target.closest('a')) return;
-        const card = e.target.closest('.skill-card');
-        if (!card) return;
-        toggleItem(parseInt(card.dataset.id, 10));
-      });
-
-      lspGenerateBtn.addEventListener('click', generateInstructions);
-      lspSelectAllBtn.addEventListener('click', toggleSelectAll);
-      lspClearBtn.addEventListener('click', clearSelection);
-      lspCopyBtn.addEventListener('click', copyOutput);
-    } catch (e) {
-      console.error('LSP init failed:', e);
     }
   }
 

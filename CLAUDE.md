@@ -1,4 +1,4 @@
-# theKingSkills — 项目约定
+# theAIKing — 项目约定
 
 ## 项目定位
 

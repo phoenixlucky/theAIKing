@@ -1,5 +1,5 @@
 {
-  "total": 143,
+  "total": 165,
   "categories": [
     {
       "id": "basic",
@@ -91,6 +91,13 @@
       "icon": "🎵",
       "color": "#e11d48",
       "description": "天气、音乐、语音、健康等生活场景工具。"
+    },
+    {
+      "id": "dsh",
+      "name": "DeepSeek Harness 插件",
+      "icon": "🔱",
+      "color": "#4d6bfe",
+      "description": "万物皆插件的 DSH 生态：记忆、视觉、搜索、UI 与桌面端。"
     }
   ],
   "skills": [
@@ -1666,6 +1673,248 @@
       "source": "phoenixlucky",
       "stars": null,
       "updated": "2026-10-15"
+    },
+    {
+      "id": 145,
+      "name": "DeepSeek Harness",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/deepseek-ai/deepseek-harness",
+      "desc": "万物皆插件的开源 Agent Harness，Web UI / 桌面端 / CLI 三种形态，插件生态的底座",
+      "source": "deepseek-ai",
+      "stars": "⭐ 264k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 146,
+      "name": "dsh-market",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/dsh-market/dsh-market",
+      "desc": "DSH 内置可视化插件市场：搜索、分类、一键安装升级，附带主题切换",
+      "source": "dsh-market",
+      "stars": "⭐ 9.3k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 147,
+      "name": "awesome-dsh-plugin",
+      "cat": "dsh",
+      "icon": "A",
+      "repo": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+      "desc": "社区维护的 DSH 插件精选清单，按 AGI/UI/记忆/工具/通知等 24 类整理",
+      "source": "awesome-dsh-plugin",
+      "stars": "⭐ 21.1k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 148,
+      "name": "dsh-context",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/bowenliang123/dsh-context",
+      "desc": "上下文可视化与管理：组成、统计、演进、压缩、剪枝一目了然",
+      "source": "bowenliang123",
+      "stars": "⭐ 1.3k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 149,
+      "name": "DSH-better-sidebar",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/omdsh-dev/DSH-better-sidebar",
+      "desc": "可扩展侧边栏底座：文件编辑/终端/侧边对话/Git/子代理页面，第三方可注册新页面",
+      "source": "omdsh-dev",
+      "stars": "⭐ 3.4k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 150,
+      "name": "modlens",
+      "cat": "dsh",
+      "icon": "M",
+      "repo": "https://github.com/liustack/modlens",
+      "desc": "给纯文本模型外挂视觉：粘贴图片输出 OCR、版面与语义的结构化 JSON",
+      "source": "liustack",
+      "stars": "⭐ 3.9k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 151,
+      "name": "dsh-vision-router",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/ysr666/dsh-vision-router",
+      "desc": "文本模型的「眼睛」：免费视觉链 + 像素级工具（问答/定位/裁剪/OCR/抠图）",
+      "source": "ysr666",
+      "stars": "⭐ 1.1k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 152,
+      "name": "modsearch",
+      "cat": "dsh",
+      "icon": "M",
+      "repo": "https://github.com/liustack/modsearch",
+      "desc": "给不会联网的模型补上搜索：免注册免 Key，返回结构化 JSON 证据",
+      "source": "liustack",
+      "stars": "⭐ 433",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 153,
+      "name": "dsh-agent-teams",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/NanmiCoder/dsh-agent-teams",
+      "desc": "给 DSH 加 Agent 团队：多角色并行协作、任务分派与结果汇总",
+      "source": "NanmiCoder",
+      "stars": "⭐ 1.5k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 154,
+      "name": "dsh-im",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/xmanrui/dsh-im",
+      "desc": "扫码/凭据把飞书、微信、钉钉、QQ、Slack、Telegram 等 9 个 IM 接进 DSH",
+      "source": "xmanrui",
+      "stars": "⭐ 1.2k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 155,
+      "name": "dsh-routing-suite",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/yjh051108/dsh-routing-suite",
+      "desc": "运行时注入器 + 任务感知推理模式路由，按任务自动选思考档位（P1–P23 实测）",
+      "source": "yjh051108",
+      "stars": "⭐ 7k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 156,
+      "name": "dsh-univer-office",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/dream-num/dsh-univer-office",
+      "desc": "把表格/文档/幻灯片/多维表搬进 DSH，产出 xlsx/docx/pptx 并支持多 Agent 协作",
+      "source": "dream-num",
+      "stars": "⭐ 303",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 157,
+      "name": "OpenViking",
+      "cat": "dsh",
+      "icon": "O",
+      "repo": "https://github.com/volcengine/OpenViking",
+      "desc": "火山引擎自进化上下文数据库，为 DSH 提供跨会话记忆、知识 RAG 与自动召回",
+      "source": "volcengine",
+      "stars": "⭐ 41k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 158,
+      "name": "WeKnora",
+      "cat": "dsh",
+      "icon": "W",
+      "repo": "https://github.com/Tencent/WeKnora",
+      "desc": "腾讯开源知识平台，给 DSH 四个只读工具：列库/混合检索/文档重组/带引用作答",
+      "source": "Tencent",
+      "stars": "⭐ 35.7k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 159,
+      "name": "DeepSeek 余额小鲸鱼",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget",
+      "desc": "DSH 右下角常驻小鲸鱼：API 余额、今日消耗、每轮花费，气泡可自定义",
+      "source": "MeteorNOX",
+      "stars": "⭐ 6.3k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 160,
+      "name": "dsh-desktop",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/anywhere-labs/dsh-desktop",
+      "desc": "为 DSH 插件生态打造的桌面端，桌面本身也是插件，内置插件市场",
+      "source": "anywhere-labs",
+      "stars": "⭐ 33.6k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 161,
+      "name": "qiaomu-rss-dsh",
+      "cat": "dsh",
+      "icon": "Q",
+      "repo": "https://github.com/joeseesun/qiaomu-rss-dsh",
+      "desc": "在 DSH 里读 RSS：频道发现、原文/中文版本切换，并就当前文章向 AI 追问",
+      "source": "joeseesun",
+      "stars": "⭐ 54",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 162,
+      "name": "qiaomu-reader-dsh",
+      "cat": "dsh",
+      "icon": "Q",
+      "repo": "https://github.com/joeseesun/qiaomu-reader-dsh",
+      "desc": "在 DSH 中读 EPUB/PDF/TXT/Markdown，划线、听书、记生词并导出笔记",
+      "source": "joeseesun",
+      "stars": "⭐ 5",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 163,
+      "name": "qiaomu-ui-learn-dsh",
+      "cat": "dsh",
+      "icon": "Q",
+      "repo": "https://github.com/joeseesun/qiaomu-ui-learn-dsh",
+      "desc": "在 DSH 里逛 13,561 条设计参考、106 个交互标本，做审美测验并沉淀 Markdown 笔记",
+      "source": "joeseesun",
+      "stars": "⭐ 10",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 164,
+      "name": "qiaomu-home-dsh",
+      "cat": "dsh",
+      "icon": "Q",
+      "repo": "https://github.com/joeseesun/qiaomu-home-dsh",
+      "desc": "DSH 起点页：会话搜索、今日重点、待办、记录与专注计时，一打开就知道该做什么",
+      "source": "joeseesun",
+      "stars": "⭐ 10",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 165,
+      "name": "dsh-mcp-settings",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/phoenixlucky/dsh-mcp-settings",
+      "desc": "可选 Bundle：在 Web/桌面 profile 管理 MCP 服务器、Chrome 连接与记忆设置",
+      "source": "phoenixlucky",
+      "stars": null,
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 166,
+      "name": "dsh-theme",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/phoenixlucky/dsh-theme",
+      "desc": "可选主题 Bundle：六套壁纸主题 + 配色预览，含 VIP 金色光辉玻璃风格",
+      "source": "phoenixlucky",
+      "stars": null,
+      "updated": "2026-10-28"
     }
   ]
 }

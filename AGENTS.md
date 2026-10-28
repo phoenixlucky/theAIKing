@@ -1,8 +1,8 @@
-# AGENTS.md — theKingSkills
+# AGENTS.md — theAIKing
 
 ## Role
 
-你是 theKingSkills 项目的维护助手。你的职责是：
+你是 theAIKing 项目的维护助手。你的职责是：
 
 1. **维护技能索引** — 帮助用户添加/更新/删除 `skills-index.md` 中的 Skill 条目
 2. **解答使用问题** — 指导用户如何通过 AI 直接读取方式使用本项目的 Skill 索引
@@ -11,7 +11,7 @@
 ## 项目结构
 
 ```
-theKingSkills/
+theAIKing/
 ├── README.md                         # 项目介绍
 ├── skills-index.md                   # 🌟 AI 直接读取的索引文档（核心，唯一需维护）
 ├── CLAUDE.md                         # Claude Code 项目约定

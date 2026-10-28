@@ -1,11 +1,11 @@
 ---
-title:   "The King Skills — AI 一键安装索引"
-version: "1.8"
-updated: "2026-10-09"
-total:   143
+title:   "The AI King — AI 一键安装索引"
+version: "1.9"
+updated: "2026-10-28"
+total:   165
 ---
 
-# 🎯 The King Skills — AI 一键安装索引
+# 🎯 The AI King — AI 一键安装索引
 
 本文件是**核心索引**。AI Agent 读取后，可根据每个 Skill 的来源和安装方式自动完成安装。
 
@@ -2961,6 +2961,550 @@ MIT 开源。要求 Claude Code v2.1.260+、Node.js 18+（或 Bun）。
 
 ---
 
+## 🔱 DeepSeek Harness 插件
+
+DeepSeek Harness（`dsh`）是 DeepSeek 开源、以「万物皆插件」为架构的 Agent Harness。
+本板块收录可直接用于 DSH 的插件与配套生态，安装方式分三类：
+
+- **Bundle 插件**：`dsh plugin --profile web add <npm 包名 | github:owner/repo#ref>`，装完重启 `dsh web`
+- **仓储插件（monorepo 子包）**：插件面板 → repository source 填 `github:owner/repo#ref&path:/子目录`
+- **桌面端**：从 Releases 下载安装，或使用自带插件市场安装
+
+> ⚠️ 插件代码以你的本机权限运行，可读写文件、使用凭据和访问网络；收录不等于安全审查。
+> DSH 仍处于 developer preview，升级宿主后请留意插件版本兼容性。
+
+### 145 — DeepSeek Harness（DSH 本体）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | deepseek-ai（⭐ 264k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 万物皆插件的开源 Agent Harness，Web UI / 桌面端 / CLI 三种形态，插件生态的底座 |
+
+**安装指令：**
+
+```
+安装 DeepSeek Harness（DSH）。
+来源：https://github.com/deepseek-ai/deepseek-harness（⭐ 264k）
+安装方式（任选）：
+- 免安装试用：npx @deepseek-ai/dsh web（默认 http://127.0.0.1:3080）
+- 源码运行：git clone 后 pnpm install && pnpm run build && pnpm dsh web
+- 桌面端：https://github.com/anywhere-labs/dsh-desktop
+
+安装后，在 Settings 填入模型 API Key 并选择工作区即可开始会话；
+后续插件统一用 dsh plugin --profile web add <包名|github:owner/repo#ref> 安装，
+装完重启 dsh web 生效。第三方插件以你的权限运行，安装前先读源码。
+```
+
+---
+
+### 146 — dsh-market（插件市场）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | dsh-market（⭐ 9.3k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH 内置可视化插件市场：搜索、分类、一键安装升级，附带主题切换 |
+
+**安装指令：**
+
+```
+安装 dsh-market 插件。
+来源：https://github.com/dsh-market/dsh-market（⭐ 9.3k）
+安装：dsh plugin --profile web add dshmarket
+
+安装后，Settings → Plugins 出现插件市场：
+- 浏览、搜索、一键安装/升级社区插件
+- Themes 标签一键切换主题
+- 装完重启 dsh web 生效
+```
+
+---
+
+### 147 — awesome-dsh-plugin（插件精选清单）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | awesome-dsh-plugin（⭐ 21.1k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 社区维护的 DSH 插件精选清单，按 AGI/UI/记忆/工具/通知等 24 类整理 |
+
+**安装指令：**
+
+```
+使用 awesome-dsh-plugin（清单，不是插件）。
+来源：https://github.com/awesome-dsh-plugin/awesome-dsh-plugin（⭐ 21.1k）
+使用方式：
+- 直接读 README 按分类挑选，每条都给出 dsh plugin --profile web add 命令
+- 在线版：https://awesome-dsh-plugin.com
+- 想让 Agent 代找插件：dsh plugin --profile web add dsh-find-plugin
+
+只收录声明 dsh.bundle、能用 dsh plugin add 装上的插件；收录≠安全审查，装前读源码。
+```
+
+---
+
+### 148 — dsh-context（上下文透视）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | bowenliang123（⭐ 1.3k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 上下文可视化与管理：组成、统计、演进、压缩、剪枝一目了然 |
+
+**安装指令：**
+
+```
+安装 dsh-context 插件。
+来源：https://github.com/bowenliang123/dsh-context（⭐ 1.3k）
+安装：dsh plugin --profile web add dsh-context
+
+安装后，从会话头部或 Settings 打开 Context 面板：
+- 查看上下文占比、组成明细和逐轮增长
+- 追踪压缩、剪枝等事件，理解上下文如何演进
+- 支持 /context 命令，重启 dsh web 生效
+```
+
+---
+
+### 149 — DSH-better-sidebar（侧边栏底座）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | omdsh-dev（⭐ 3.4k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 可扩展侧边栏底座：文件编辑/终端/侧边对话/Git/子代理页面，第三方可注册新页面 |
+
+**安装指令：**
+
+```
+安装 DSH-better-sidebar 插件。
+来源：https://github.com/omdsh-dev/DSH-better-sidebar（⭐ 3.4k）
+安装：dsh plugin --profile web add dsh-better-sidebar@latest
+注意版本匹配：DSH 0.2.1-rc.2 用 @0.26.1；0.2.1-alpha.5 用 @0.28.0-alpha.0；
+0.2.1-rc.1+ 用 @0.28.2（完整兼容表见仓库 README）。
+
+安装后，右侧边栏获得文件浏览/编辑、终端、Git、子代理等页面，
+并开放注册机制，其他插件可把自己的页面挂进来。
+```
+
+---
+
+### 150 — modlens（视觉插件）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | liustack（⭐ 3.9k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 给纯文本模型外挂视觉：粘贴图片输出 OCR、版面与语义的结构化 JSON |
+
+**安装指令：**
+
+```
+安装 modlens 插件。
+来源：https://github.com/liustack/modlens（⭐ 3.9k）
+安装：npx -y @deepseek-ai/dsh plugin --profile web add @liustack/modlens
+
+安装后，粘贴图片即可识别（OCR/版面/语义），输出结构化 JSON 证据；
+模型选择器会多出 (modlens vision) 入口，可复用本机已有的多模态模型/Key。
+图片会经所选视觉通道上传到对应服务商，机密材料请改用本地视觉链。
+```
+
+---
+
+### 151 — dsh-vision-router（视觉工具箱）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | ysr666（⭐ 1.1k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 文本模型的「眼睛」：免费视觉链 + 像素级工具（问答/定位/裁剪/OCR/抠图） |
+
+**安装指令：**
+
+```
+安装 dsh-vision-router 插件。
+来源：https://github.com/ysr666/dsh-vision-router（⭐ 1.1k）
+安装：npx @deepseek-ai/dsh plugin --profile web add dsh-vision-router
+
+安装后，纯文本模型获得图像输入与像素级视觉工具：
+问答、grounding、裁剪、像素 diff、取色、OCR、SVG 描摹、抠图、截图。
+默认启用匿名云端视觉兜底，图片会离开本机；敏感场景请切到本地视觉链。
+```
+
+---
+
+### 152 — modsearch（免费联网搜索）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | liustack（⭐ 433） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 给不会联网的模型补上搜索：免注册免 Key，返回结构化 JSON 证据 |
+
+**安装指令：**
+
+```
+安装 modsearch 插件。
+来源：https://github.com/liustack/modsearch（⭐ 433）
+安装：npx -y @deepseek-ai/dsh plugin --profile web add @liustack/modsearch
+
+安装后，DSH 自带 web_search 走 modsearch：
+- 默认 Firecrawl 无 Key 额度（每月 1000 次），也可接 Keenable / Antigravity CLI
+- 返回带引用的结构化 JSON，支持网页抓取；装有 Grok Build 时还可搜 X
+桌面端请在 Plugins → Add plugin 输入 @liustack/modsearch，不要填 GitHub 地址。
+```
+
+---
+
+### 153 — dsh-agent-teams（多 Agent 团队）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | NanmiCoder（⭐ 1.5k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 给 DSH 加 Agent 团队：多角色并行协作、任务分派与结果汇总 |
+
+**安装指令：**
+
+```
+安装 dsh-agent-teams 插件。
+来源：https://github.com/NanmiCoder/dsh-agent-teams（⭐ 1.5k）
+安装（任选）：
+- 插件面板 Add plugin 粘贴 https://github.com/NanmiCoder/dsh-agent-teams
+  （或简写 github:NanmiCoder/dsh-agent-teams）
+- npm：dsh plugin --profile web add @nanmicoder/dsh-agent-teams@<版本>
+
+安装后，可在 DSH 内组建多 Agent 团队，按角色分派任务并汇总结果；
+注意宿主版本兼容矩阵（仓库 compatibility.json），桌面端请用自带包管理器安装。
+```
+
+---
+
+### 154 — dsh-im（IM 机器人接入）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | xmanrui（⭐ 1.2k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 扫码/凭据把飞书、微信、钉钉、QQ、Slack、Telegram 等 9 个 IM 接进 DSH |
+
+**安装指令：**
+
+```
+安装 dsh-im 插件。
+来源：https://github.com/xmanrui/dsh-im（⭐ 1.2k）
+安装：dsh plugin --profile web add -w @xmanrui/dsh-im
+
+安装后，用扫码或机器人凭据把 DSH 接入 IM：
+支持飞书、微信、钉钉、企业微信、QQ、Slack、Telegram、Discord、WhatsApp，
+在聊天窗口里直接给 Agent 派任务。接入前确认机器人权限与消息隐私范围。
+```
+
+---
+
+### 155 — dsh-routing-suite（推理路由）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | yjh051108（⭐ 7k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 运行时注入器 + 任务感知推理模式路由，按任务自动选思考档位（P1–P23 实测） |
+
+**安装指令：**
+
+```
+安装 dsh-routing-suite 插件。
+来源：https://github.com/yjh051108/dsh-routing-suite（⭐ 7k）
+安装：dsh plugin --profile web add github:yjh051108/dsh-routing-suite
+
+安装后，获得运行时注入器与任务感知的推理模式路由：
+- 按任务类型自动切换思考档位，减少简单任务的过度思考
+- 附带 dev_* 工具：注入、热重载、侧挂转正、卸载、路由自愈
+装完重启 dsh web；先用小任务验证路由行为再上生产。
+```
+
+---
+
+### 156 — dsh-univer-office（Office 工作区）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | dream-num（⭐ 303） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 把表格/文档/幻灯片/多维表搬进 DSH，产出 xlsx/docx/pptx 并支持多 Agent 协作 |
+
+**安装指令：**
+
+```
+安装 dsh-univer-office 插件。
+来源：https://github.com/dream-num/dsh-univer-office（⭐ 303）
+安装：dsh plugin --profile web add dsh-univer-office
+
+安装后，DSH 获得类 Office 工作区：
+- 表格、文档、幻灯片、画布、关系表，可实时预览与校验
+- 产出 .xlsx / .docx / .pptx，支持版本化修改与多 Agent 隔离 worktree
+插件默认发送匿名使用统计（不含文件内容/路径），可用 DO_NOT_TRACK=1 关闭。
+```
+
+---
+
+### 157 — OpenViking（记忆与上下文）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | volcengine（⭐ 41k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 火山引擎自进化上下文数据库，为 DSH 提供跨会话记忆、知识 RAG 与自动召回 |
+
+**安装指令：**
+
+```
+安装 OpenViking 的 DSH 记忆插件。
+来源：https://github.com/volcengine/OpenViking（⭐ 41k）
+安装（插件面板 → repository source）：
+github:volcengine/OpenViking#main&path:/examples/dsh-memory-plugin
+
+安装后，接入 OpenViking 服务即可获得：
+- 每轮前置自动召回与画像注入，会话结束自动归档
+- recall / write memory 工具，viking:// URI 守卫
+- 记忆、知识 RAG 与 Skills 统一管理，跨会话持久
+需要先部署 OpenViking 服务端；不要把敏感数据交给未加固的实例。
+```
+
+---
+
+### 158 — WeKnora（知识库 RAG）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | Tencent（⭐ 35.7k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 腾讯开源知识平台，给 DSH 四个只读工具：列库/混合检索/文档重组/带引用作答 |
+
+**安装指令：**
+
+```
+安装 WeKnora 的 DSH 插件。
+来源：https://github.com/Tencent/WeKnora（⭐ 35.7k）
+安装（插件面板 → repository source）：
+github:Tencent/WeKnora#main&path:/dsh-weknora
+
+安装后，Agent 获得四个只读知识库工具：
+列出知识库、混合段落检索、按序重组单篇文档、带引用的 RAG/ReAct 作答（可续会话）。
+适合企业文档问答与资料溯源；需先部署 WeKnora 并导入文档。
+```
+
+---
+
+### 159 — DeepSeek 余额小鲸鱼（余额监控）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | MeteorNOX（⭐ 6.3k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH 右下角常驻小鲸鱼：API 余额、今日消耗、每轮花费，气泡可自定义 |
+
+**安装指令：**
+
+```
+安装 DeepSeek-Balance-Whale-Widget 插件。
+来源：https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget（⭐ 6.3k）
+安装：dsh plugin --profile web add dsh-whale-widget
+
+安装后，DSH Web 右下角常驻小鲸鱼挂件：
+- 显示 DeepSeek API 余额、今日已用、每轮对话消耗
+- 点击气泡可自定义文案/图片/模块排版，支持拖拽吸附
+npm 名与 github: 源二选一，不要混装；桌面端使用 desktop profile，需在应用内安装。
+```
+
+---
+
+### 160 — dsh-desktop（桌面端）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | anywhere-labs（⭐ 33.6k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 为 DSH 插件生态打造的桌面端，桌面本身也是插件，内置插件市场 |
+
+**安装指令：**
+
+```
+安装 DSH 桌面端。
+来源：https://github.com/anywhere-labs/dsh-desktop（⭐ 33.6k）
+安装：从 GitHub Releases 下载 Windows / macOS / Linux 安装包
+
+安装后，获得带插件市场的 DSH 桌面工作区：
+- 内置 dsh-market，插件一键安装/升级
+- 桌面窗口、文件与多会话管理，无需手动起 Web 服务
+桌面端使用独立的 desktop profile，部分 CLI 插件需在应用内插件面板安装。
+```
+
+---
+
+### 161 — qiaomu-rss-dsh（RSS 伴读）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | joeseesun（★ 54） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 在 DSH 里读 RSS：频道发现、原文/中文版本切换，并就当前文章向 AI 追问 |
+
+**安装指令：**
+
+```
+安装 乔木 RSS 插件。
+来源：https://github.com/joeseesun/qiaomu-rss-dsh（★ 54）
+安装（预构建 tgz，未发布 npm）：
+- 从 GitHub Releases 下载 qiaomu-rss-dsh-0.8.0.tgz 与 .sha256，先校验：
+  shasum -a 256 -c qiaomu-rss-dsh-0.8.0.tgz.sha256
+- 安装并重启 profile：
+  dsh plugin --profile web add /absolute/path/qiaomu-rss-dsh-0.8.0.tgz
+  （桌面端把 web 换成 desktop）
+
+安装后，侧栏出现乔木 RSS：
+- 发现作者与频道，读原文或已有中文改写版本
+- 选中段落让 AI 伴读、翻译或追问，当前文章作为上下文
+- 提交的公开链接与改写结果会进入所配置的乔木服务，凭据保存在 Host 存储
+```
+
+---
+
+### 162 — qiaomu-reader-dsh（电子书阅读）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | joeseesun（★ 5） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 在 DSH 中读 EPUB/PDF/TXT/Markdown，划线、听书、记生词并导出笔记 |
+
+**安装指令：**
+
+```
+安装 乔木阅读插件。
+来源：https://github.com/joeseesun/qiaomu-reader-dsh（★ 5）
+安装（预构建 tgz，未发布 npm）：
+- 从 v1.1.0 Release 下载 qiaomu-reader-dsh-1.1.0.tgz 与 SHA256SUMS，校验后安装：
+  dsh plugin --profile web add /absolute/path/qiaomu-reader-dsh-1.1.0.tgz
+  （把 web 换成 desktop 即可装进桌面 profile）
+
+安装后，DSH 内获得完整阅读器：
+- EPUB / PDF / TXT / Markdown / HTML 导入，支持 UTF-8、UTF-16 BOM、GB18030
+- 划线、生词本（保留上下文与原文回跳）、Markdown 笔记导出、可选 AnkiConnect
+- 系统语音跨章朗读；选区查词复用 Harness 原生会话；移除书库后进度可恢复
+```
+
+---
+
+### 163 — qiaomu-ui-learn-dsh（UI 学习）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | joeseesun（★ 10） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 在 DSH 里逛 13,561 条设计参考、106 个交互标本，做审美测验并沉淀 Markdown 笔记 |
+
+**安装指令：**
+
+```
+安装 乔木 UI 学习插件。
+来源：https://github.com/joeseesun/qiaomu-ui-learn-dsh（★ 10）
+安装（预构建 tgz）：
+- 从 GitHub Releases 下载 qiaomu-ui-learn-dsh-0.1.0.tgz，校验后安装：
+  dsh plugin --profile web add /absolute/path/qiaomu-ui-learn-dsh-0.1.0.tgz
+  （把 web 换成 desktop 即可装进桌面 profile）
+
+安装后，获得 Obsidian 版乔木 UI 学习的完整迁移界面：
+- 13,561 条设计参考、184 个分类，支持搜索、收藏、最近浏览与点评筛选
+- 106 个交互标本的 UI 词典与风格图鉴，含双语解释、特征与实现提示词
+- 审美测验、收藏夹与设置，点评可保存为 Markdown 并接入 Home 入口
+```
+
+---
+
+### 164 — qiaomu-home-dsh（起点页）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | joeseesun（★ 10） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH 起点页：会话搜索、今日重点、待办、记录与专注计时，一打开就知道该做什么 |
+
+**安装指令：**
+
+```
+安装 乔木 Home 插件。
+来源：https://github.com/joeseesun/qiaomu-home-dsh（★ 10）
+安装（源码仓库，未发布 npm）：
+git clone https://github.com/joeseesun/qiaomu-home-dsh.git
+cd qiaomu-home-dsh && npm ci && npm run build && npm test
+
+然后在 DSH 插件管理工具中执行 install_bundle，target 指向克隆目录的绝对路径：
+plugin_manager install_bundle
+  target=/absolute/path/to/qiaomu-home-dsh
+（或手动把 qiaomu-home-dsh 加入 profile 的 dsh.profile.bundles 与 dependencies，
+  在该 profile 下 pnpm install，再重启 DSH）
+
+安装后，侧栏出现「乔木 Home」：问候、会话搜索、今日重点、待办、最近会话与常用入口；
+待办/重点/便签等数据保存在本地 localStorage（dsh-qiaomu-home:v1），不自动跨设备同步。
+```
+
+---
+
+### 165 — dsh-mcp-settings（MCP 设置）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | phoenixlucky |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 可选 Bundle：在 Web/桌面 profile 管理 MCP 服务器、Chrome 连接与记忆设置 |
+
+**安装指令：**
+
+```
+安装 dsh-mcp-settings Bundle。
+来源：https://github.com/phoenixlucky/dsh-mcp-settings
+安装：
+git clone https://github.com/phoenixlucky/dsh-mcp-settings.git
+cd ..（进入包含该目录的上级目录）
+pnpm dsh plugin --profile web add file:./dsh-mcp-settings
+装完重启 DSH（桌面端把 web 换成 desktop）。
+
+安装后，Settings 出现 MCP 管理入口：
+- 启停、编辑、连接受管 MCP 服务器
+- Chrome 连接与 VISION-LIAO 记忆为可选项，默认关闭，需手动开启
+包 id 为 @deepseek-ai/dsh-mcp-settings；官方 Web/Desktop profile 已内置时无需重复安装。
+```
+
+---
+
+### 166 — dsh-theme（主题包）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | phoenixlucky |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 可选主题 Bundle：六套壁纸主题 + 配色预览，含 VIP 金色光辉玻璃风格 |
+
+**安装指令：**
+
+```
+安装 dsh-theme Bundle。
+来源：https://github.com/phoenixlucky/dsh-theme
+安装（任选）：
+- Git 源：dsh plugin --profile web add git+https://github.com/phoenixlucky/dsh-theme.git#main
+- 本地目录：dsh plugin --profile web add <dsh-theme 绝对路径>
+（桌面端把 web 换成 desktop）
+
+安装后，Settings 主题页出现六套可选主题与配套壁纸、配色和预览：
+- WJ Dreamlight 六套主题；VIP Golden Radiance 增加金色点缀、玻璃质感与授权展示字体
+- 主题选择随 profile 保留，升级 DSH 不丢失
+包 id @deepseek-ai/dsh-theme，bundle 版本 1.0.8，适配 DSH 0.2.1-rc.3。
+```
+
+---
+
 ## 🚀 AI 一键安装（全文复制）
 
 > 将下方内容直接提供给 AI Agent，它会读取每个 Skill 的来源和安装指令自动完成安装：
@@ -3137,9 +3681,34 @@ MIT 开源。要求 Claude Code v2.1.260+、Node.js 18+（或 Bun）。
 123. findmy — Hermes Agent 官方内置，FindMy 定位设备/AirTag
 124. imessage — Hermes Agent 官方内置，macOS 收发 iMessage
 125. gif-search — Hermes Agent 官方内置，Tenor GIF 搜索下载
+
+【DeepSeek Harness 插件】
+145. DeepSeek Harness（DSH 本体）— deepseek-ai（⭐ 264k），万物皆插件的开源 Agent Harness
+146. dsh-market — dsh-market（⭐ 9.3k），DSH 可视化插件市场（一键安装/升级/主题）
+147. awesome-dsh-plugin — awesome-dsh-plugin（⭐ 21.1k），24 类 DSH 插件精选清单
+148. dsh-context — bowenliang123（⭐ 1.3k），上下文组成/演进/压缩可视化
+149. DSH-better-sidebar — omdsh-dev（⭐ 3.4k），可扩展侧边栏（文件/终端/Git/子代理）
+150. modlens — liustack（⭐ 3.9k），给纯文本模型外挂视觉（OCR/版面/语义）
+151. dsh-vision-router — ysr666（⭐ 1.1k），免费视觉链 + 像素级视觉工具箱
+152. modsearch — liustack（⭐ 433），免 Key 联网搜索，返回带引用 JSON
+153. dsh-agent-teams — NanmiCoder（⭐ 1.5k），多 Agent 团队协作与任务分派
+154. dsh-im — xmanrui（⭐ 1.2k），飞书/微信/钉钉/QQ/Slack/Telegram 等 9 个 IM 接入
+155. dsh-routing-suite — yjh051108（⭐ 7k），运行时注入器 + 任务感知推理路由
+156. dsh-univer-office — dream-num（⭐ 303），表格/文档/幻灯片 Office 工作区
+157. OpenViking — volcengine（⭐ 41k），跨会话记忆 + 知识 RAG + 自动召回
+158. WeKnora — Tencent（⭐ 35.7k），知识库检索与带引用作答
+159. DeepSeek 余额小鲸鱼 — MeteorNOX（⭐ 6.3k），余额/消耗监控挂件
+160. dsh-desktop — anywhere-labs（⭐ 33.6k），内置插件市场的 DSH 桌面端
+161. qiaomu-rss-dsh — joeseesun（★ 54），RSS 订阅 + 原生 AI 伴读
+162. qiaomu-reader-dsh — joeseesun（★ 5），EPUB/PDF/TXT 阅读、划线、听书与生词本
+163. qiaomu-ui-learn-dsh — joeseesun（★ 10），13561 设计参考 + 106 交互标本 + 审美测验
+164. qiaomu-home-dsh — joeseesun（★ 10），会话搜索/今日重点/待办/专注计时起点页
+165. dsh-mcp-settings — phoenixlucky，MCP 服务器管理 + Chrome 连接 + 记忆设置
+166. dsh-theme — phoenixlucky，六套主题壁纸与 VIP 金色玻璃风格
+
 请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。
 ```
 
 ---
 
-*本索引由 theKingSkills 项目维护。欢迎提交 Issue 和 PR 补充更多热门 Skill 的来源信息！*
+*本索引由 theAIKing 项目维护。欢迎提交 Issue 和 PR 补充更多热门 Skill 的来源信息！*

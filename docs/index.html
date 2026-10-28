@@ -3,40 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The King Skills — AI Agent Skill 索引</title>
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <title>The AI King — AI Agent Skill / 插件 / LSP 索引</title>
+  <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <h1>👑 The King Skills</h1>
-      <p class="subtitle">收集热门且好用的 AI Agent Skill，指导各种 AI Agent 快速一键安装配置</p>
-      <p class="meta">共收录 <strong id="totalCount">0</strong> 个 Skill，覆盖 <strong>13</strong> 大分类 · <span class="gold-hint">👑 金色卡片 = 本站原创精选，已置顶展示</span></p>
+      <h1>👑 The AI King</h1>
+      <p class="subtitle">收集热门且好用的 AI Agent Skill、插件与 LSP，指导各种 AI Agent 快速一键安装配置</p>
+      <p class="meta">共收录 <strong id="skillCount">0</strong> 个 Skill + <strong id="pluginCount">0</strong> 个插件（<strong id="totalCount">0</strong> 个条目），另有 <strong id="lspTotalCount">0</strong> 个 LSP · 覆盖 <strong id="categoryCount">0</strong> 大分类 · <span class="gold-hint">👑 金色卡片 = 本站原创精选，已置顶展示</span></p>
     </div>
   </header>
 
   <main class="container">
     <!-- Controls: Filter + Search -->
     <section class="controls">
-      <div class="filter-bar" id="filterBar">
-        <button class="filter-btn active" data-cat="all">🏠 全部</button>
-      </div>
-      <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="搜索技能名称或描述…" autocomplete="off">
+      <div class="filter-panel">
+        <div class="filter-panel-head">
+          <div class="filter-title">
+            <span class="filter-kicker">分类筛选</span>
+            <span class="filter-sub" id="filterSummary"></span>
+          </div>
+          <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="搜索技能名称或描述…" autocomplete="off">
+          </div>
+        </div>
+        <div class="filter-bar" id="filterBar" role="group" aria-label="技能分类筛选"></div>
       </div>
     </section>
 
     <!-- Stats bar -->
     <section class="stats-bar">
-      <span>已选 <strong id="selectedCount">0</strong> 个 Skill</span>
+      <span>已选 <strong id="selectedCount">0</strong> 项</span>
       <button class="btn btn-secondary" id="selectAllBtn">✅ 全选</button>
       <button class="btn btn-primary" id="generateBtn">📋 生成安装指令</button>
       <button class="btn btn-secondary" id="clearBtn">清除选择</button>
-    </section>
-
-    <!-- Skill cards grid -->
-    <section class="skills-grid" id="skillsGrid">
-      <!-- Rendered by JS -->
     </section>
 
     <!-- Install instructions output -->
@@ -47,41 +48,20 @@
       <button class="btn btn-primary" id="copyBtn">📄 复制到剪贴板</button>
     </section>
 
-    <!-- LSP recommendations -->
-    <section class="lsp-section" id="lspSection">
-      <div class="section-head">
-        <h2>🧩 语言服务器（LSP）推荐</h2>
-        <p class="section-sub">让 AI Agent 获得类型分析、跳转与重构能力 · 共 <strong id="lspTotalCount">0</strong> 个 · 可独立勾选并生成安装指令</p>
-      </div>
-
-      <section class="stats-bar">
-        <span>已选 <strong id="lspSelectedCount">0</strong> 个 LSP</span>
-        <button class="btn btn-secondary" id="lspSelectAllBtn">✅ 全选</button>
-        <button class="btn btn-primary" id="lspGenerateBtn">📋 生成安装指令</button>
-        <button class="btn btn-secondary" id="lspClearBtn">清除选择</button>
-      </section>
-
-      <section class="skills-grid" id="lspGrid">
-        <!-- Rendered by JS -->
-      </section>
-
-      <section class="output-section" id="lspOutputSection" style="display:none;">
-        <h2>📋 LSP 安装指令</h2>
-        <p class="output-hint">将下方内容直接提供给 AI Agent：</p>
-        <textarea id="lspOutputText" readonly rows="12"></textarea>
-        <button class="btn btn-primary" id="lspCopyBtn">📄 复制到剪贴板</button>
-      </section>
+    <!-- Skill cards grid -->
+    <section class="skills-grid" id="skillsGrid">
+      <!-- Rendered by JS -->
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>由 <a href="https://github.com/phoenixlucky/theKingSkills" target="_blank">theKingSkills</a> 项目维护 · 欢迎提交 Issue 和 PR</p>
+      <p>由 <a href="https://github.com/phoenixlucky/theAIKing" target="_blank">theAIKing</a> 项目维护 · 欢迎提交 Issue 和 PR</p>
     </div>
   </footer>
 
   <div class="toast" id="toast"></div>
 
-  <script src="js/script.js?v=628dede2"></script>
+  <script src="js/script.js?v=292178a7"></script>
 </body>
 </html>
