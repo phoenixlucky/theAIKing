@@ -1,5 +1,5 @@
 {
-  "total": 165,
+  "total": 167,
   "categories": [
     {
       "id": "basic",
@@ -1915,6 +1915,28 @@
       "source": "phoenixlucky",
       "stars": null,
       "updated": "2026-10-28"
+    },
+    {
+      "id": 167,
+      "name": "diagram-design",
+      "cat": "frontend",
+      "icon": "D",
+      "repo": "https://github.com/cathrynlavery/diagram-design",
+      "desc": "45 种编辑级图表：一句话让 Agent 产出单文件 HTML + SVG（架构/时序/ER/象限/桑基/甘特等），可拉取网站配色字体做品牌化",
+      "source": "cathrynlavery",
+      "stars": "⭐ 62.1k",
+      "updated": "2026-10-28"
+    },
+    {
+      "id": 168,
+      "name": "Spec Kit",
+      "cat": "dev",
+      "icon": "S",
+      "repo": "https://github.com/github/spec-kit",
+      "desc": "GitHub 官方 SDD 工具包：把「规格→计划→任务→实现→收敛」固化成 Agent 命令，也能修 Bug、评估想法、自定义流程",
+      "source": "GitHub 官方",
+      "stars": "⭐ 143.7k",
+      "updated": "2026-10-29"
     }
   ]
 }

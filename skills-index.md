@@ -1,8 +1,8 @@
 ---
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
-updated: "2026-10-28"
-total:   165
+updated: "2026-10-29"
+total:   167
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -614,6 +614,35 @@ CLI 命令为 graphify，PyPI 包名为 graphifyy（双 y）。
 
 ---
 
+### 168 — Spec Kit（规格驱动开发）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | GitHub 官方（⭐ 143.7k） |
+| **分类** | 开发与编码 |
+| **一句话** | GitHub 官方 SDD 工具包：把「规格→计划→任务→实现→收敛」固化成 Agent 命令，也能修 Bug、评估想法、自定义流程 |
+
+**安装指令：**
+
+```
+安装 Spec Kit（Spec-Driven Development）。
+来源：https://github.com/github/spec-kit（⭐ 143.7k）
+安装方式（需 Python 3.11+ 与 uv）：
+  uv tool install specify-cli
+  specify init my-project --integration copilot    # 换成你的 Agent：claude / codex / cursor / gemini 等
+  cd my-project
+然后在项目目录启动编码 Agent，按需选一条流程。
+
+安装后，Agent 获得三条独立入口 + 可组合机制：
+- Spec-Driven Development（内置）：/speckit-constitution → -specify → -plan → -tasks → -implement → -converge
+- Bug 修复（扩展）：specify extension add bug，再 /speckit-bug-assess / -bug-fix / -bug-test
+- 想法评估（扩展）：specify extension add assess，再 /speckit-assess-intake → -research → -define → -shape → -decide
+- 自定义：extension / preset / workflow / bundle / catalog，可套用团队规范或接入私有目录
+支持 GitHub Copilot / Claude Code / Codex / Cursor / Gemini CLI 等；MIT 开源。
+```
+
+---
+
 ## 🎨 前端与设计
 
 UI 设计规范、视觉风格与动效，告别 AI 味界面。
@@ -918,6 +947,37 @@ CLI：npx impeccable detect <目录|文件|URL>，可接 CI（--json）。Apache
 - 通过本地 Chrome MCP 实读 Figma 变量面板与 Design 面板 DOM，画布只能截图（无需 Figma 官方 MCP / access token）
 - 产出页面代码（CSS 变量 + 带出处注释的字面量）/ 改稿 diff / 映射表 / 细节表
 覆盖场景：贴 Figma 或网页版设计系统链接提 token、对齐配色/字号/圆角/层级/动效。MIT。
+```
+
+---
+
+### 167 — diagram-design（编辑级图表设计）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | cathrynlavery（⭐ 62.1k） |
+| **分类** | 前端与设计 |
+| **一句话** | 45 种编辑级图表：一句话让 Agent 产出单文件 HTML + SVG（架构/时序/ER/象限/桑基/甘特等），可拉取网站配色字体做品牌化 |
+
+**安装指令：**
+
+```
+安装 diagram-design Skill。
+来源：https://github.com/cathrynlavery/diagram-design（⭐ 62.1k）
+安装方式（任选）：
+- 通用 Agent Skills：npx skills add cathrynlavery/diagram-design
+- Claude Code 插件：/plugin marketplace add cathrynlavery/diagram-design
+  然后 /plugin install diagram-design@diagram-design
+（支持 Claude Code / Codex / Cursor / GitHub Copilot / Gemini CLI / Qoder / Factory Droid / Pi 等）
+
+安装后，Agent 按一句话需求选类型、说明方案，产出可直接双击打开的单文件 HTML + SVG：
+- 45 种类型 × 3 变体（minimal light / minimal dark / full-editorial）：
+  架构、时序、ER、状态机、泳道、象限、雷达、漏斗、桑基、Wardley、甘特、热力、UML、爆炸轴测等
+- Onboarding：说「onboard diagram-design to https://你的站点」，自动取色取字体写入 style-guide.md，
+  并做 WCAG AA 对比度校验；支持多客户 profile
+- 导入重绘 draw.io / Mermaid / Excalidraw，按 format/size/detail/audience 四档适配并出 fidelity ledger
+- 导出 SVG / PNG（PNG 需 Playwright）；可选动效（none/reveal/step/loop，尊重 reduced-motion）
+无阴影、1px 发丝线、4px 网格，默认零网络请求（system fonts）。MIT。
 ```
 
 ---
@@ -3547,6 +3607,7 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 120. codebase-inspection — Hermes Agent 官方内置，代码库体检
 131. Understand-Anything — Egonex-AI（⭐ 85.7k），把代码库变成交互式知识图谱
 132. Graphify — Graphify-Labs（⭐ 125k），代码/文档/PDF 转可查询知识图谱（本地 AST）
+168. Spec Kit — GitHub 官方（⭐ 143.7k），规格驱动开发（规格→计划→任务→实现→收敛）
 
 【前端与设计】
 5. Frontend Design — Anthropic 官方，去 AI 感设计
@@ -3563,6 +3624,7 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 134. Impeccable — pbakaus（⭐ 78.9k），AI 设计语言（24 命令 + 59 条检测规则）
 142. emilkowalski/skills — emilkowalski（⭐ 45k），Emil 设计工程技能（动画/手势/评审）
 144. figma-design-skill — phoenixlucky，提取 Claude UI kit 设计规范并出页面代码
+167. diagram-design — cathrynlavery（⭐ 62.1k），45 种编辑级图表（单文件 HTML + SVG，可品牌化）
 
 【内容创作】
 7. baoyu-skills — JimLiu（⭐ 25.6k），20 个视觉设计 Skill
