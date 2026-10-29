@@ -1,5 +1,5 @@
 {
-  "total": 169,
+  "total": 170,
   "categories": [
     {
       "id": "basic",
@@ -1958,6 +1958,17 @@
       "desc": "让 Claude 做出获奖级电影感落地页：40 个示例提示词 + 媒体架 + 55 条技法配方 + 截图自检修复循环",
       "source": "Motionsites-AI",
       "stars": "⭐ 903",
+      "updated": "2026-10-29"
+    },
+    {
+      "id": 171,
+      "name": "digital-human-koubo",
+      "cat": "video",
+      "icon": "D",
+      "repo": "https://github.com/andyhuo520/digital-human-koubo",
+      "desc": "一张照片 + 一句话，全自动产出数字人口播成片：脚本/唇形视频/修音/字幕/博主级包装，5 种剪辑风格 + 48 个包装组件",
+      "source": "andyhuo520",
+      "stars": "⭐ 1.3k",
       "updated": "2026-10-29"
     }
   ]

@@ -2,7 +2,7 @@
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
 updated: "2026-10-29"
-total:   169
+total:   170
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -1717,6 +1717,41 @@ OCR 提取能力已并入内置 pdf Skill（skills/productivity/pdf，含 pymupd
 - 两段无缝转场、多格分镜动画、多人物与对白音色、BGM 移除与声画同步
 - 人物身份/体型/服装/配饰锁定，提示词冲突诊断并按原结构改写
 只在本地产出策划/脚本/诊断/提示词文本，不调用付费接口、不消耗积分。
+```
+
+---
+
+### 171 — digital-human-koubo（AI 数字人口播）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | andyhuo520（⭐ 1.3k） |
+| **分类** | 视频制作 |
+| **一句话** | 一张照片 + 一句话，全自动产出数字人口播成片：脚本/唇形视频/修音/字幕/博主级包装，5 种剪辑风格 + 48 个包装组件 |
+
+**安装指令：**
+
+```
+安装 digital-human-koubo Skill。
+来源：https://github.com/andyhuo520/digital-human-koubo（⭐ 1.3k）
+安装方式：
+  git clone https://github.com/andyhuo520/digital-human-koubo.git
+  cd digital-human-koubo
+  mkdir -p ~/.claude/skills && cp -R skills/digital-human-koubo skills/finance-explainer ~/.claude/skills/
+（Codex 改为 ~/.codex/skills/；WorkBuddy / OpenClaw 等打包 zip 后在 Skills 页导入）
+另需：连接 Renoise MCP（浏览器登录，无需 API key）用于 AI 视频/图像生成；
+本地 ffmpeg、Python3 + numpy/Pillow、Node 18+、whisper.cpp；
+一键体检：bash ~/.claude/skills/digital-human-koubo/scripts/doctor.sh
+
+安装后，Agent 按 8 步流水线产出成片：
+- persona.json 锁定同一位数字人（脸/服装/音色/提示词模板），可换任意场景
+- 脚本切成 ≤15s 段，走 Grok Video 1.5 生成；生成前先报「段数·秒数·积分·余额」并等你确认
+- whisper 回检台词 + 每段抽 4 帧检查（识别烧进画面的字幕并重拍）
+- 音色统一（1/3 倍频程谱匹配 + 去齿音 + 共享房间混响 + 响度归一）
+- 5 种风格（财经/科技解说、9:16 口播带货、发布会拆解、分步教程、多主持多语言多场景）
+- 48 个包装组件（TextBehind 文字置于人物之后、EvidenceCard、Danmaku、PunchInHost 等）
+- Remotion 剪辑渲染，转场帧检查 + -14/-16 LUFS 响度
+需自备照片/音色授权；成片建议标注「内容由 AI 数字人演绎」。代码 MIT。
 ```
 
 ---
@@ -3727,6 +3762,7 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 99. seedance-2.0 — Emily2040（⭐ 7.1k），Seedance 2.0 完整导演制作管线
 128. huashu-art-motion — alchaincyf（⭐ 2.7k），35 种艺术风格 + 9 种解说语法的艺术动画
 130. seedance-2-5-video-director — liyue-aigc（★ 566），Seedance 2.5 视频导演（脚本/诊断/人物锁定）
+171. digital-human-koubo — andyhuo520（⭐ 1.3k），一张照片 + 一句话出数字人口播成片
 
 【商业与金融】
 10. Business Data Analyst — 商业分析与指标拆解
