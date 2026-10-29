@@ -1,5 +1,5 @@
 {
-  "total": 167,
+  "total": 169,
   "categories": [
     {
       "id": "basic",
@@ -1936,6 +1936,28 @@
       "desc": "GitHub 官方 SDD 工具包：把「规格→计划→任务→实现→收敛」固化成 Agent 命令，也能修 Bug、评估想法、自定义流程",
       "source": "GitHub 官方",
       "stars": "⭐ 143.7k",
+      "updated": "2026-10-29"
+    },
+    {
+      "id": 169,
+      "name": "ai-design-skills",
+      "cat": "frontend",
+      "icon": "A",
+      "repo": "https://github.com/elayadesign/ai-design-skills",
+      "desc": "面向 AI 编码工具的设计技能合集：从提问、结构、转化文案到完整视觉系统（字体/间距/圆角/动效）搭建落地页",
+      "source": "elayadesign",
+      "stars": "⭐ 11.2k",
+      "updated": "2026-10-29"
+    },
+    {
+      "id": 170,
+      "name": "MotionSites Web Builder",
+      "cat": "frontend",
+      "icon": "M",
+      "repo": "https://github.com/Motionsites-AI/claude-skill",
+      "desc": "让 Claude 做出获奖级电影感落地页：40 个示例提示词 + 媒体架 + 55 条技法配方 + 截图自检修复循环",
+      "source": "Motionsites-AI",
+      "stars": "⭐ 903",
       "updated": "2026-10-29"
     }
   ]

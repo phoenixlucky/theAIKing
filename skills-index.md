@@ -2,7 +2,7 @@
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
 updated: "2026-10-29"
-total:   167
+total:   169
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -978,6 +978,68 @@ CLI：npx impeccable detect <目录|文件|URL>，可接 CI（--json）。Apache
 - 导入重绘 draw.io / Mermaid / Excalidraw，按 format/size/detail/audience 四档适配并出 fidelity ledger
 - 导出 SVG / PNG（PNG 需 Playwright）；可选动效（none/reveal/step/loop，尊重 reduced-motion）
 无阴影、1px 发丝线、4px 网格，默认零网络请求（system fonts）。MIT。
+```
+
+---
+
+### 169 — ai-design-skills（落地页设计）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | elayadesign（⭐ 11.2k） |
+| **分类** | 前端与设计 |
+| **一句话** | 面向 AI 编码工具的设计技能合集：从提问、结构、转化文案到完整视觉系统（字体/间距/圆角/动效）搭建落地页 |
+
+**安装指令：**
+
+```
+安装 ai-design-skills。
+来源：https://github.com/elayadesign/ai-design-skills（⭐ 11.2k）
+安装方式（Claude Code）：
+  mkdir -p .claude/skills
+  git clone https://github.com/elayadesign/ai-design-skills.git /tmp/ai-design-skills
+  cp -r /tmp/ai-design-skills/skills/<skill-name> .claude/skills/
+（Cursor / Codex / Windsurf 等其他读 markdown 规则文件的工具同理，按各自 skills 目录放置）
+
+可用技能：
+- landing-page-design：从零搭落地页——需求访谈、页面结构、转化文案，
+  外加完整视觉系统（字体、间距、圆角、动效）
+设计值集中在 SKILL.md 底部一节，fork 后改那里即可整体换风格。
+兼容 Claude Code / Cursor / Codex / Windsurf 及 Claude.ai。MIT。
+```
+
+---
+
+### 170 — MotionSites Web Builder（电影级落地页）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | Motionsites-AI（⭐ 903） |
+| **分类** | 前端与设计 |
+| **一句话** | 让 Claude 做出获奖级电影感落地页：40 个示例提示词 + 媒体架 + 55 条技法配方 + 截图自检修复循环 |
+
+**安装指令：**
+
+```
+安装 MotionSites Web Builder Skill。
+来源：https://github.com/Motionsites-AI/claude-skill（⭐ 903）
+安装方式（任选）：
+- Claude Code 插件：
+  /plugin marketplace add Motionsites-AI/claude-skill
+  /plugin install motionsites-web-builder@motionsites
+- Claude Code 手动：把 plugins/motionsites-web-builder/skills/motionsites-web-builder 复制到 ~/.claude/skills/
+- Claude.ai / 桌面版：下载 motionsites-web-builder.zip，
+  Customize → Skills → + → Create skill → Upload a skill（需开启 Code execution）
+
+安装后，Claude 按「先写精确 build spec → 搭建 → 截图自检 → 修到达标」的流程出页面：
+- 40 个高赞示例提示词（每次读最接近的 2–3 个对齐细节与品味）
+- 媒体架：50+ 电影感 hero 视频、30 个透明 3D 抠图、29 张图片（带编号 contact sheet 供挑选）
+- 55+ 技法配方含可运行代码：无缝视频循环、液态玻璃、逐词模糊标题、鼠标刮擦视频、
+  聚光灯揭示、景深轮播、滚动叙事、Three.js 真实 3D
+- 带具体数值的设计品味规则（字阶、字距、间距、颜色、动效时长、文案）+ look-and-fix 评分表
+- Prompt 模式：改为输出适配 Lovable / Bolt / v0 / Cursor / Manus / Google AI Studio / Kimi 的提示词
+建议装 Playwright（pip install playwright && python -m playwright install chromium）以启用自检。
+指令与代码 MIT；示例提示词与媒体版权归 MotionSites（可在用本 skill 做的站点中使用）。
 ```
 
 ---
@@ -3625,6 +3687,8 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 142. emilkowalski/skills — emilkowalski（⭐ 45k），Emil 设计工程技能（动画/手势/评审）
 144. figma-design-skill — phoenixlucky，提取 Claude UI kit 设计规范并出页面代码
 167. diagram-design — cathrynlavery（⭐ 62.1k），45 种编辑级图表（单文件 HTML + SVG，可品牌化）
+169. ai-design-skills — elayadesign（⭐ 11.2k），从零搭落地页（结构/文案/视觉系统）
+170. MotionSites Web Builder — Motionsites-AI（⭐ 903），电影级落地页（示例/媒体架/技法配方）
 
 【内容创作】
 7. baoyu-skills — JimLiu（⭐ 25.6k），20 个视觉设计 Skill
