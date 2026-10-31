@@ -1,5 +1,5 @@
 {
-  "total": 170,
+  "total": 171,
   "categories": [
     {
       "id": "basic",
@@ -1970,6 +1970,17 @@
       "source": "andyhuo520",
       "stars": "⭐ 1.3k",
       "updated": "2026-10-29"
+    },
+    {
+      "id": 172,
+      "name": "agent-qa-result-triage",
+      "cat": "dev",
+      "icon": "A",
+      "repo": "https://github.com/vostride/agent-qa/tree/main/skills/agent-qa-result-triage",
+      "desc": "通过 agent-qa MCP 读取运行摘要、截图和日志，进行有证据可核验的应用测试失败分析",
+      "source": "vostride",
+      "stars": null,
+      "updated": "2026-10-31"
     }
   ]
 }
