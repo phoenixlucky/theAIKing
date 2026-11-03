@@ -1,5 +1,5 @@
 {
-  "total": 170,
+  "total": 172,
   "categories": [
     {
       "id": "basic",
@@ -1970,6 +1970,28 @@
       "source": "andyhuo520",
       "stars": "⭐ 1.3k",
       "updated": "2026-10-29"
+    },
+    {
+      "id": 172,
+      "name": "dsh-character-presets",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/phoenixlucky/dsh-character-presets",
+      "desc": "DSH Web 可选角色预设包：猫娘理财助手 + 八位「白月光」人物预设，在 Settings → Agent presets 一键切换",
+      "source": "phoenixlucky",
+      "stars": null,
+      "updated": "2026-11-03"
+    },
+    {
+      "id": 173,
+      "name": "dsh-plugin-manager-wj",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/phoenixlucky/dsh-plugin-manager-wj",
+      "desc": "DSH Web 插件管理面板：在 Settings → Plugins 查看插件状态/健康检查/配置来源/工具与 MCP 运行时注册，并可启停插件",
+      "source": "phoenixlucky",
+      "stars": null,
+      "updated": "2026-11-03"
     }
   ]
 }

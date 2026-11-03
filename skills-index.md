@@ -2,7 +2,7 @@
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
 updated: "2026-10-29"
-total:   170
+total:   172
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -3662,6 +3662,63 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 
 ---
 
+### 172 — dsh-character-presets（角色预设）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | phoenixlucky |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH Web 可选角色预设包：猫娘理财助手 + 八位「白月光」人物预设，在 Settings → Agent presets 一键切换 |
+
+**安装指令：**
+
+```
+安装 dsh-character-presets Bundle。
+来源：https://github.com/phoenixlucky/dsh-character-presets
+安装方式（任选）：
+- Git 源：dsh plugin --profile web add git+https://github.com/phoenixlucky/dsh-character-presets.git#main
+- 本地目录：dsh plugin --profile web add <仓库路径>
+装完重开 dsh web（或桌面端）。
+
+安装后，Settings → Agent presets 可选：
+- 猫娘理财助手（maoniang-search）：复用 Web profile 已有的 Chrome MCP 做公开市场调研，
+  配合只读 new-gold 工具查看持仓（这两个连接需另行配置，预设不代装）
+- 八位白月光角色：西施、王昭君、貂蝉、杨玉环、潘安、兰陵王、卫玠、宋玉
+  （改编自 phoenixlucky/moon-lovers-skill）
+预设只加人设与研究指令，不新增工具；移除 bundle 即移除预设声明。
+```
+
+---
+
+### 173 — dsh-plugin-manager-wj（插件管理面板）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | phoenixlucky |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH Web 插件管理面板：在 Settings → Plugins 查看插件状态/健康检查/配置来源/工具与 MCP 运行时注册，并可启停插件 |
+
+**安装指令：**
+
+```
+安装 dsh-plugin-manager-wj Bundle。
+来源：https://github.com/phoenixlucky/dsh-plugin-manager-wj
+安装方式：
+1. 把包放到 Harness 包解析器可见的位置（本地 checkout 或已发布包）
+2. 把 dsh-plugin-manager-wj bundle 加入目标 Web profile
+   （自定义包：dsh plugin --profile web add <仓库路径>）
+3. 打开 Settings → Plugins → Plugin management
+
+安装后获得管理视图：
+- 插件状态与健康检查、配置来源（只显示层级名与脱敏标识，不显示值或文件路径）
+- 工具 / MCP 运行时注册查看；可启停可由当前 profile 寻址的插件
+- 重复注册修复预览：低风险一键执行，高风险先展示确切影响并要求显式确认
+- 通过 Host 的 configForms 编辑非密钥标量设置；密钥字段不出现在编辑器里
+不安装/卸载包、不改凭据、不执行任意命令。需较新的 Harness Host。MIT。
+```
+
+---
+
 ## 🚀 AI 一键安装（全文复制）
 
 > 将下方内容直接提供给 AI Agent，它会读取每个 Skill 的来源和安装指令自动完成安装：
@@ -3867,6 +3924,8 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 164. qiaomu-home-dsh — joeseesun（★ 10），会话搜索/今日重点/待办/专注计时起点页
 165. dsh-mcp-settings — phoenixlucky，MCP 服务器管理 + Chrome 连接 + 记忆设置
 166. dsh-theme — phoenixlucky，六套主题壁纸与 VIP 金色玻璃风格
+172. dsh-character-presets — phoenixlucky，DSH 角色预设（猫娘理财 + 八位白月光）
+173. dsh-plugin-manager-wj — phoenixlucky，DSH 插件管理面板（状态/健康/配置来源/启停）
 
 请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。
 ```
