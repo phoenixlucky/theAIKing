@@ -2,7 +2,7 @@
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
 updated: "2026-10-29"
-total:   172
+total:   174
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -3719,6 +3719,71 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 
 ---
 
+### 174 — dsh-recall-plugin（消息撤回）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | limbo947（⭐ 52） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 任意消息下点「↶ 撤回」：工作区文件与对话历史一起回到该消息发送前；也可「✎ 编辑」就地改完重发，并翻页切换同句的多个版本 |
+
+**安装指令：**
+
+```
+安装 dsh-recall-plugin。
+来源：https://github.com/limbo947/dsh-recall-plugin（⭐ 52）
+安装方式（任选）：
+- dsh plugin --profile web add dsh-recall-plugin      # Web UI
+- dsh plugin --profile desktop add dsh-recall-plugin  # 桌面端
+- git 直装：dsh plugin --profile web add github:limbo947/dsh-recall-plugin
+装完重启 DSH 进程，再硬刷新页面（Ctrl+Shift+R）。
+
+前置：git CLI（不在 PATH 时撤回按钮不出现）、Node.js ≥ 20、DSH 0.1.2-alpha.1 ~ 0.2.2-alpha.2
+
+安装后：
+- 悬停消息出现「↶ 撤回」：发送时已把工作区快照进独立影子 git 仓库（不碰项目自身 git），
+  撤回时恢复文件 + 经官方 sessions.fork 切回该消息之前的对话
+- 确认面板可选「回退文件与对话」或「仅撤回对话」（文件一个字节不动）
+- 撤回后原文与附件自动回填输入框；「✎ 编辑」在该消息处就地改完直接重发
+- 版本翻页 ‹ X/N › 在同一句的多个版本间切换
+- 设置页可视化配置排除表、单文件/单工作区上限、gc 与保留天数，附三级快照管理树
+支持 Windows（PowerShell + git）/ Linux / macOS（bash + git）。MIT。
+```
+
+---
+
+### 175 — dsh-pet（桌面宠物）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | PC2005-cloud（⭐ 5.4k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 住在 DSH 里的透明动画桌宠：100+ 段动画、多开、拖拽物理、工作状态/余额联动，还内置 AI 素材链可自造宠物 |
+
+**安装指令：**
+
+```
+安装 dsh-pet。
+来源：https://github.com/PC2005-cloud/dsh-pet（⭐ 5.4k）
+安装方式（任选）：
+- 图形化：桌面应用「插件管理」页安装框填 dsh-pet
+- 命令行：dsh plugin --profile web add dsh-pet   # 桌面端把 web 换成 desktop
+- 不装 DSH：Release 下 dsh-pet-win-x64.zip，解压双击 dsh-pet.exe（独立模式）
+装完重开 DSH 生效，宠物默认落在界面右上角。
+
+安装后：
+- 100+ 段透明动画（待机/漫游/玩耍/吃饭/节令/点击回应/拖拽/工作状态/睡觉…），可多开、各调大小位置
+- 三种形态：浏览器 overlay、桌面透明置顶窗、不依赖 DSH 的独立模式
+- 交互物理：点击回应、拖拽甩抛、双击弹弓、宠物互撞；触屏与摇一摇/倾斜重力
+- 会话联动：六档工作状态动画、余额分档播动画 + 头顶气泡、待办提醒、系统通知
+- 碎碎念与对话、语音说/听、右键菜单
+- 对外开放 HTTP（/dsh-pet-7340）与 Cordis 服务，供其他插件驱动或读状态
+- 附 prompts/ 提示词配方 + 素材生成链，可用 AI 视频从零做自己的 pet pack
+代码 MIT；素材禁商用，形象为社区二创「大肥鱼」（CC BY-NC-SA 4.0，非官方）。
+```
+
+---
+
 ## 🚀 AI 一键安装（全文复制）
 
 > 将下方内容直接提供给 AI Agent，它会读取每个 Skill 的来源和安装指令自动完成安装：
@@ -3926,6 +3991,8 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 166. dsh-theme — phoenixlucky，六套主题壁纸与 VIP 金色玻璃风格
 172. dsh-character-presets — phoenixlucky，DSH 角色预设（猫娘理财 + 八位白月光）
 173. dsh-plugin-manager-wj — phoenixlucky，DSH 插件管理面板（状态/健康/配置来源/启停）
+174. dsh-recall-plugin — limbo947（⭐ 52），消息撤回（文件 + 对话一起回到发送前）
+175. dsh-pet — PC2005-cloud（⭐ 5.4k），透明动画桌面宠物（100+ 动画/多开/DIY）
 
 请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。
 ```
