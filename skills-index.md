@@ -1,8 +1,8 @@
 ---
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
-updated: "2026-10-29"
-total:   174
+updated: "2026-11-04"
+total:   175
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -3784,6 +3784,39 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 
 ---
 
+### 176 — dsh-archive-manager（归档会话管理）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | MichengAI（⭐ 283） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH 归档会话管理器：960px 居中面板统一搜索/收藏/预览/恢复/清理已归档与未归档会话，含空闲清理与孤儿子代理回收 |
+
+**安装指令：**
+
+```
+安装 dsh-archive-manager。
+来源：https://github.com/MichengAI/dsh-archive-manager（⭐ 283）
+安装方式（推荐 npm 官方源）：
+  dsh plugin --profile web add @michengai/dsh-archive-manager@latest --registry=https://registry.npmjs.org/
+装完重启 DSH Web，再刷新页面（或 Ctrl+Shift+R），打开 Settings → Archived sessions。
+也可交给 Agent：把「用 npm 官方源把 @michengai/dsh-archive-manager 最新版装进我的 DSH web profile」
+发给能执行终端命令的 Agent。
+
+要求：DeepSeek Harness 0.2.x（>=0.2.0-rc.1 <0.3.0-0）；0.1.x 宿主请装 1.0.20。
+
+安装后：
+- 双视图（Archived / Unarchived）+ 侧边栏常驻入口，960px 居中工作区，40px 紧凑行
+- 标题 + 正文全文搜索、项目/收藏/日期筛选与排序；命中高亮，Quick preview 不恢复即看上下文
+- 归档/恢复：单个、整个工作区、跨项目批量；星标收藏；空闲会话清理（自动保护运行中/收藏/待确认）
+- 侧边栏整行右键菜单：复制文件夹路径、打开文件夹、归档、跨工作区迁移（级联子菜单）
+- 永久删除（不可撤销）、孤儿子代理检测与磁盘占用回收
+- 可关闭的在线更新开关（支持宿主级锁定），兼容前缀剥离反向代理部署
+Apache-2.0；社区维护，非 DeepSeek 官方产品。
+```
+
+---
+
 ## 🚀 AI 一键安装（全文复制）
 
 > 将下方内容直接提供给 AI Agent，它会读取每个 Skill 的来源和安装指令自动完成安装：
@@ -3993,6 +4026,7 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 173. dsh-plugin-manager-wj — phoenixlucky，DSH 插件管理面板（状态/健康/配置来源/启停）
 174. dsh-recall-plugin — limbo947（⭐ 52），消息撤回（文件 + 对话一起回到发送前）
 175. dsh-pet — PC2005-cloud（⭐ 5.4k），透明动画桌面宠物（100+ 动画/多开/DIY）
+176. dsh-archive-manager — MichengAI（⭐ 283），归档会话管理（搜索/恢复/清理/永久删除）
 
 请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。
 ```

@@ -1,5 +1,5 @@
 {
-  "total": 174,
+  "total": 175,
   "categories": [
     {
       "id": "basic",
@@ -2014,6 +2014,17 @@
       "source": "PC2005-cloud",
       "stars": "⭐ 5.4k",
       "updated": "2026-11-03"
+    },
+    {
+      "id": 176,
+      "name": "dsh-archive-manager",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/MichengAI/dsh-archive-manager",
+      "desc": "DSH 归档会话管理器：960px 居中面板统一搜索/收藏/预览/恢复/清理已归档与未归档会话，含空闲清理与孤儿子代理回收",
+      "source": "MichengAI",
+      "stars": "⭐ 283",
+      "updated": "2026-11-04"
     }
   ]
 }
