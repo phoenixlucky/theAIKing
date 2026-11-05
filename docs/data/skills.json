@@ -1,5 +1,5 @@
 {
-  "total": 175,
+  "total": 178,
   "categories": [
     {
       "id": "basic",
@@ -2025,6 +2025,39 @@
       "source": "MichengAI",
       "stars": "⭐ 283",
       "updated": "2026-11-04"
+    },
+    {
+      "id": 177,
+      "name": "dsh-Go",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/ccch1mneyyy/dsh-Go",
+      "desc": "DeepSeek Harness 的 Android 客户端：手机本机装 Linux 环境直接跑 DSH，也能远程遥控电脑/服务器上的 DSH",
+      "source": "ccch1mneyyy",
+      "stars": "⭐ 8.4k",
+      "updated": "2026-11-04"
+    },
+    {
+      "id": 178,
+      "name": "dsh-session-norms",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": null,
+      "desc": "把当前 Session 的每一轮、每条消息和工具调用渲染成统一、可复制的规范化 transcript，便于归档与复盘",
+      "source": "npm @tinyforge（ethanwilkins 发布）",
+      "stars": null,
+      "updated": "2026-11-05"
+    },
+    {
+      "id": 179,
+      "name": "dsh-open-market",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/polang233/dsh-plugin-index",
+      "desc": "DSH 开放插件市场：接入 dshopen.org 社区索引，分类搜索、今日推荐、收藏分组、版本切换与更新，附可选马卡龙主题",
+      "source": "npm dsh-open-market（polang233）",
+      "stars": null,
+      "updated": "2026-11-05"
     }
   ]
 }
