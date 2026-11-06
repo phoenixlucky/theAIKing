@@ -1,8 +1,8 @@
 ---
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
-updated: "2026-11-04"
-total:   178
+updated: "2026-11-07"
+total:   179
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -640,6 +640,29 @@ CLI 命令为 graphify，PyPI 包名为 graphifyy（双 y）。
 - 自定义：extension / preset / workflow / bundle / catalog，可套用团队规范或接入私有目录
 支持 GitHub Copilot / Claude Code / Codex / Cursor / Gemini CLI 等；MIT 开源。
 ```
+
+---
+
+### 180 — agent-qa-result-triage（应用测试失败分析）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | vostride |
+| **分类** | 开发与编码 |
+| **一句话** | 通过 agent-qa MCP 读取运行摘要、截图和日志，进行有证据可核验的应用测试失败分析 |
+
+**安装指令：**
+
+```
+安装 agent-qa-result-triage Skill。
+来源：https://github.com/vostride/agent-qa/tree/main/skills/agent-qa-result-triage
+按当前 Agent 的 Skill 安装方式安装此目录，保留 SKILL.md 和 references/。
+安装后，提供失败运行的 runId，读取摘要和证据，输出失败类别、置信度、依据及下一步。
+需要修复并复测时，可配合同仓库的 agent-qa-debug-fix Skill。
+运行依赖：Node.js 24+，并按官方 MCP 文档配置 agent-qa。
+```
+
+[agent-qa 官网](https://vostride.com) · [MCP 配置](https://vostride.com/docs/agent-qa/mcp)。agent-qa 支持 memidex 持久记忆和经验证的自我改进；运行时许可证为 FSL-1.1-ALv2，模型与外部服务费用随配置和用量变化。
 
 ---
 
@@ -3954,6 +3977,8 @@ GPL-3.0；社区项目，非 DeepSeek 官方。当前版本 0.3.2。
 131. Understand-Anything — Egonex-AI（⭐ 85.7k），把代码库变成交互式知识图谱
 132. Graphify — Graphify-Labs（⭐ 125k），代码/文档/PDF 转可查询知识图谱（本地 AST）
 168. Spec Kit — GitHub 官方（⭐ 143.7k），规格驱动开发（规格→计划→任务→实现→收敛）
+
+180. agent-qa-result-triage — vostride，基于运行摘要、截图和日志分析应用测试失败
 
 【前端与设计】
 5. Frontend Design — Anthropic 官方，去 AI 感设计

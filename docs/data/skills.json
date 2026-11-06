@@ -1,5 +1,5 @@
 {
-  "total": 178,
+  "total": 179,
   "categories": [
     {
       "id": "basic",
@@ -2058,6 +2058,17 @@
       "source": "npm dsh-open-market（polang233）",
       "stars": null,
       "updated": "2026-11-05"
+    },
+    {
+      "id": 180,
+      "name": "agent-qa-result-triage",
+      "cat": "dev",
+      "icon": "A",
+      "repo": "https://github.com/vostride/agent-qa/tree/main/skills/agent-qa-result-triage",
+      "desc": "通过 agent-qa MCP 读取运行摘要、截图和日志，进行有证据可核验的应用测试失败分析",
+      "source": "vostride",
+      "stars": null,
+      "updated": "2026-11-06"
     }
   ]
 }
