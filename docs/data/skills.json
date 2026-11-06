@@ -1,5 +1,5 @@
 {
-  "total": 171,
+  "total": 179,
   "categories": [
     {
       "id": "basic",
@@ -1973,6 +1973,94 @@
     },
     {
       "id": 172,
+      "name": "dsh-character-presets",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/phoenixlucky/dsh-character-presets",
+      "desc": "DSH Web 可选角色预设包：猫娘理财助手 + 八位「白月光」人物预设，在 Settings → Agent presets 一键切换",
+      "source": "phoenixlucky",
+      "stars": null,
+      "updated": "2026-11-03"
+    },
+    {
+      "id": 173,
+      "name": "dsh-plugin-manager-wj",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/phoenixlucky/dsh-plugin-manager-wj",
+      "desc": "DSH Web 插件管理面板：在 Settings → Plugins 查看插件状态/健康检查/配置来源/工具与 MCP 运行时注册，并可启停插件",
+      "source": "phoenixlucky",
+      "stars": null,
+      "updated": "2026-11-03"
+    },
+    {
+      "id": 174,
+      "name": "dsh-recall-plugin",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/limbo947/dsh-recall-plugin",
+      "desc": "任意消息下点「↶ 撤回」：工作区文件与对话历史一起回到该消息发送前；也可「✎ 编辑」就地改完重发，并翻页切换同句的多个版本",
+      "source": "limbo947",
+      "stars": "⭐ 52",
+      "updated": "2026-11-03"
+    },
+    {
+      "id": 175,
+      "name": "dsh-pet",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/PC2005-cloud/dsh-pet",
+      "desc": "住在 DSH 里的透明动画桌宠：100+ 段动画、多开、拖拽物理、工作状态/余额联动，还内置 AI 素材链可自造宠物",
+      "source": "PC2005-cloud",
+      "stars": "⭐ 5.4k",
+      "updated": "2026-11-03"
+    },
+    {
+      "id": 176,
+      "name": "dsh-archive-manager",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/MichengAI/dsh-archive-manager",
+      "desc": "DSH 归档会话管理器：960px 居中面板统一搜索/收藏/预览/恢复/清理已归档与未归档会话，含空闲清理与孤儿子代理回收",
+      "source": "MichengAI",
+      "stars": "⭐ 283",
+      "updated": "2026-11-04"
+    },
+    {
+      "id": 177,
+      "name": "dsh-Go",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/ccch1mneyyy/dsh-Go",
+      "desc": "DeepSeek Harness 的 Android 客户端：手机本机装 Linux 环境直接跑 DSH，也能远程遥控电脑/服务器上的 DSH",
+      "source": "ccch1mneyyy",
+      "stars": "⭐ 8.4k",
+      "updated": "2026-11-04"
+    },
+    {
+      "id": 178,
+      "name": "dsh-session-norms",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": null,
+      "desc": "把当前 Session 的每一轮、每条消息和工具调用渲染成统一、可复制的规范化 transcript，便于归档与复盘",
+      "source": "npm @tinyforge（ethanwilkins 发布）",
+      "stars": null,
+      "updated": "2026-11-05"
+    },
+    {
+      "id": 179,
+      "name": "dsh-open-market",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/polang233/dsh-plugin-index",
+      "desc": "DSH 开放插件市场：接入 dshopen.org 社区索引，分类搜索、今日推荐、收藏分组、版本切换与更新，附可选马卡龙主题",
+      "source": "npm dsh-open-market（polang233）",
+      "stars": null,
+      "updated": "2026-11-05"
+    },
+    {
+      "id": 180,
       "name": "agent-qa-result-triage",
       "cat": "dev",
       "icon": "A",
@@ -1980,7 +2068,7 @@
       "desc": "通过 agent-qa MCP 读取运行摘要、截图和日志，进行有证据可核验的应用测试失败分析",
       "source": "vostride",
       "stars": null,
-      "updated": "2026-10-31"
+      "updated": "2026-11-06"
     }
   ]
 }

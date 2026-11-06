@@ -1,8 +1,8 @@
 ---
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
-updated: "2026-10-31"
-total:   171
+updated: "2026-11-07"
+total:   179
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -643,7 +643,7 @@ CLI 命令为 graphify，PyPI 包名为 graphifyy（双 y）。
 
 ---
 
-### 172 — agent-qa-result-triage（应用测试失败分析）
+### 180 — agent-qa-result-triage（应用测试失败分析）
 
 | 字段 | 值 |
 |------|-----|
@@ -3645,10 +3645,12 @@ plugin_manager install_bundle
 ```
 安装 dsh-mcp-settings Bundle。
 来源：https://github.com/phoenixlucky/dsh-mcp-settings
-安装：
-git clone https://github.com/phoenixlucky/dsh-mcp-settings.git
-cd ..（进入包含该目录的上级目录）
-pnpm dsh plugin --profile web add file:./dsh-mcp-settings
+npm：https://www.npmjs.com/package/@tinyforge/dsh-mcp-settings
+安装（任选）：
+- npm（推荐）：dsh plugin --profile web add @tinyforge/dsh-mcp-settings
+- 本地：git clone https://github.com/phoenixlucky/dsh-mcp-settings.git
+  cd ..（进入包含该目录的上级目录）
+  pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 装完重启 DSH（桌面端把 web 换成 desktop）。
 
 安装后，Settings 出现 MCP 管理入口：
@@ -3672,7 +3674,9 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 ```
 安装 dsh-theme Bundle。
 来源：https://github.com/phoenixlucky/dsh-theme
+npm：https://www.npmjs.com/package/@tinyforge/dsh-theme
 安装（任选）：
+- npm（推荐）：dsh plugin --profile web add @tinyforge/dsh-theme
 - Git 源：dsh plugin --profile web add git+https://github.com/phoenixlucky/dsh-theme.git#main
 - 本地目录：dsh plugin --profile web add <dsh-theme 绝对路径>
 （桌面端把 web 换成 desktop）
@@ -3681,6 +3685,251 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 - WJ Dreamlight 六套主题；VIP Golden Radiance 增加金色点缀、玻璃质感与授权展示字体
 - 主题选择随 profile 保留，升级 DSH 不丢失
 包 id @deepseek-ai/dsh-theme，bundle 版本 1.0.8，适配 DSH 0.2.1-rc.3。
+```
+
+---
+
+### 172 — dsh-character-presets（角色预设）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | phoenixlucky |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH Web 可选角色预设包：猫娘理财助手 + 八位「白月光」人物预设，在 Settings → Agent presets 一键切换 |
+
+**安装指令：**
+
+```
+安装 dsh-character-presets Bundle。
+来源：https://github.com/phoenixlucky/dsh-character-presets
+npm：https://www.npmjs.com/package/@tinyforge/dsh-character-presets
+安装方式（任选）：
+- npm（推荐）：dsh plugin --profile web add @tinyforge/dsh-character-presets
+- Git 源：dsh plugin --profile web add git+https://github.com/phoenixlucky/dsh-character-presets.git#main
+- 本地目录：dsh plugin --profile web add <仓库路径>
+装完重开 dsh web（或桌面端）。
+
+安装后，Settings → Agent presets 可选：
+- 猫娘理财助手（maoniang-search）：复用 Web profile 已有的 Chrome MCP 做公开市场调研，
+  配合只读 new-gold 工具查看持仓（这两个连接需另行配置，预设不代装）
+- 八位白月光角色：西施、王昭君、貂蝉、杨玉环、潘安、兰陵王、卫玠、宋玉
+  （改编自 phoenixlucky/moon-lovers-skill）
+预设只加人设与研究指令，不新增工具；移除 bundle 即移除预设声明。
+```
+
+---
+
+### 173 — dsh-plugin-manager-wj（插件管理面板）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | phoenixlucky |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH Web 插件管理面板：在 Settings → Plugins 查看插件状态/健康检查/配置来源/工具与 MCP 运行时注册，并可启停插件 |
+
+**安装指令：**
+
+```
+安装 dsh-plugin-manager-wj Bundle。
+来源：https://github.com/phoenixlucky/dsh-plugin-manager-wj
+npm：https://www.npmjs.com/package/@tinyforge/dsh-plugin-manager-wj
+安装方式（任选）：
+- npm（推荐）：dsh plugin --profile web add @tinyforge/dsh-plugin-manager-wj
+- 本地：把包放到 Harness 包解析器可见的位置，再 dsh plugin --profile web add <仓库路径>
+装完重启 DSH，打开 Settings → Plugins → Plugin management。
+
+安装后获得管理视图：
+- 插件状态与健康检查、配置来源（只显示层级名与脱敏标识，不显示值或文件路径）
+- 工具 / MCP 运行时注册查看；可启停可由当前 profile 寻址的插件
+- 重复注册修复预览：低风险一键执行，高风险先展示确切影响并要求显式确认
+- 通过 Host 的 configForms 编辑非密钥标量设置；密钥字段不出现在编辑器里
+不安装/卸载包、不改凭据、不执行任意命令。需较新的 Harness Host。MIT。
+```
+
+---
+
+### 174 — dsh-recall-plugin（消息撤回）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | limbo947（⭐ 52） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 任意消息下点「↶ 撤回」：工作区文件与对话历史一起回到该消息发送前；也可「✎ 编辑」就地改完重发，并翻页切换同句的多个版本 |
+
+**安装指令：**
+
+```
+安装 dsh-recall-plugin。
+来源：https://github.com/limbo947/dsh-recall-plugin（⭐ 52）
+安装方式（任选）：
+- dsh plugin --profile web add dsh-recall-plugin      # Web UI
+- dsh plugin --profile desktop add dsh-recall-plugin  # 桌面端
+- git 直装：dsh plugin --profile web add github:limbo947/dsh-recall-plugin
+装完重启 DSH 进程，再硬刷新页面（Ctrl+Shift+R）。
+
+前置：git CLI（不在 PATH 时撤回按钮不出现）、Node.js ≥ 20、DSH 0.1.2-alpha.1 ~ 0.2.2-alpha.2
+
+安装后：
+- 悬停消息出现「↶ 撤回」：发送时已把工作区快照进独立影子 git 仓库（不碰项目自身 git），
+  撤回时恢复文件 + 经官方 sessions.fork 切回该消息之前的对话
+- 确认面板可选「回退文件与对话」或「仅撤回对话」（文件一个字节不动）
+- 撤回后原文与附件自动回填输入框；「✎ 编辑」在该消息处就地改完直接重发
+- 版本翻页 ‹ X/N › 在同一句的多个版本间切换
+- 设置页可视化配置排除表、单文件/单工作区上限、gc 与保留天数，附三级快照管理树
+支持 Windows（PowerShell + git）/ Linux / macOS（bash + git）。MIT。
+```
+
+---
+
+### 175 — dsh-pet（桌面宠物）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | PC2005-cloud（⭐ 5.4k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 住在 DSH 里的透明动画桌宠：100+ 段动画、多开、拖拽物理、工作状态/余额联动，还内置 AI 素材链可自造宠物 |
+
+**安装指令：**
+
+```
+安装 dsh-pet。
+来源：https://github.com/PC2005-cloud/dsh-pet（⭐ 5.4k）
+安装方式（任选）：
+- 图形化：桌面应用「插件管理」页安装框填 dsh-pet
+- 命令行：dsh plugin --profile web add dsh-pet   # 桌面端把 web 换成 desktop
+- 不装 DSH：Release 下 dsh-pet-win-x64.zip，解压双击 dsh-pet.exe（独立模式）
+装完重开 DSH 生效，宠物默认落在界面右上角。
+
+安装后：
+- 100+ 段透明动画（待机/漫游/玩耍/吃饭/节令/点击回应/拖拽/工作状态/睡觉…），可多开、各调大小位置
+- 三种形态：浏览器 overlay、桌面透明置顶窗、不依赖 DSH 的独立模式
+- 交互物理：点击回应、拖拽甩抛、双击弹弓、宠物互撞；触屏与摇一摇/倾斜重力
+- 会话联动：六档工作状态动画、余额分档播动画 + 头顶气泡、待办提醒、系统通知
+- 碎碎念与对话、语音说/听、右键菜单
+- 对外开放 HTTP（/dsh-pet-7340）与 Cordis 服务，供其他插件驱动或读状态
+- 附 prompts/ 提示词配方 + 素材生成链，可用 AI 视频从零做自己的 pet pack
+代码 MIT；素材禁商用，形象为社区二创「大肥鱼」（CC BY-NC-SA 4.0，非官方）。
+```
+
+---
+
+### 176 — dsh-archive-manager（归档会话管理）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | MichengAI（⭐ 283） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH 归档会话管理器：960px 居中面板统一搜索/收藏/预览/恢复/清理已归档与未归档会话，含空闲清理与孤儿子代理回收 |
+
+**安装指令：**
+
+```
+安装 dsh-archive-manager。
+来源：https://github.com/MichengAI/dsh-archive-manager（⭐ 283）
+安装方式（推荐 npm 官方源）：
+  dsh plugin --profile web add @michengai/dsh-archive-manager@latest --registry=https://registry.npmjs.org/
+装完重启 DSH Web，再刷新页面（或 Ctrl+Shift+R），打开 Settings → Archived sessions。
+也可交给 Agent：把「用 npm 官方源把 @michengai/dsh-archive-manager 最新版装进我的 DSH web profile」
+发给能执行终端命令的 Agent。
+
+要求：DeepSeek Harness 0.2.x（>=0.2.0-rc.1 <0.3.0-0）；0.1.x 宿主请装 1.0.20。
+
+安装后：
+- 双视图（Archived / Unarchived）+ 侧边栏常驻入口，960px 居中工作区，40px 紧凑行
+- 标题 + 正文全文搜索、项目/收藏/日期筛选与排序；命中高亮，Quick preview 不恢复即看上下文
+- 归档/恢复：单个、整个工作区、跨项目批量；星标收藏；空闲会话清理（自动保护运行中/收藏/待确认）
+- 侧边栏整行右键菜单：复制文件夹路径、打开文件夹、归档、跨工作区迁移（级联子菜单）
+- 永久删除（不可撤销）、孤儿子代理检测与磁盘占用回收
+- 可关闭的在线更新开关（支持宿主级锁定），兼容前缀剥离反向代理部署
+Apache-2.0；社区维护，非 DeepSeek 官方产品。
+```
+
+---
+
+### 177 — dsh-Go（DSH 安卓客户端）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | ccch1mneyyy（⭐ 8.4k） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DeepSeek Harness 的 Android 客户端：手机本机装 Linux 环境直接跑 DSH，也能远程遥控电脑/服务器上的 DSH |
+
+**安装指令：**
+
+```
+安装 dsh-Go（Android App）。
+来源：https://github.com/ccch1mneyyy/dsh-Go（⭐ 8.4k）
+安装方式：从 GitHub Releases 或官网 https://go.dshtui.com/download 下载 APK，
+常见 64 位手机选 arm64 包（x86_64/模拟器用 x64 包；无 32 位 ARM 构建）。
+要求 Android 8.0（API 26）及以上；装上签名不同的旧测试包需先卸载。
+首次启动：选「本机安装运行环境」或「连接远程主机」，再配置模型与凭据。
+
+安装后：
+- 本机运行：App 内安装 Ubuntu + Node.js + DSH 运行环境，无需 Root / Termux（PRoot 兼容启动）
+- 远程连接：SSH 或 DSHarness Remote 连电脑、服务器上的 DSH
+- 聊天与工具：切模型、发图、语音输入、处理工具审批与提问；原生界面与官方网页版一键切换
+- 手机操控：授权后让本机引擎读屏、点按、输入，可随时停止，三档确认
+- 分享卡、对话回放（端到端加密链接）、六套主题、横屏/平板适配、中英界面
+- 桌宠 Deepy / 鲸娘；提供插件 SDK、教程与示例
+AGPL-3.0（sdk/ 与 examples/ 为 MIT）；社区第三方项目，非 DeepSeek 官方。
+```
+
+---
+
+### 178 — dsh-session-norms（会话规范化视图）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | npm @tinyforge（ethanwilkins 发布） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 把当前 Session 的每一轮、每条消息和工具调用渲染成统一、可复制的规范化 transcript，便于归档与复盘 |
+
+**安装指令：**
+
+```
+安装 dsh-session-norms。
+npm：https://www.npmjs.com/package/@tinyforge/dsh-session-norms
+安装：dsh plugin --profile web add @tinyforge/dsh-session-norms
+（桌面端把 web 换成 desktop；装完重启 DSH）
+
+安装后：当前会话的所有 turn / 消息 / 工具调用按一致格式渲染，
+可整段复制，适合归档、复盘与交接。
+当前版本 1.3.1（2026-11-04 发布）。
+```
+
+---
+
+### 179 — dsh-open-market（开放插件市场）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | npm dsh-open-market（polang233） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | DSH 开放插件市场：接入 dshopen.org 社区索引，分类搜索、今日推荐、收藏分组、版本切换与更新，附可选马卡龙主题 |
+
+**安装指令：**
+
+```
+安装 dsh-open-market。
+npm：https://www.npmjs.com/package/dsh-open-market
+来源：https://github.com/polang233/dsh-plugin-index
+主页：https://dshopen.org/
+安装：dsh plugin --profile desktop add dsh-open-market
+（Web 端把 desktop 换成 web）
+GitHub 源：dsh plugin --profile desktop add "git+https://github.com/polang233/dsh-plugin-index.git#main&path:/packages/dsh-open-market"
+重启 DSH 后，https://dshopen.org/index.json 会出现在「插件 → 发现」中。
+
+要求：DSH >= 0.1.7-rc.1 < 0.3.0。首次会为该 profile 打开一次「自定义插件市场」。
+
+安装后：
+- 插件页新增「开放市场」标签：分类 + 同义词搜索、今日推荐、热度/增长榜、可排序网格
+- 「我已安装」列出本索引收录插件及其更新；收藏支持分组、按包名加入、整组启停、导入导出
+- 版本切换与更新由宿主完成，替换失败会尝试恢复原版本
+- 每天可点赞一次（安装计一次），点赞每 3 天衰减并影响今日推荐
+- 可选「新对话自动使用自动审查」；数据每 6 小时后台更新，也可手动「同步最新数据」
+- 可选马卡龙主题（设置 → 显示，默认关闭），覆盖侧边栏/对话/代码块/菜单/设置，可即时关闭
+- 可在侧边栏显示独立开放市场页；输入 /open-market 可重新加入索引源
+GPL-3.0；社区项目，非 DeepSeek 官方。当前版本 0.3.2。
 ```
 
 ---
@@ -3728,7 +3977,8 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 131. Understand-Anything — Egonex-AI（⭐ 85.7k），把代码库变成交互式知识图谱
 132. Graphify — Graphify-Labs（⭐ 125k），代码/文档/PDF 转可查询知识图谱（本地 AST）
 168. Spec Kit — GitHub 官方（⭐ 143.7k），规格驱动开发（规格→计划→任务→实现→收敛）
-172. agent-qa-result-triage — vostride，基于运行摘要、截图和日志分析应用测试失败
+
+180. agent-qa-result-triage — vostride，基于运行摘要、截图和日志分析应用测试失败
 
 【前端与设计】
 5. Frontend Design — Anthropic 官方，去 AI 感设计
@@ -3891,6 +4141,14 @@ pnpm dsh plugin --profile web add file:./dsh-mcp-settings
 164. qiaomu-home-dsh — joeseesun（★ 10），会话搜索/今日重点/待办/专注计时起点页
 165. dsh-mcp-settings — phoenixlucky，MCP 服务器管理 + Chrome 连接 + 记忆设置
 166. dsh-theme — phoenixlucky，六套主题壁纸与 VIP 金色玻璃风格
+172. dsh-character-presets — phoenixlucky，DSH 角色预设（猫娘理财 + 八位白月光）
+173. dsh-plugin-manager-wj — phoenixlucky，DSH 插件管理面板（状态/健康/配置来源/启停）
+174. dsh-recall-plugin — limbo947（⭐ 52），消息撤回（文件 + 对话一起回到发送前）
+175. dsh-pet — PC2005-cloud（⭐ 5.4k），透明动画桌面宠物（100+ 动画/多开/DIY）
+176. dsh-archive-manager — MichengAI（⭐ 283），归档会话管理（搜索/恢复/清理/永久删除）
+177. dsh-Go — ccch1mneyyy（⭐ 8.4k），DSH Android 客户端（本机跑 + 远程遥控）
+178. dsh-session-norms — npm @tinyforge，会话规范化 transcript（全 turn/消息/工具调用可复制）
+179. dsh-open-market — npm（polang233），DSH 开放插件市场（搜索/收藏/版本切换/更新）
 
 请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。
 ```
