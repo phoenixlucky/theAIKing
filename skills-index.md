@@ -2,7 +2,7 @@
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
 updated: "2026-11-04"
-total:   179
+total:   180
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -3946,6 +3946,46 @@ npm：https://www.npmjs.com/package/dsh-opencode-patch
 
 ---
 
+### 181 — DSH-to-Figma（Figma 原生画布）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | Duoasa（⭐ 56） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 把 Figma 原生画布接进 DSH：用自然语言读写设计、组件与变量、导出素材与截图，本地模式不消耗官方 MCP 额度 |
+
+**安装指令：**
+
+```
+安装 DSH to Figma。
+来源：https://github.com/Duoasa/DSH-to-Figma（⭐ 56）
+推荐：把下面这段发给能执行命令的 DSH，让它按仓库最新 README 自动装：
+  「帮我安装或升级 DSH to Figma：https://github.com/Duoasa/DSH-to-Figma
+   按最新 README：确认当前宿主的 CLI / profile / DSH_HOME → 从最新 Release 取
+   dsh-to-figma-<版本>.tgz 与 SHA256SUMS 并校验 → 用宿主原生 plugin --profile <profile> add
+   安装（local 模式，保留其他插件）→ 检查插件组件与工具 → 调用 figma_setup 给我
+   manifest.json 完整路径 → 我导入后调用 figma_status 确认两端版本与连接」
+手动：从最新 Release 下载 tgz + SHA256SUMS，校验后
+  dsh plugin --profile <profile> add "file:/绝对路径/dsh-to-figma-0.3.5.tgz"
+（macOS 桌面版请用应用内置 CLI：
+ /Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh）
+
+首次连接：Figma 桌面端 Plugins → Development → Import plugin from manifest…，
+导入 figma_setup 返回的 manifest.json（通常 ~/.dsh/figma/companion/manifest.json），
+在目标文件运行 DSH to Figma · Local 并保持窗口打开。
+
+安装后可用：
+- 读懂设计：选中画板、图层结构、文字、尺寸、布局、样式与截图
+- 创作与修改：原生画板/文字/矢量/自动布局；批量改文案、颜色、字号、间距、圆角
+- 设计系统：组件、变体、实例属性、样式、变量、模式与别名
+- 素材与交付：导入图片/SVG，导出 PNG/JPG/SVG/PDF；设计稿转前端代码
+- FigJam / Slides / 原型交互；0.3.5 支持原生关键帧动画、断线重连、能力检测
+默认 local 模式（bridgePort 3055），可切 desktop / remote；不消耗官方 Figma MCP 调用额度。
+已验证 DSH Desktop 0.2.1-rc.5 / 0.2.2-rc.1；MIT。
+```
+
+---
+
 ## 🚀 AI 一键安装（全文复制）
 
 > 将下方内容直接提供给 AI Agent，它会读取每个 Skill 的来源和安装指令自动完成安装：
@@ -4160,6 +4200,7 @@ npm：https://www.npmjs.com/package/dsh-opencode-patch
 178. dsh-session-norms — phoenixlucky，会话规范化 transcript（全 turn/消息/工具调用可复制）
 179. dsh-open-market — npm（polang233），DSH 开放插件市场（搜索/收藏/版本切换/更新）
 180. dsh-opencode-patch — npm（viztor），OpenCode Zen/Go 接入 DSH（会话亲和/协议路由/额度计量）
+181. DSH-to-Figma — Duoasa（⭐ 56），Figma 原生画布接入 DSH（读写设计/组件/变量/导出）
 
 请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。
 ```

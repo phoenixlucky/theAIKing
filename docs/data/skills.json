@@ -1,5 +1,5 @@
 {
-  "total": 179,
+  "total": 180,
   "categories": [
     {
       "id": "basic",
@@ -2248,6 +2248,18 @@
       "source": "npm dsh-opencode-patch（viztor，MIT）",
       "stars": null,
       "updated": "2026-11-05"
+    },
+    {
+      "id": 181,
+      "name": "DSH-to-Figma",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/Duoasa/DSH-to-Figma",
+      "npm": null,
+      "desc": "把 Figma 原生画布接进 DSH：用自然语言读写设计、组件与变量、导出素材与截图，本地模式不消耗官方 MCP 额度",
+      "source": "Duoasa",
+      "stars": "⭐ 56",
+      "updated": "2026-11-07"
     }
   ]
 }
