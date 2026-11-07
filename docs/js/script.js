@@ -46,11 +46,31 @@
     toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
   }
 
+  // ---- Copy text ----
+  async function copyText(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast(`✅ 已复制 ${text}`);
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch {}
+      document.body.removeChild(ta);
+      showToast(ok ? `✅ 已复制 ${text}` : '复制失败，请手动选择包名');
+    }
+  }
+
   // ---- Load data ----
   async function loadData() {
     try {
       const [skillsResp, lspResp] = await Promise.all([
-        fetch('data/skills.json?v=27cfb2e2'),
+        fetch('data/skills.json?v=a7a6f045'),
         fetch('data/lsp.json?v=1'),
       ]);
       if (!skillsResp.ok) throw new Error(`HTTP ${skillsResp.status}`);
@@ -220,6 +240,9 @@
         : '';
       const isOwn = s.source === 'phoenixlucky';
       const ownBadge = isOwn ? '<span class="skill-badge">👑 精选</span>' : '';
+      const npmRow = s.npm
+        ? `<div class="skill-npm"><span class="skill-npm-label">npm</span><code class="skill-npm-name" title="${s.npm}">${s.npm}</code><button type="button" class="skill-npm-copy" data-npm="${s.npm}" title="复制包名">复制</button></div>`
+        : '';
 
       html += `
         <div class="skill-card ${isSelected ? 'selected' : ''}${isOwn ? ' skill-card--own' : ''}" data-key="${key}">
@@ -235,6 +258,7 @@
               ${repoLink}
             </div>
             <div class="skill-desc">${s.desc}</div>
+            ${npmRow}
             ${s.updated ? `<div class="skill-updated">🕒 更新于 ${s.updated}</div>` : ''}
           </div>
         </div>
@@ -419,6 +443,13 @@
 
       // Click card to toggle selection
       skillsGrid.addEventListener('click', (e) => {
+        const copyBtn = e.target.closest('[data-npm]');
+        if (copyBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          copyText(copyBtn.dataset.npm);
+          return;
+        }
         if (e.target.closest('a')) return;
         const card = e.target.closest('.skill-card');
         if (!card || !card.dataset.key) return;

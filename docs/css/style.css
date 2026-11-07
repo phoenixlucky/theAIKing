@@ -447,6 +447,59 @@ a:hover { text-decoration: underline; }
   letter-spacing: .02em;
 }
 
+/* ---- npm 包名（可复制） ---- */
+.skill-npm {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 7px;
+  max-width: 100%;
+}
+.skill-npm-label {
+  flex-shrink: 0;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #cb3837;
+  background: rgba(203,56,55,.1);
+  border: 1px solid rgba(203,56,55,.22);
+  border-radius: 5px;
+  padding: 1px 5px;
+  line-height: 1.5;
+}
+.skill-npm-name {
+  min-width: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .74rem;
+  color: var(--text-primary);
+  background: var(--surface-2, rgba(15,23,42,.05));
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 2px 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  user-select: all;
+}
+.skill-npm-copy {
+  flex-shrink: 0;
+  font-family: var(--font);
+  font-size: .66rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 2px 7px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.skill-npm-copy:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
 .skill-repo {
   font-size: .65rem;
   font-family: var(--font);

@@ -2,7 +2,7 @@
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
 updated: "2026-11-04"
-total:   178
+total:   179
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -3857,7 +3857,7 @@ AGPL-3.0（sdk/ 与 examples/ 为 MIT）；社区第三方项目，非 DeepSeek 
 
 | 字段 | 值 |
 |------|-----|
-| **来源** | npm @tinyforge（ethanwilkins 发布） |
+| **来源** | phoenixlucky |
 | **分类** | DeepSeek Harness 插件 |
 | **一句话** | 把当前 Session 的每一轮、每条消息和工具调用渲染成统一、可复制的规范化 transcript，便于归档与复盘 |
 
@@ -3907,6 +3907,41 @@ GitHub 源：dsh plugin --profile desktop add "git+https://github.com/polang233/
 - 可选马卡龙主题（设置 → 显示，默认关闭），覆盖侧边栏/对话/代码块/菜单/设置，可即时关闭
 - 可在侧边栏显示独立开放市场页；输入 /open-market 可重新加入索引源
 GPL-3.0；社区项目，非 DeepSeek 官方。当前版本 0.3.2。
+```
+
+---
+
+### 180 — dsh-opencode-patch（OpenCode 接入补丁）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | npm dsh-opencode-patch（viztor，MIT） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 让 OpenCode Zen / Go 模型在 DSH 内稳定可用：会话亲和、网关来源头、免费层工具回退、按模型路由四种协议，附实时额度计量 |
+
+**安装指令：**
+
+```
+安装 dsh-opencode-patch（Node 24+）。
+npm：https://www.npmjs.com/package/dsh-opencode-patch
+来源：https://github.com/viztor/dsh-opencode-patch
+安装：
+  cd ~/.dsh/profiles/web
+  npm install dsh-opencode-patch
+再把 dsh-opencode-patch 加入该 profile 的 dsh.profile.bundles（可按需设 patchReload: "live"），
+并在 DSH Credentials 或环境变量里存好 OPENCODE_GO_API_KEY（Go）/ OPENCODE_API_KEY（Zen），
+然后重启 dsh web（客户端 UI 变更刷新浏览器即可）。
+
+安装后：
+- 确定性 ses_<hex><base62> 会话哈希，跨轮次、子代理与分叉保持 KV 提示缓存亲和
+- 网关来源恢复：User-Agent、x-opencode-client、x-opencode-project、父会话谱系
+- 免费层 read + bash 工具 schema 回退（注意：Zen 免费层 403 由网关侧决定，补丁不承诺解除）
+- 目录补全（models.opencode.ai）：显示名、上下文窗口、价格；离线预置 + 后台 SWR 刷新
+- 按模型而非按 provider 路由：OpenAI Chat Completions / Responses / Anthropic / Google 四种协议
+- 输入框停靠栏实时计量：Go 三窗口（5 小时/每周/每月）额度环，或 Zen 按量计费花费
+- Zen 密钥严格隔离，不查询 Go 额度端点
+- 设置卡片九个控件：注入开关、端点 auto/legacy/modern、凭据来源、是否读取 OpenCode 本地密钥等
+已验证 DSH 0.2.1 / 0.2.2 预发布（alpha 与 rc 两条通道）；MIT。
 ```
 
 ---
@@ -4122,8 +4157,9 @@ GPL-3.0；社区项目，非 DeepSeek 官方。当前版本 0.3.2。
 175. dsh-pet — PC2005-cloud（⭐ 5.4k），透明动画桌面宠物（100+ 动画/多开/DIY）
 176. dsh-archive-manager — MichengAI（⭐ 283），归档会话管理（搜索/恢复/清理/永久删除）
 177. dsh-Go — ccch1mneyyy（⭐ 8.4k），DSH Android 客户端（本机跑 + 远程遥控）
-178. dsh-session-norms — npm @tinyforge，会话规范化 transcript（全 turn/消息/工具调用可复制）
+178. dsh-session-norms — phoenixlucky，会话规范化 transcript（全 turn/消息/工具调用可复制）
 179. dsh-open-market — npm（polang233），DSH 开放插件市场（搜索/收藏/版本切换/更新）
+180. dsh-opencode-patch — npm（viztor），OpenCode Zen/Go 接入 DSH（会话亲和/协议路由/额度计量）
 
 请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。
 ```

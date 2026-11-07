@@ -46,10 +46,17 @@ for (const line of lines) {
     if (cur && (m = line.match(/^\|\s*\*\*(来源|分类|一句话)\*\*\s*\|\s*(.*?)\s*\|\s*$/))) {
       cur[m[1]] = m[2].trim();
     }
-  } else if (cur && !cur.repo) {
+  } else if (cur) {
     // 安装代码块内的「来源：URL」
-    const m = line.match(/来源：\s*(https?:\/\/[^\s（）()]+)/);
-    if (m) cur.repo = m[1].replace(/[，。、]+$/, '');
+    if (!cur.repo) {
+      const m = line.match(/来源：\s*(https?:\/\/[^\s（）()]+)/);
+      if (m) cur.repo = m[1].replace(/[，。、]+$/, '');
+    }
+    // 「npm：https://www.npmjs.com/package/<包名>」
+    if (!cur.npm) {
+      const m = line.match(/npm\s*[：:]\s*https?:\/\/www\.npmjs\.com\/package\/([^\s，。、（）()]+)/);
+      if (m) cur.npm = decodeURIComponent(m[1].replace(/[，。、]+$/, ''));
+    }
   }
 }
 if (cur) entries.push(cur);
@@ -83,6 +90,7 @@ const recordOf = (e) => {
     cat,
     icon,
     repo: e.repo ?? old?.repo ?? null,
+    npm: e.npm ?? old?.npm ?? null,
     desc: e['一句话'] ?? old?.desc ?? null,
     source,
     stars,
