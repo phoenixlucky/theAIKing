@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The AI King — AI Agent Skill / 插件 / LSP 索引</title>
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
   <header class="header">
     <div class="container">
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button>
       <h1>👑 The AI King</h1>
-      <p class="subtitle">收集热门且好用的 AI Agent Skill、插件与 LSP，指导各种 AI Agent 快速一键安装配置</p>
-      <p class="meta">共收录 <strong id="skillCount">0</strong> 个 Skill + <strong id="pluginCount">0</strong> 个插件（<strong id="totalCount">0</strong> 个条目），另有 <strong id="lspTotalCount">0</strong> 个 LSP · 覆盖 <strong id="categoryCount">0</strong> 大分类 · <span class="gold-hint">👑 金色卡片 = 本站原创精选，已置顶展示</span></p>
+      <p class="subtitle" id="subtitle">收集热门且好用的 AI Agent Skill、插件与 LSP，指导各种 AI Agent 快速一键安装配置</p>
+      <p class="meta" id="metaLine"></p>
     </div>
   </header>
 
@@ -21,7 +22,7 @@
       <div class="filter-panel">
         <div class="filter-panel-head">
           <div class="filter-title">
-            <span class="filter-kicker">分类筛选</span>
+            <span class="filter-kicker" id="filterKicker">分类筛选</span>
             <span class="filter-sub" id="filterSummary"></span>
           </div>
           <div class="search-bar">
@@ -34,7 +35,7 @@
 
     <!-- Stats bar -->
     <section class="stats-bar">
-      <span>已选 <strong id="selectedCount">0</strong> 项</span>
+      <span><span id="selectedLabel">已选</span> <strong id="selectedCount">0</strong> <span id="itemUnit">项</span></span>
       <button class="btn btn-secondary" id="selectAllBtn">✅ 全选</button>
       <button class="btn btn-primary" id="generateBtn">📋 生成安装指令</button>
       <button class="btn btn-secondary" id="clearBtn">清除选择</button>
@@ -42,8 +43,8 @@
 
     <!-- Install instructions output -->
     <section class="output-section" id="outputSection" style="display:none;">
-      <h2>📋 安装指令</h2>
-      <p class="output-hint">将下方内容直接提供给 AI Agent：</p>
+      <h2 id="outputTitle">📋 安装指令</h2>
+      <p class="output-hint" id="outputHint">将下方内容直接提供给 AI Agent：</p>
       <textarea id="outputText" readonly rows="12"></textarea>
       <button class="btn btn-primary" id="copyBtn">📄 复制到剪贴板</button>
     </section>
@@ -56,12 +57,12 @@
 
   <footer class="footer">
     <div class="container">
-      <p>由 <a href="https://github.com/phoenixlucky/theAIKing" target="_blank">theAIKing</a> 项目维护 · 欢迎提交 Issue 和 PR</p>
+      <p id="footerText">由 <a href="https://github.com/phoenixlucky/theAIKing" target="_blank">theAIKing</a> 项目维护 · 欢迎提交 Issue 和 PR</p>
     </div>
   </footer>
 
   <div class="toast" id="toast"></div>
 
-  <script src="js/script.js?v=a7a6f045"></script>
+  <script src="js/script.js?v=a7a6f045-i18n2"></script>
 </body>
 </html>
