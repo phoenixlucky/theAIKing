@@ -1,5 +1,5 @@
 {
-  "total": 180,
+  "total": 182,
   "categories": [
     {
       "id": "basic",
@@ -2260,6 +2260,30 @@
       "source": "Duoasa",
       "stars": "⭐ 56",
       "updated": "2026-11-07"
+    },
+    {
+      "id": 182,
+      "name": "modern-web-guidance",
+      "cat": "dev",
+      "icon": "M",
+      "repo": "https://github.com/GoogleChrome/modern-web-guidance/tree/main/skills/modern-web-guidance",
+      "npm": null,
+      "desc": "Chrome/Edge/Firefox/MDN 共同维护的 Web 平台技能：250 个现代特性 + 203 个真实用例，引导 Agent 用原生 API 替代过时写法",
+      "source": "GoogleChrome",
+      "stars": "⭐ 7.6k",
+      "updated": "2026-11-13"
+    },
+    {
+      "id": 183,
+      "name": "chrome-extensions",
+      "cat": "dev",
+      "icon": "C",
+      "repo": "https://github.com/GoogleChrome/modern-web-guidance/tree/main/skills/chrome-extensions",
+      "npm": null,
+      "desc": "同仓库的 Chrome 扩展技能包：Manifest V3、Service Worker、扩展 API 与 Chrome Web Store 发布规范",
+      "source": "GoogleChrome",
+      "stars": "⭐ 7.6k",
+      "updated": "2026-11-13"
     }
   ]
 }

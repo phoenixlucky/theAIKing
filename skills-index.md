@@ -2,7 +2,7 @@
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
 updated: "2026-11-04"
-total:   180
+total:   182
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -639,6 +639,66 @@ CLI 命令为 graphify，PyPI 包名为 graphifyy（双 y）。
 - 想法评估（扩展）：specify extension add assess，再 /speckit-assess-intake → -research → -define → -shape → -decide
 - 自定义：extension / preset / workflow / bundle / catalog，可套用团队规范或接入私有目录
 支持 GitHub Copilot / Claude Code / Codex / Cursor / Gemini CLI 等；MIT 开源。
+```
+
+---
+
+### 182 — modern-web-guidance（现代 Web 最佳实践）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | GoogleChrome（⭐ 7.6k） |
+| **分类** | 开发与编码 |
+| **一句话** | Chrome/Edge/Firefox/MDN 共同维护的 Web 平台技能：250 个现代特性 + 203 个真实用例，引导 Agent 用原生 API 替代过时写法 |
+
+**安装指令：**
+
+```
+安装 modern-web-guidance Skill。
+来源：https://github.com/GoogleChrome/modern-web-guidance/tree/main/skills/modern-web-guidance（⭐ 7.6k）
+安装方式（任选）：
+- 交互式安装：npx modern-web-guidance@latest install
+- 自选技能包：npx modern-web-guidance@latest install --choose   # 勾选 modern-web-guidance
+- 更新：npx modern-web-guidance@latest update
+不安装也能试：
+  npx modern-web-guidance@latest search "animate a dialog modal backdrop"
+  npx modern-web-guidance@latest retrieve "animate-to-from-top-layer"
+  npx modern-web-guidance@latest legacy-scan .
+
+安装后，Agent 用本地离线语义搜索（嵌入 + BM25，无网络、无 API Key）按需取指南：
+- CSS 布局：container queries、subgrid、oklch 等现代色彩空间、text-wrap、line-height 裁切
+- 用户体验：View Transitions、进出场动画、视差滚动、scrollbar-color
+- 性能：instant preloading、INP 诊断、scheduler.yield
+- 表单与 UI：Anchor Positioning、Popover API、dialog、:user-invalid、自适应输入框
+- 可访问性；内置 AI（本地翻译 / 摘要 / 语言检测）
+- 区分「可安全忽略的增强」与「需要轻量兜底的关键行为」，附 gotcha 与 Baseline 兼容数据
+- Origin Trial / 易变特性默认在 retrieve 时拦截，需 set-allow-origin-trials / set-allow-volatile-features 显式开启
+支持 Antigravity / Copilot CLI / Claude Code / Codex / Grok / Kimi 等。代码 Apache-2.0，指南 CC-BY-4.0。
+```
+
+---
+
+### 183 — chrome-extensions（Chrome 扩展开发）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | GoogleChrome（⭐ 7.6k） |
+| **分类** | 开发与编码 |
+| **一句话** | 同仓库的 Chrome 扩展技能包：Manifest V3、Service Worker、扩展 API 与 Chrome Web Store 发布规范 |
+
+**安装指令：**
+
+```
+安装 chrome-extensions Skill。
+来源：https://github.com/GoogleChrome/modern-web-guidance/tree/main/skills/chrome-extensions（⭐ 7.6k）
+安装：npx modern-web-guidance@latest install --choose   # 勾选 chrome-extensions
+更新：npx modern-web-guidance@latest update
+
+安装后，Agent 按需加载扩展开发指南（入口约 175 tokens）：
+- Manifest V3 结构、background service worker、内容脚本与消息传递
+- 扩展 API 的正确用法与权限模型
+- Chrome Web Store 发布与审核要点
+与 modern-web-guidance 同源，可单独装或一起装。代码 Apache-2.0，指南 CC-BY-4.0。
 ```
 
 ---
@@ -4029,6 +4089,8 @@ npm：https://www.npmjs.com/package/dsh-opencode-patch
 131. Understand-Anything — Egonex-AI（⭐ 85.7k），把代码库变成交互式知识图谱
 132. Graphify — Graphify-Labs（⭐ 125k），代码/文档/PDF 转可查询知识图谱（本地 AST）
 168. Spec Kit — GitHub 官方（⭐ 143.7k），规格驱动开发（规格→计划→任务→实现→收敛）
+182. modern-web-guidance — GoogleChrome（⭐ 7.6k），现代 Web 最佳实践（250 特性 / 203 用例）
+183. chrome-extensions — GoogleChrome（⭐ 7.6k），Chrome 扩展开发（Manifest V3 / API / 上架）
 
 【前端与设计】
 5. Frontend Design — Anthropic 官方，去 AI 感设计
