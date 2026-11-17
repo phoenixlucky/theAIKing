@@ -1,5 +1,5 @@
 {
-  "total": 182,
+  "total": 185,
   "categories": [
     {
       "id": "basic",
@@ -2284,6 +2284,42 @@
       "source": "GoogleChrome",
       "stars": "⭐ 7.6k",
       "updated": "2026-11-13"
+    },
+    {
+      "id": 184,
+      "name": "dsh-computer-use-win",
+      "cat": "dsh",
+      "icon": "D",
+      "repo": "https://github.com/Yu-tao-Li/dsh-computer-use-win",
+      "npm": "dsh-computer-use-win",
+      "desc": "让 DSH Agent 真正操作 Windows 桌面与网页：UIA 读控件、OCR 读屏、后台点击输入、窗口管理，网页走 CDP 不抢鼠标",
+      "source": "Yu-tao-Li（npm 0.5.7）",
+      "stars": null,
+      "updated": "2026-11-14"
+    },
+    {
+      "id": 185,
+      "name": "zuowang-skill",
+      "cat": "basic",
+      "icon": "Z",
+      "repo": "https://github.com/phoenixlucky/zuowang-skill",
+      "npm": null,
+      "desc": "多轮对话上下文管理：松开过时判断，保留推进当前目标所需的目标、决定、约束与未完成事项",
+      "source": "phoenixlucky",
+      "stars": null,
+      "updated": "2026-11-17"
+    },
+    {
+      "id": 186,
+      "name": "ffmpeg-skill",
+      "cat": "video",
+      "icon": "F",
+      "repo": "https://github.com/kajisho5/ffmpeg-skill",
+      "npm": "ffmpeg-skill",
+      "desc": "给编码 Agent 一个本地视频剪辑器：42 个 FFmpeg 工具 + 机器可读契约 + MCP server，剪片/字幕/改幅/响度/平台导出并自检",
+      "source": "kajisho5",
+      "stars": "⭐ 6.9k",
+      "updated": "2026-11-17"
     }
   ]
 }

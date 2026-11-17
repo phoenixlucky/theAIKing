@@ -2,7 +2,7 @@
 title:   "The AI King — AI 一键安装索引"
 version: "1.9"
 updated: "2026-11-04"
-total:   182
+total:   185
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -259,6 +259,34 @@ total:   182
 - 每轮复述状态、给具体时间估计（分钟）、错误平淡陈述、列表最多 5 条
 - 无开场白、无复述、无“希望有帮助”式收尾
 跨 Claude Code / Codex / Cursor / Gemini / OpenCode 等（MIT）。
+```
+
+---
+
+### 185 — zuowang-skill（坐忘 · 上下文管理）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | phoenixlucky |
+| **分类** | 基础与元 Skill |
+| **一句话** | 多轮对话上下文管理：松开过时判断，保留推进当前目标所需的目标、决定、约束与未完成事项 |
+
+**安装指令：**
+
+```
+安装 zuowang-skill（坐忘）。
+来源：https://github.com/phoenixlucky/zuowang-skill
+安装方式：把仓库放进宿主的 skills 目录（支持 SKILL.md 即可），例如
+  ~/.claude/skills/zuowang-skill/ 或 ~/.agents/skills/zuowang-skill/，然后重启宿主。
+
+安装后，Agent 按「先辨认当下」处理多轮上下文：
+- 保留：当前明确的目标/约束/偏好、已确认的决定与关键事实及其来源、未解决问题与后续承诺
+- 放下或降权：被新信息取代的旧状态、已完成事项、重复内容、未经证实的推测与惯性判断
+- 「降权」不等于删除记录：只指导当前对话取舍，不写长期记忆、不控制宿主上下文窗口
+- 六条原则：先辨认当下；忘其执不忘其据；保留能推动目标的信息；不确定时说清楚；
+  留意更正与未完成事项；行动遵循授权范围
+思想来源：庄子·大宗师「坐忘」＋《尉缭子·十二陵》的应变 / 预备 / 慎小。
+适合跨多轮续作、用户改方向、约束相互冲突、对话信息过载的场景。Apache-2.0。
 ```
 
 ---
@@ -1812,6 +1840,47 @@ OCR 提取能力已并入内置 pdf Skill（skills/productivity/pdf，含 pymupd
 - 48 个包装组件（TextBehind 文字置于人物之后、EvidenceCard、Danmaku、PunchInHost 等）
 - Remotion 剪辑渲染，转场帧检查 + -14/-16 LUFS 响度
 需自备照片/音色授权；成片建议标注「内容由 AI 数字人演绎」。代码 MIT。
+```
+
+---
+
+### 186 — ffmpeg-skill（Agent 视频剪辑）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | kajisho5（⭐ 6.9k） |
+| **分类** | 视频制作 |
+| **一句话** | 给编码 Agent 一个本地视频剪辑器：42 个 FFmpeg 工具 + 机器可读契约 + MCP server，剪片/字幕/改幅/响度/平台导出并自检 |
+
+**安装指令：**
+
+```
+安装 ffmpeg-skill。
+来源：https://github.com/kajisho5/ffmpeg-skill（⭐ 6.9k）
+npm：https://www.npmjs.com/package/ffmpeg-skill
+安装：
+  sudo apt install ffmpeg     # 先装系统 FFmpeg（macOS: brew install ffmpeg；Windows: winget install Gyan.FFmpeg）
+  npx ffmpeg-skill            # 默认装到 Claude Code；Cursor 加 --cursor，Codex 加 --codex，全装 --all
+  npx ffmpeg-skill doctor     # 检查 ffmpeg / ffprobe 与本机是否具备所需组件
+  npx ffmpeg-skill contract --json   # 机器可读契约（供 Agent 框架读取）
+MCP：通过 mcp/server.py 以 stdio 提供；默认 tools/list 只暴露核心 12 个，
+  设 FFMPEG_SKILL_MCP_FULL=1 列出全部 42 个（tools/call 始终可按名调用全部）。
+
+安装后，Agent 按「probe → 无损优先 → check → look 自检」流程工作，42 个工具覆盖：
+- 分析：probe（VFR/HDR/杜比视界/音轨）、scenes（转场/音频峰值/节拍/镜头分类）、look（联系表/安全区）
+- 剪辑：cut（无损优先/精确/smart/按节拍）、join（xfade）、silence（去静音/口癖）、
+  fit（时长/画幅/裁剪/旋转）、crop、cropdetect、deinterlace、denoise、redact、sphere、
+  straighten、insert、background、reverse、stabilize、sequence、waveform、freeze、pad、
+  speedramp、loop、broll、metadata（章节）、grid
+- 音频：audio（人声清理/压缩/限幅/闪避/变速/重采样）、sync（互相关对齐+漂移校正）、
+  loudness（EBU R128 两遍达标）
+- 画面：caption（SRT/ASS/卡拉OK/多语言轨/自动适配安全区）、overlay（画中画/绿幕/品牌位）、
+  graphics（下三分之一/标题卡/进度条/倒计时）、color（HDR→SDR/LUT/一级调色）
+- 交付：export（YouTube/Reels/TikTok/Shorts/ProRes/alpha/gif 等预设）、proxy、
+  check（各平台规范 + 内容检查）、report（单文件 HTML 交付报告）
+- 编排：render（project.json 整片渲染、交付模板、导出 FCPXML/EDL/OTIO）、batch、multicam、verify
+纯本地、无云、无 API Key、工具仅用 Python 标准库；字幕转写可选本地 whisper/Parakeet。
+附带 before/after 演示与 CI 测试（FFmpeg 6.1/7.1/8/9）。MIT。
 ```
 
 ---
@@ -4046,6 +4115,43 @@ npm：https://www.npmjs.com/package/dsh-opencode-patch
 
 ---
 
+### 184 — dsh-computer-use-win（Windows 电脑操控）
+
+| 字段 | 值 |
+|------|-----|
+| **来源** | Yu-tao-Li（npm 0.5.7） |
+| **分类** | DeepSeek Harness 插件 |
+| **一句话** | 让 DSH Agent 真正操作 Windows 桌面与网页：UIA 读控件、OCR 读屏、后台点击输入、窗口管理，网页走 CDP 不抢鼠标 |
+
+**安装指令：**
+
+```
+安装 dsh-computer-use-win（仅 Windows）。
+npm：https://www.npmjs.com/package/dsh-computer-use-win
+来源：https://github.com/Yu-tao-Li/dsh-computer-use-win
+安装（DSH 桌面版：托盘右键「Open DSH Terminal」）：
+  dsh plugin --profile desktop add dsh-computer-use-win
+装完右键托盘图标选「退出」再重开 DSH Desktop（只关窗口不够，旧插件仍在托盘里跑）。
+Web 端：dsh plugin --profile web add dsh-computer-use-win，然后重启 dsh web。
+其他方式：dsh plugin --profile desktop add github:Yu-tao-Li/dsh-computer-use-win
+或在插件市场搜 dsh-computer-use-win。
+
+安装后（25 个动作工具 + 1 个管理入口，默认全开）：
+- 读窗口与控件：list_windows、snapshot、accessibility_tree、find、element_info
+- 读屏与识图：screenshot、ocr（WinRT OCR，小字先放大再识别）
+- 鼠标：click、double_click、move、drag、scroll
+- 键盘与控件：type_text、keypress、focus、invoke、set_value（多数可后台完成，不动鼠标/不抢前台）
+- 应用与窗口：launch_app、activate_window、move_window、close_window
+- 等待与确认：wait_for、wait；批量：batch（1–10 个计划动作）
+- 浏览器通道：默认用独立 DSH 浏览器走 CDP，后台读写网页、不移动指针；可选「保留网站登录态」、
+  「复用已打开的 Chrome/Edge」（实验性，需在浏览器允许远程调试）
+- 屏幕边缘/指针提示、对话内步骤记录、推理进度浮层；Esc（或自定义快捷键）随时停止
+设置：Settings → Computer Use（电脑操控）；工具加载可选 All(26) / Lite(12) / Lazy(1) / Custom。
+要求：Windows + PowerShell 5.1（7 仅部分能力验证）；独立 MCP 或 DSH Web 需 Node ≥ 22。MIT。
+```
+
+---
+
 ## 🚀 AI 一键安装（全文复制）
 
 > 将下方内容直接提供给 AI Agent，它会读取每个 Skill 的来源和安装指令自动完成安装：
@@ -4067,6 +4173,7 @@ npm：https://www.npmjs.com/package/dsh-opencode-patch
 135. Caveman — JuliusBrussee（⭐ 111k），穴居人话省 token（会话输入 -33%）
 136. awesome-claude-skills — ComposioHQ（⭐ 76.7k），1000+ 生产级 Claude Skill 精选合集
 139. i-have-adhd — ayghri（⭐ 56.3k），重点前置输出（先动作、编号、去寒暄）
+185. zuowang-skill — phoenixlucky，坐忘上下文管理（目标/决定/约束的取舍）
 
 【Agent 智能化】
 30. Self-Improving Agent — ClawHub（★ 3.8k），自动记录错误与经验，永久进化
@@ -4149,6 +4256,7 @@ npm：https://www.npmjs.com/package/dsh-opencode-patch
 128. huashu-art-motion — alchaincyf（⭐ 2.7k），35 种艺术风格 + 9 种解说语法的艺术动画
 130. seedance-2-5-video-director — liyue-aigc（★ 566），Seedance 2.5 视频导演（脚本/诊断/人物锁定）
 171. digital-human-koubo — andyhuo520（⭐ 1.3k），一张照片 + 一句话出数字人口播成片
+186. ffmpeg-skill — kajisho5（⭐ 6.9k），42 个 FFmpeg 工具 + MCP 的本地视频剪辑
 
 【商业与金融】
 10. Business Data Analyst — 商业分析与指标拆解
@@ -4263,6 +4371,7 @@ npm：https://www.npmjs.com/package/dsh-opencode-patch
 179. dsh-open-market — npm（polang233），DSH 开放插件市场（搜索/收藏/版本切换/更新）
 180. dsh-opencode-patch — npm（viztor），OpenCode Zen/Go 接入 DSH（会话亲和/协议路由/额度计量）
 181. DSH-to-Figma — Duoasa（⭐ 56），Figma 原生画布接入 DSH（读写设计/组件/变量/导出）
+184. dsh-computer-use-win — Yu-tao-Li，Windows 电脑操控（UIA / OCR / 后台键鼠 / CDP 浏览器）
 
 请根据上面每个 Skill 的「安装指令」完成安装，如果存在，则覆盖安装。
 ```
