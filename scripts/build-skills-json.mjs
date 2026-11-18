@@ -43,7 +43,7 @@ for (const line of lines) {
       cur = { id: Number(m[1]), title: m[2], section };
       continue;
     }
-    if (cur && (m = line.match(/^\|\s*\*\*(来源|分类|一句话)\*\*\s*\|\s*(.*?)\s*\|\s*$/))) {
+    if (cur && (m = line.match(/^\|\s*\*\*(来源|分类|一句话|最新版本)\*\*\s*\|\s*(.*?)\s*\|\s*$/))) {
       cur[m[1]] = m[2].trim();
     }
   } else if (cur) {
@@ -84,6 +84,16 @@ const recordOf = (e) => {
   const old = seedSkill.get(e.id);
   const icon = old?.icon ?? (base.match(/[A-Za-z0-9\p{L}]/u)?.[0]?.toUpperCase() ?? '?');
 
+  // 「最新版本」单元格：`v1.2.3`（2026-11-17）/ 默认分支（最新提交 2026-11-17，无 tag）/ —（平台托管…）
+  const verCell = e['最新版本'] ?? null;
+  const verTag = verCell?.match(/`([^`]+)`/)?.[1] ?? null;
+  const verDate = verCell?.match(/(\d{4}-\d{2}-\d{2})/)?.[1] ?? null;
+  const verKind = !verCell || verCell.startsWith('—')
+    ? null
+    : verTag
+      ? (verCell.includes('（tag') ? 'tag' : 'release')
+      : 'branch';
+
   return {
     id: e.id,
     name,
@@ -94,6 +104,9 @@ const recordOf = (e) => {
     desc: e['一句话'] ?? old?.desc ?? null,
     source,
     stars,
+    ver: verTag,
+    verKind,
+    verDate,
     updated: old?.updated ?? today,
   };
 };

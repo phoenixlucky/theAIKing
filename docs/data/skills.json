@@ -111,6 +111,9 @@
       "desc": "创建 Skill 的 Skill，把重复工作流封装成 Skill",
       "source": "Anthropic 官方",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-04"
     },
     {
@@ -123,6 +126,9 @@
       "desc": "Skill 搜索引擎，帮你从 ClawHub 全网搜索想要的 Skill",
       "source": "ClawHub",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-04"
     },
     {
@@ -135,6 +141,9 @@
       "desc": "开发流程规范化，模糊需求 → 执行计划 → 代码落地",
       "source": "GitHub 社区",
       "stars": "⭐ 21 万+",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-04"
     },
     {
@@ -147,6 +156,9 @@
       "desc": "内置 23 个工程专家角色（CEO/PM/设计师/工程师），AI 工程团队",
       "source": "Gary Tan（YC 总裁）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-04"
     },
     {
@@ -159,6 +171,9 @@
       "desc": "去 AI 感设计，配色/字体/间距一键优化，输出专业级前端",
       "source": "Anthropic 官方",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-04"
     },
     {
@@ -171,6 +186,9 @@
       "desc": "设计资源库：50 种设计风格 + 97 种配色方案 + 9 个技术栈",
       "source": "nextlevelbuilder",
       "stars": "⭐ 124k",
+      "ver": "v2.15.0",
+      "verKind": "release",
+      "verDate": "2026-08-13",
       "updated": "2026-06-04"
     },
     {
@@ -183,6 +201,9 @@
       "desc": "约 20 个视觉设计 Skill 包：封面图/信息图/PPT/文章配图/长文排版",
       "source": "JimLiu",
       "stars": "⭐ 25.6k",
+      "ver": "v2.5.2",
+      "verKind": "release",
+      "verDate": "2026-06-18",
       "updated": "2026-06-04"
     },
     {
@@ -195,6 +216,9 @@
       "desc": "打通 Agent 与 NotebookLM，Agent 可直接查询 NotebookLM 中的文档",
       "source": "teng-lin",
       "stars": "⭐ 19.1k",
+      "ver": "v0.8.6",
+      "verKind": "release",
+      "verDate": "2026-10-29",
       "updated": "2026-06-04"
     },
     {
@@ -207,6 +231,9 @@
       "desc": "Token 高效约束，最少 token 和精准提示完成任务，减少无效输出",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-10-16",
       "updated": "2026-06-04"
     },
     {
@@ -219,6 +246,9 @@
       "desc": "商业分析与指标拆解，业务问题→分析方案→可执行建议",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-09-29",
       "updated": "2026-06-04"
     },
     {
@@ -231,6 +261,9 @@
       "desc": "结构化五栏分析框架：本质→条件→得失→先后→对手",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-09-24",
       "updated": "2026-06-04"
     },
     {
@@ -243,6 +276,9 @@
       "desc": "温柔/克制/留白感强的恋爱聊天回复 Skill，内置西施/王昭君/貂蝉/杨玉环四大美人角色卡",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-06-18",
       "updated": "2026-06-04"
     },
     {
@@ -255,6 +291,9 @@
       "desc": "金融投资分析：周期定位→六栏框架→交易策略与风险判断",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-05-28",
       "updated": "2026-06-04"
     },
     {
@@ -267,6 +306,9 @@
       "desc": "一句话生成动效视频：HTML/CSS/动画制作产品介绍/动态海报/知识视频，输出 MP4",
       "source": "heygen-com",
       "stars": null,
+      "ver": "v0.9.65",
+      "verKind": "release",
+      "verDate": "2026-11-18",
       "updated": "2026-06-05"
     },
     {
@@ -279,6 +321,9 @@
       "desc": "Agent 帮你剪视频：删除停顿/错误片段/口头禅，处理字幕/音频/调色/画面动效",
       "source": "browser-use",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-10-08",
       "updated": "2026-06-05"
     },
     {
@@ -291,6 +336,9 @@
       "desc": "用 React 代码批量制作视频：排行榜/数据周报/产品更新/固定栏目视频",
       "source": "Remotion 官方",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-16",
       "updated": "2026-06-05"
     },
     {
@@ -303,6 +351,9 @@
       "desc": "AI 视频/图片/音频生成工具箱：广告/UGC/音乐视频/社交媒体短片",
       "source": "SamurAIGPT",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-09-29",
       "updated": "2026-06-05"
     },
     {
@@ -315,6 +366,9 @@
       "desc": "面向中文创作者的视频剪辑 Agent（原 videocut-skills，已迁移改名）：素材/字幕/短视频制作流程",
       "source": "Agentchengfeng（原 Ceeon）",
       "stars": null,
+      "ver": "v0.10.11",
+      "verKind": "tag",
+      "verDate": "2026-09-20",
       "updated": "2026-06-05"
     },
     {
@@ -327,6 +381,9 @@
       "desc": "为即梦 Seedance 2.0 设计逐秒分镜/运镜/提示词，输出专业视频提示词",
       "source": "dexhunter",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-09-19",
       "updated": "2026-06-05"
     },
     {
@@ -339,6 +396,9 @@
       "desc": "复现并定位问题，给出最小修复和验证路径",
       "source": "Reasonix 内置",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-16"
     },
     {
@@ -351,6 +411,9 @@
       "desc": "审查代码变更，优先发现缺陷、回归和缺失测试",
       "source": "Reasonix 内置",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-16"
     },
     {
@@ -363,6 +426,9 @@
       "desc": "优化界面细节、响应式状态和视觉一致性",
       "source": "Reasonix 内置",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-16"
     },
     {
@@ -375,6 +441,9 @@
       "desc": "AI Agent 专用 Office 文档工具：创建、编辑和自动化 Word/Excel/PPT，单二进制免装 Office",
       "source": "iOfficeAI",
       "stars": "⭐ 29.8k",
+      "ver": "v1.0.162",
+      "verKind": "release",
+      "verDate": "2026-11-16",
       "updated": "2026-08-12"
     },
     {
@@ -387,6 +456,9 @@
       "desc": "整理面向用户的发布说明和升级注意事项",
       "source": "Reasonix 内置",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-16"
     },
     {
@@ -399,6 +471,9 @@
       "desc": "完整的 DOCX 文档创建、编辑与分析能力，支持修订、批注、格式保持和文本提取",
       "source": "kimi-skills",
       "stars": "⭐ 232",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-03-28",
       "updated": "2026-06-16"
     },
     {
@@ -411,6 +486,9 @@
       "desc": "专业 PDF 工具集：报告生成/提取/合并/拆分/表单填写/安全处理（57 种工具）",
       "source": "zavora-ai",
       "stars": "⭐ 1",
+      "ver": "v1.0.0",
+      "verKind": "release",
+      "verDate": "2026-05-26",
       "updated": "2026-06-16"
     },
     {
@@ -423,6 +501,9 @@
       "desc": "把技术类 PDF/EPUB/DOCX 书籍转化为可交互的 Agent Skill，按需加载章节",
       "source": "virgiliojr94",
       "stars": "⭐ 28k",
+      "ver": "v1.4.0",
+      "verKind": "release",
+      "verDate": "2026-08-10",
       "updated": "2026-06-20"
     },
     {
@@ -435,6 +516,9 @@
       "desc": "让 AI Agent 像资深懒人开发者一样思考：能省则省，YAGNI，用最少的代码完成任务",
       "source": "DietrichGebert",
       "stars": "⭐ 122k",
+      "ver": "v5.3.3",
+      "verKind": "release",
+      "verDate": "2026-10-29",
       "updated": "2026-06-20"
     },
     {
@@ -447,6 +531,9 @@
       "desc": "持续学习与纠错：自动记录错误、纠正和经验，让 Agent 永久进化",
       "source": "ClawHub — pskoett",
       "stars": "⭐ 3.8k，安装 6.9k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-20"
     },
     {
@@ -459,6 +546,9 @@
       "desc": "安装任何第三方 Skill 前的安全审查，检查红旗、权限范围和可疑模式",
       "source": "ClawHub — spclaudehome",
       "stars": "⭐ 1.2k，安装 4.7k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -471,6 +561,9 @@
       "desc": "把 Agent 从「等指令」变成「主动预判需求」，带 WAL 协议与自动定时任务",
       "source": "ClawHub — halthelobster",
       "stars": "⭐ 800，安装 3.0k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -483,6 +576,9 @@
       "desc": "自我反思 + 自我批评 + 自我学习 + 自组织记忆，Agent 能评估自己的工作并永久改进",
       "source": "ClawHub — ivangdavila",
       "stars": "⭐ 1.2k，安装 2.2k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -495,6 +591,9 @@
       "desc": "类型化知识图谱，给 Agent 结构化记忆与可组合的技能能力",
       "source": "ClawHub — oswalpalash",
       "stars": "⭐ 638，安装 1.4k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -507,6 +606,9 @@
       "desc": "每天自动检查并更新 Agent 本体和所有已安装 Skill，附变更摘要",
       "source": "ClawHub — maximeprades",
       "stars": "⭐ 428，安装 1.5k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -519,6 +621,9 @@
       "desc": "用 `gh` CLI 操作 GitHub：issue、PR、CI 运行和高级查询",
       "source": "ClawHub — steipete",
       "stars": "⭐ 636，安装 4.5k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -531,6 +636,9 @@
       "desc": "Google Workspace CLI：Gmail、日历、Drive、通讯录、Sheets、Docs 一站式操控",
       "source": "ClawHub — steipete",
       "stars": "⭐ 924，安装 3.7k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -543,6 +651,9 @@
       "desc": "从 Agent 控制 Slack：发消息、表情回复、置顶/取消置顶等",
       "source": "ClawHub — steipete",
       "stars": "⭐ 158，安装 1.4k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -555,6 +666,9 @@
       "desc": "通过 Trello REST API 管理看板、列表和卡片",
       "source": "ClawHub — steipete",
       "stars": "⭐ 161，安装 1.3k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -567,6 +681,9 @@
       "desc": "Notion API 创建和管理页面、数据库与 block",
       "source": "ClawHub — steipete",
       "stars": "⭐ 259，安装 2.4k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -579,6 +696,9 @@
       "desc": "操作 Obsidian 笔记库（纯 Markdown）并通过 obsidian-cli 自动化",
       "source": "ClawHub — steipete",
       "stars": "⭐ 428，安装 2.6k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -591,6 +711,9 @@
       "desc": "从 Agent 控制 Discord：发消息、表情、投票、管理频道/成员/权限",
       "source": "ClawHub — steipete",
       "stars": "⭐ 77，安装 1.3k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -603,6 +726,9 @@
       "desc": "用 mcporter CLI 列出、配置、授权并调用任意 MCP 服务器/工具（HTTP 或 stdio）",
       "source": "ClawHub — steipete",
       "stars": "⭐ 194，安装 2.0k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -615,6 +741,9 @@
       "desc": "用 himalaya CLI 通过 IMAP/SMTP 收发、搜索和管理邮件",
       "source": "ClawHub — lamelas",
       "stars": "⭐ 69，安装 1.5k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -627,6 +756,9 @@
       "desc": "设置并使用 1Password CLI（op），读取/注入/运行密钥",
       "source": "ClawHub — steipete",
       "stars": "⭐ 52，安装 1.3k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -639,6 +771,9 @@
       "desc": "用 `memo` CLI 在 macOS 上管理 Apple Notes（创建/查看/编辑/搜索/导出）",
       "source": "ClawHub — steipete",
       "stars": "⭐ 57，安装 1.4k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -651,6 +786,9 @@
       "desc": "用 `remindctl` CLI 管理 Apple 提醒事项（列表/添加/编辑/完成/删除）",
       "source": "ClawHub — steipete",
       "stars": "⭐ 54，安装 1.3k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -663,6 +801,9 @@
       "desc": "用 vdirsyncer + khal 同步查询 CalDAV 日历（iCloud/Google/Fastmail/Nextcloud）",
       "source": "ClawHub — asleep123",
       "stars": "⭐ 242",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -675,6 +816,9 @@
       "desc": "集成 16 个搜索引擎（7 国内 + 9 全球），支持高级运算符和时间筛选",
       "source": "ClawHub — gpyangyoujun",
       "stars": "⭐ 727，安装 2.2k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -687,6 +831,9 @@
       "desc": "通过 Tavily API 联网搜索（Brave 不可用时的替代方案）",
       "source": "ClawHub — jacky1n7",
       "stars": "⭐ 263，安装 1.4k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -699,6 +846,9 @@
       "desc": "用百度 AI 搜索引擎（BDSE）联网搜索，适合中文实时信息",
       "source": "ClawHub — ide-rea",
       "stars": "⭐ 216",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -711,6 +861,9 @@
       "desc": "为 AI Agent 优化的无头浏览器自动化 CLI，带可访问性树快照和 ref 元素选择",
       "source": "ClawHub — matrixy",
       "stars": "⭐ 424",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -723,6 +876,9 @@
       "desc": "用 Peekaboo CLI 捕获并自动化 macOS UI",
       "source": "ClawHub — steipete",
       "stars": "⭐ 82，安装 1.3k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -735,6 +891,9 @@
       "desc": "远程控制 tmux 会话，向交互式 CLI 发送按键并抓取输出",
       "source": "ClawHub — steipete",
       "stars": "⭐ 43，安装 1.4k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -747,6 +906,9 @@
       "desc": "广告情报与应用分析助手，搜索广告素材、分析 App、排名、下载、收入和市场洞察",
       "source": "ClawHub — fly0pants",
       "stars": "⭐ 286",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -759,6 +921,9 @@
       "desc": "接入 Polymarket 预测市场数据",
       "source": "ClawHub — mvanhorn",
       "stars": "⭐ 22",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -771,6 +936,9 @@
       "desc": "设计并实现自动化工作流，覆盖 Zapier/Make/n8n 工具选型、触发器和测试维护",
       "source": "ClawHub — jk-0001",
       "stars": "⭐ 305，安装 1.1k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -783,6 +951,9 @@
       "desc": "用 CodexBar CLI 统计各模型的本地用量和成本",
       "source": "ClawHub — steipete",
       "stars": "⭐ 113，安装 1.6k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -795,6 +966,9 @@
       "desc": "用 blogwatcher CLI 监控博客和 RSS/Atom 订阅源的更新",
       "source": "ClawHub — steipete",
       "stars": "⭐ 70，安装 1.5k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -807,6 +981,9 @@
       "desc": "查询实时天气和预报，无需 API Key",
       "source": "ClawHub — steipete",
       "stars": "⭐ 417，安装 3.9k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -819,6 +996,9 @@
       "desc": "用 ffmpeg 从视频中提取帧或短片段",
       "source": "ClawHub — steipete",
       "stars": "⭐ 129，安装 1.6k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -831,6 +1011,9 @@
       "desc": "用 Whisper CLI 本地语音转文字，无需 API Key",
       "source": "ClawHub — steipete",
       "stars": "⭐ 325，安装 2.1k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -843,6 +1026,9 @@
       "desc": "通过 OpenAI Audio Transcriptions API 转录音频",
       "source": "ClawHub — steipete",
       "stars": "⭐ 52，安装 1.2k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -855,6 +1041,9 @@
       "desc": "ElevenLabs 文字转语音，提供 macOS say 风格体验",
       "source": "ClawHub — steipete",
       "stars": "⭐ 26，安装 1.3k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -867,6 +1056,9 @@
       "desc": "终端 Spotify 播放与搜索（spogo 或 spotify_player）",
       "source": "ClawHub — steipete",
       "stars": "⭐ 54，安装 1.2k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -879,6 +1071,9 @@
       "desc": "控制 Sonos 音箱（发现/状态/播放/音量/分组）",
       "source": "ClawHub — steipete",
       "stars": "⭐ 55，安装 2.8k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -891,6 +1086,9 @@
       "desc": "用 goplaces CLI 查询 Google Places API，做地点搜索/详情/评价",
       "source": "ClawHub — steipete",
       "stars": "⭐ 30，安装 1.3k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -903,6 +1101,9 @@
       "desc": "Gemini CLI 一次性问答、摘要和生成",
       "source": "ClawHub — steipete",
       "stars": "⭐ 56，安装 1.5k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -915,6 +1116,9 @@
       "desc": "用 jq 搜索和分析自己的会话日志（历史/父级对话）",
       "source": "ClawHub — guogang1024",
       "stars": "⭐ 30，安装 1.4k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -927,6 +1131,9 @@
       "desc": "用 Nano Banana Pro（Gemini 3 Pro Image）生成/编辑图片，支持文生图 + 图生图",
       "source": "ClawHub — steipete",
       "stars": "⭐ 405，安装 1.9k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -939,6 +1146,9 @@
       "desc": "通过 OpenAI Images API 批量生成图片，附随机 prompt 采样和画廊",
       "source": "ClawHub — steipete",
       "stars": "⭐ 37，安装 1.1k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -951,6 +1161,9 @@
       "desc": "去除文本中的 AI 写作痕迹，基于维基百科「AI 写作迹象」清单改写得更自然",
       "source": "ClawHub — biostartechnology",
       "stars": "⭐ 669，安装 1.5k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -963,6 +1176,9 @@
       "desc": "用自然语言指令通过 nano-pdf CLI 编辑 PDF",
       "source": "ClawHub — steipete",
       "stars": "⭐ 260，安装 2.6k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -975,6 +1191,9 @@
       "desc": "用 JSON 文件存储追踪每日喝水和睡眠",
       "source": "ClawHub — stellarhold170nt",
       "stars": "⭐ 11，安装 1.2k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -987,6 +1206,9 @@
       "desc": "ClawHub 社区版 Skill 创建指南，扩展 Agent 的知识、工作流和工具集成",
       "source": "ClawHub — chindden",
       "stars": "⭐ 319，安装 2.5k",
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-06-17"
     },
     {
@@ -999,6 +1221,9 @@
       "desc": "专业视频处理命令行神器：格式转换/压缩/剪辑/分析，视频工具链的底层基石",
       "source": "fabriqaai / LobeHub",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-02-15",
       "updated": "2026-06-29"
     },
     {
@@ -1011,6 +1236,9 @@
       "desc": "世界首个开源 agentic 视频生产系统：12 条 pipeline、100+ 工具、700+ agent skills",
       "source": "calesthio",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-16",
       "updated": "2026-06-29"
     },
     {
@@ -1023,6 +1251,9 @@
       "desc": "3Blue1Brown 同款数学动画引擎：文字描述 → 高质量知识动画视频",
       "source": "adithya-s-k（Manim Community）",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-01-23",
       "updated": "2026-06-29"
     },
     {
@@ -1035,6 +1266,9 @@
       "desc": "开源 AI Agent 长期记忆平台：自托管知识图谱引擎，跨会话持久上下文",
       "source": "topoteretes",
       "stars": "⭐ 30.4k",
+      "ver": "v1.6.8",
+      "verKind": "release",
+      "verDate": "2026-11-12",
       "updated": "2026-06-29"
     },
     {
@@ -1047,6 +1281,9 @@
       "desc": "从 .claude 等目录提炼可复用结构化技能，系统化管理 Agent 能力",
       "source": "addyosmani",
       "stars": null,
+      "ver": "0.6.16",
+      "verKind": "release",
+      "verDate": "2026-11-14",
       "updated": "2026-06-29"
     },
     {
@@ -1059,6 +1296,9 @@
       "desc": "LLM token 自动压缩：减少 60-95% token 消耗，支持 library / proxy / MCP 集成",
       "source": "headroomlabs-ai",
       "stars": null,
+      "ver": "v0.44.0",
+      "verKind": "release",
+      "verDate": "2026-11-10",
       "updated": "2026-06-29"
     },
     {
@@ -1071,6 +1311,9 @@
       "desc": "一 CLI 零 API 费用实时抓取 Twitter/X、Reddit、YouTube、GitHub、Bilibili、小红书情报",
       "source": "Panniantong",
       "stars": null,
+      "ver": "v1.6.1",
+      "verKind": "release",
+      "verDate": "2026-11-01",
       "updated": "2026-06-29"
     },
     {
@@ -1083,6 +1326,9 @@
       "desc": "TypeScript 开源编码 Agent，高性能可扩展的 AI 编码助手",
       "source": "anomalyco",
       "stars": null,
+      "ver": "v1.19.6",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-06-29"
     },
     {
@@ -1095,6 +1341,9 @@
       "desc": "反模板化前端设计框架：让 AI 生成有品味的 UI，告别千篇一律的「AI 味」界面",
       "source": "Leonxlnx",
       "stars": "⭐ 84k",
+      "ver": "v2.5.1",
+      "verKind": "release",
+      "verDate": "2026-11-07",
       "updated": "2026-06-30"
     },
     {
@@ -1107,6 +1356,9 @@
       "desc": "GSAP 动画官方 AI Skill：教 AI 代理正确使用 GSAP 动画库（核心 API/时间线/ScrollTrigger/插件）",
       "source": "greensock",
       "stars": "⭐ 14.8k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-04-21",
       "updated": "2026-06-30"
     },
     {
@@ -1119,6 +1371,9 @@
       "desc": "❤️ 家庭关怀陪伴 Skill：原生家庭觉察与疗愈，内置八大历史人物文化原型自动匹配",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-06-12",
       "updated": "2026-07-01"
     },
     {
@@ -1131,6 +1386,9 @@
       "desc": "丢个 URL 进去整站爬完，吐出 AI 能直接吃的干净数据，JS 渲染页面也扛得住",
       "source": "firecrawl",
       "stars": "⭐ 176k，GitHub Top 100",
+      "ver": "v2.11.0",
+      "verKind": "release",
+      "verDate": "2026-06-19",
       "updated": "2026-07-01"
     },
     {
@@ -1143,6 +1401,9 @@
       "desc": "把网站整成 LLM 能直接读的文本，不要 API Key 不要钱",
       "source": "unclecode",
       "stars": "⭐ 81k",
+      "ver": "v0.9.5",
+      "verKind": "release",
+      "verDate": "2026-10-14",
       "updated": "2026-07-01"
     },
     {
@@ -1155,6 +1416,9 @@
       "desc": "让 AI 像真人一样点鼠标、登录、填表，ETH Zurich 学生团队出品",
       "source": "browser-use",
       "stars": "⭐ 112k",
+      "ver": "1.0.6",
+      "verKind": "release",
+      "verDate": "2026-11-16",
       "updated": "2026-07-01"
     },
     {
@@ -1167,6 +1431,9 @@
       "desc": "自动换代理/重试/伪装指纹/管队列，整套躲限制的爬虫框架",
       "source": "apify",
       "stars": null,
+      "ver": "v3.18.2",
+      "verKind": "release",
+      "verDate": "2026-09-29",
       "updated": "2026-07-01"
     },
     {
@@ -1179,6 +1446,9 @@
       "desc": "干了十多年的老牌爬虫框架，几百万页面照样稳，永久免费",
       "source": "scrapy",
       "stars": "⭐ 64k",
+      "ver": "2.20.0",
+      "verKind": "release",
+      "verDate": "2026-11-06",
       "updated": "2026-07-01"
     },
     {
@@ -1191,6 +1461,9 @@
       "desc": "网站改版它自己适应，持续躲封禁，免费版能打付费的",
       "source": "D4Vinci",
       "stars": null,
+      "ver": "v0.5.1",
+      "verKind": "release",
+      "verDate": "2026-11-04",
       "updated": "2026-07-01"
     },
     {
@@ -1203,6 +1476,9 @@
       "desc": "给它一个样例，它自己学规律批量扒，不用写选择器",
       "source": "alirezamika",
       "stars": null,
+      "ver": "v1.1.14",
+      "verKind": "release",
+      "verDate": "2022-07-17",
       "updated": "2026-07-01"
     },
     {
@@ -1215,6 +1491,9 @@
       "desc": "微软出品：PDF/Office/HTML/图片批量转 Markdown 文本，开源免费",
       "source": "Microsoft",
       "stars": null,
+      "ver": "v0.1.9",
+      "verKind": "release",
+      "verDate": "2026-10-21",
       "updated": "2026-07-01"
     },
     {
@@ -1227,6 +1506,9 @@
       "desc": "用电脑远程操控安卓手机，专治那些只有 App 没网页的数据源",
       "source": "Genymobile",
       "stars": "⭐ 149k",
+      "ver": "v5.0.1",
+      "verKind": "release",
+      "verDate": "2026-10-08",
       "updated": "2026-07-01"
     },
     {
@@ -1239,6 +1521,9 @@
       "desc": "把请求伪装成真 Chrome 浏览器指纹，绕反爬不要太轻松",
       "source": "lwthiker",
       "stars": null,
+      "ver": "v0.6.1",
+      "verKind": "release",
+      "verDate": "2024-03-02",
       "updated": "2026-07-01"
     },
     {
@@ -1251,6 +1536,9 @@
       "desc": "多平台自媒体数据采集：小红书/抖音/B站/微博/快手/贴吧/知乎，支持关键词搜索和评论爬取",
       "source": "NanmiCoder",
       "stars": "⭐ 64k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-17",
       "updated": "2026-07-01"
     },
     {
@@ -1263,6 +1551,9 @@
       "desc": "232 个领域专家 AI Agent 合集：从前端开发到安全审计，一人即团队",
       "source": "msitarzewski",
       "stars": "⭐ 150k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-09",
       "updated": "2026-07-01"
     },
     {
@@ -1275,6 +1566,9 @@
       "desc": "Seedance 2.0 完整导演制作管线：专业分镜/运镜/续拍/安全改写，支持多语言提示词",
       "source": "Emily2040",
       "stars": "⭐ 7.1k",
+      "ver": "v6.7.0",
+      "verKind": "release",
+      "verDate": "2026-08-06",
       "updated": "2026-07-04"
     },
     {
@@ -1287,6 +1581,9 @@
       "desc": "MCP Streamable HTTP 桥接工具：session ID 自动持久化，零配置连接 Chrome MCP 服务",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-09-18",
       "updated": "2026-07-29"
     },
     {
@@ -1299,6 +1596,9 @@
       "desc": "一人律所 Agents：28 位 AI 虚拟专员、7 大部门，覆盖接案/检索/文书/排期/催收/品宣/知识沉淀全链条",
       "source": "saysoph",
       "stars": "⭐ 41",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-03-24",
       "updated": "2026-08-01"
     },
     {
@@ -1311,6 +1611,9 @@
       "desc": "AI 对抗性 UI 测试：分析 git diff 测变更，或全 app 主动探索找 bug",
       "source": "browserbase",
       "stars": "⭐ 3.7k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-17",
       "updated": "2026-08-12"
     },
     {
@@ -1323,6 +1626,9 @@
       "desc": "观察网站 HTTP 流量，逆向生成 OpenAPI 3.1 规范，把网页变可调用的 API",
       "source": "browserbase",
       "stars": "⭐ 3.7k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-17",
       "updated": "2026-08-12"
     },
     {
@@ -1335,6 +1641,9 @@
       "desc": "最强浏览器自动化：CAPTCHA 自动解决、住宅代理、远程会话，支持登录态复用",
       "source": "browserbase",
       "stars": "⭐ 3.7k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-17",
       "updated": "2026-08-12"
     },
     {
@@ -1347,6 +1656,9 @@
       "desc": "自动发现公司竞品，营销/信号/基准/战略四维深研，输出可浏览 HTML 报告",
       "source": "browserbase",
       "stars": "⭐ 3.7k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-17",
       "updated": "2026-08-12"
     },
     {
@@ -1359,6 +1671,9 @@
       "desc": "按 ICP 画像发现目标公司，逐家深研并打分，输出研究报告和 CSV",
       "source": "browserbase",
       "stars": "⭐ 3.7k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-17",
       "updated": "2026-08-12"
     },
     {
@@ -1371,6 +1686,9 @@
       "desc": "按关键词/作者/分类/ID 搜索 arXiv 论文，做学术调研",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1383,6 +1701,9 @@
       "desc": "⚠️ 已失效：Hermes 官方已移除该 Skill，OCR 能力并入内置 pdf Skill",
       "source": "Hermes Agent / Nous Research（官方内置 · ⚠️ 已移除）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1395,6 +1716,9 @@
       "desc": "从文档中提取带引用的义务、截止日期和任务清单",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1407,6 +1731,9 @@
       "desc": "监控商品/航班/挂牌价格，达到目标价自动提醒",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1419,6 +1746,9 @@
       "desc": "盯住指定公司的重大新闻，输出带引用的情报简报",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1431,6 +1761,9 @@
       "desc": "暗色主题 SVG 架构/云/基础设施图，直接输出 HTML",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1443,6 +1776,9 @@
       "desc": "手绘风格 Excalidraw JSON 图表：架构/流程/时序图",
       "source": "Hermes Agent / Nous Research（官方可选）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1455,6 +1791,9 @@
       "desc": "54 个大厂真实设计系统（Stripe/Linear/Vercel）HTML/CSS 参考实现",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1467,6 +1806,9 @@
       "desc": "OpenStreetMap/OSRM 地理编码、POI、路线规划、时区查询，免 API Key",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1479,6 +1821,9 @@
       "desc": "每周重置复盘：承诺事项/搁置工作/下周计划",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1491,6 +1836,9 @@
       "desc": "YouTube 字幕 → 摘要/长文/博客/社交媒体文案",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1503,6 +1851,9 @@
       "desc": "会议记录 → 带引用的决策、负责人和待办工单",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1515,6 +1866,9 @@
       "desc": "后台驱动桌面完成自动化操作，不抢占焦点",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1527,6 +1881,9 @@
       "desc": "用 pygount 统计代码量、语言占比、目录分布",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1539,6 +1896,9 @@
       "desc": "ComfyUI 扩散工作流生成图片/视频/音频",
       "source": "Hermes Agent / Nous Research（官方可选）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1551,6 +1911,9 @@
       "desc": "写歌技巧 + Suno AI 音乐提示词创作",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1563,6 +1926,9 @@
       "desc": "macOS 上通过 FindMy 定位 Apple 设备和 AirTag",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1575,6 +1941,9 @@
       "desc": "macOS 上用 imsg CLI 收发 iMessage/SMS",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1587,6 +1956,9 @@
       "desc": "从 Tenor 搜索/下载 GIF，curl + jq 一行搞定",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1599,6 +1971,9 @@
       "desc": "编写/校验/导出 Google DESIGN.md 设计 token 规范文件",
       "source": "Hermes Agent / Nous Research（官方内置）",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-08-12"
     },
     {
@@ -1611,6 +1986,9 @@
       "desc": "200+ WebGPU 特效组件：渐变/噪点/玻璃/金属/光效/畸变/转场/模糊/光标特效，支持 React/Vue/Svelte/Solid/JS/Framer",
       "source": "shader-effects-inc",
       "stars": "⭐ 3.6k",
+      "ver": "v4.0.7",
+      "verKind": "release",
+      "verDate": "2026-11-06",
       "updated": "2026-10-09"
     },
     {
@@ -1623,6 +2001,9 @@
       "desc": "用代码让画动起来：35 种艺术风格配方 + 9 种解说语法，让 coding agent 把艺术风格写成会动的画",
       "source": "alchaincyf / 花叔",
       "stars": "⭐ 2.7k",
+      "ver": "v1.3.1",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-10-09"
     },
     {
@@ -1635,6 +2016,9 @@
       "desc": "基于 283 万字语料统计的去 AI 味 skill：用语言学方法量化「什么是 AI 味」并逐项检验后可复算地去痕",
       "source": "larashero3-dotcom",
       "stars": "⭐ 2.5k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-11",
       "updated": "2026-10-09"
     },
     {
@@ -1647,6 +2031,9 @@
       "desc": "面向 Dreamina／即梦 Seedance 2.5 的视频导演 Skill：把创意/参考图/视频/音频整理成脚本、导演方案、诊断结果与复制即用的提示词",
       "source": "liyue-aigc",
       "stars": "⭐ 566",
+      "ver": "v1.0.0",
+      "verKind": "release",
+      "verDate": "2026-08-18",
       "updated": "2026-10-09"
     },
     {
@@ -1659,6 +2046,9 @@
       "desc": "把任意代码库/知识库/文档变成可探索、可搜索、可提问的交互式知识图谱，附可视化 Dashboard",
       "source": "Egonex-AI",
       "stars": "⭐ 85.7k",
+      "ver": "v2.9.8",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-10-09"
     },
     {
@@ -1671,6 +2061,9 @@
       "desc": "把代码、文档、SQL、配置、PDF 变成可查询知识图谱：本地确定性 AST 解析，每条边可解释，无需向量库",
       "source": "Graphify-Labs",
       "stars": "⭐ 125k，YC S26",
+      "ver": "v0.9.112",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-10-15"
     },
     {
@@ -1683,6 +2076,9 @@
       "desc": "把任何想法、方案或代码库变成漂亮的交互式 HTML 图（架构/流程/时序/数据流/生命周期），可探索、可分享",
       "source": "tt-a1i",
       "stars": "⭐ 81k，GitHub Trending 周榜第一",
+      "ver": "v3.2.0",
+      "verKind": "release",
+      "verDate": "2026-10-19",
       "updated": "2026-10-15"
     },
     {
@@ -1695,6 +2091,9 @@
       "desc": "让 AI 编码 Agent 更懂设计的技能：1 个 skill + 24 个命令 + 实时浏览器迭代 + 59 条确定性检测规则",
       "source": "pbakaus / Paul Bakaus",
       "stars": "⭐ 78.9k",
+      "ver": "cli-v4.9.2",
+      "verKind": "release",
+      "verDate": "2026-11-16",
       "updated": "2026-10-15"
     },
     {
@@ -1707,6 +2106,9 @@
       "desc": "让 Agent「说穴居人话」省 token：输出压缩 + 代理压缩，整段会话省 33% 输入 token，答案不变",
       "source": "JuliusBrussee",
       "stars": "⭐ 111k",
+      "ver": "v4.1.0",
+      "verKind": "release",
+      "verDate": "2026-11-08",
       "updated": "2026-10-15"
     },
     {
@@ -1719,6 +2121,9 @@
       "desc": "1000+ 生产级 Claude Skill / 插件精选清单，覆盖文档、开发、数据、营销、协作等全场景",
       "source": "ComposioHQ",
       "stars": "⭐ 76.7k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-07-24",
       "updated": "2026-10-15"
     },
     {
@@ -1731,6 +2136,9 @@
       "desc": "把一句灵感或一张参考图整理成可用生图提示词：外貌/服装/构图/材质/光影，含 3397 条分类词库",
       "source": "joshesye",
       "stars": "⭐ 18",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-10-03",
       "updated": "2026-10-15"
     },
     {
@@ -1743,6 +2151,9 @@
       "desc": "给一个选题，查证/找素材/排版/检查/打包，交付封面 + 10 页（1440×1920）成套可直接发布的图文轮播",
       "source": "chengyi-ai",
       "stars": "⭐ 129",
+      "ver": "v0.1.2",
+      "verKind": "release",
+      "verDate": "2026-10-17",
       "updated": "2026-10-15"
     },
     {
@@ -1755,6 +2166,9 @@
       "desc": "让编码 Agent 别把答案埋没：先给动作、编号步骤、结尾一个下一步，去掉寒暄和总结",
       "source": "ayghri",
       "stars": "⭐ 56.3k",
+      "ver": "v0.4.1",
+      "verKind": "release",
+      "verDate": "2026-10-19",
       "updated": "2026-10-15"
     },
     {
@@ -1767,6 +2181,9 @@
       "desc": "Claude Code 状态栏插件：实时显示上下文用量、速率限制、活跃工具、运行中的 Agent 和 todo 进度",
       "source": "jarrodwatts",
       "stars": "⭐ 28.4k",
+      "ver": "v0.15.0",
+      "verKind": "release",
+      "verDate": "2026-11-02",
       "updated": "2026-10-15"
     },
     {
@@ -1779,6 +2196,9 @@
       "desc": "跨 Reddit/X/YouTube/TikTok/HN/Polymarket/GitHub 等平台，调研任何话题最近 30 天真实讨论，综合成带引用的简报",
       "source": "mvanhorn",
       "stars": "⭐ 63.9k",
+      "ver": "v4.3.2",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-10-15"
     },
     {
@@ -1791,6 +2211,9 @@
       "desc": "Vercel/Linear 设计工程师 Emil Kowalski 的界面与动画技能包：让 Agent 选对缓动/时长/属性，做出「顺滑」的交互",
       "source": "emilkowalski",
       "stars": "⭐ 45k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-15",
       "updated": "2026-10-15"
     },
     {
@@ -1803,6 +2226,9 @@
       "desc": "面向营销的 AI Agent 技能合集：CRO、文案、SEO、分析、增长工程，40+ 个可复用营销技能",
       "source": "coreyhaines31 / Corey Haines",
       "stars": "⭐ 32.8k",
+      "ver": "v2.14.13",
+      "verKind": "release",
+      "verDate": "2026-11-18",
       "updated": "2026-10-15"
     },
     {
@@ -1815,6 +2241,9 @@
       "desc": "把 Claude 官方 UI kit 的设计细节（token/组件几何/动效/硬规则）取到手，照着改或做页面，交付可运行代码而非设计赏析",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-10-15",
       "updated": "2026-10-15"
     },
     {
@@ -1827,6 +2256,9 @@
       "desc": "万物皆插件的开源 Agent Harness，Web UI / 桌面端 / CLI 三种形态，插件生态的底座",
       "source": "deepseek-ai",
       "stars": "⭐ 264k",
+      "ver": "dsh-v0.2.2-rc.4",
+      "verKind": "tag",
+      "verDate": "2026-11-17",
       "updated": "2026-10-28"
     },
     {
@@ -1839,6 +2271,9 @@
       "desc": "DSH 内置可视化插件市场：搜索、分类、一键安装升级，附带主题切换",
       "source": "dsh-market",
       "stars": "⭐ 9.3k",
+      "ver": "v1.73.20",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-10-28"
     },
     {
@@ -1851,6 +2286,9 @@
       "desc": "社区维护的 DSH 插件精选清单，按 AGI/UI/记忆/工具/通知等 24 类整理",
       "source": "awesome-dsh-plugin",
       "stars": "⭐ 21.1k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-17",
       "updated": "2026-10-28"
     },
     {
@@ -1863,6 +2301,9 @@
       "desc": "上下文可视化与管理：组成、统计、演进、压缩、剪枝一目了然",
       "source": "bowenliang123",
       "stars": "⭐ 1.3k",
+      "ver": "v0.85.1",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-10-28"
     },
     {
@@ -1875,6 +2316,9 @@
       "desc": "可扩展侧边栏底座：文件编辑/终端/侧边对话/Git/子代理页面，第三方可注册新页面",
       "source": "omdsh-dev",
       "stars": "⭐ 3.4k",
+      "ver": "v0.32.1",
+      "verKind": "release",
+      "verDate": "2026-11-12",
       "updated": "2026-10-28"
     },
     {
@@ -1887,6 +2331,9 @@
       "desc": "给纯文本模型外挂视觉：粘贴图片输出 OCR、版面与语义的结构化 JSON",
       "source": "liustack",
       "stars": "⭐ 3.9k",
+      "ver": "v3.27.5",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-10-28"
     },
     {
@@ -1899,6 +2346,9 @@
       "desc": "文本模型的「眼睛」：免费视觉链 + 像素级工具（问答/定位/裁剪/OCR/抠图）",
       "source": "ysr666",
       "stars": "⭐ 1.1k",
+      "ver": "v3.4.0",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-10-28"
     },
     {
@@ -1911,6 +2361,9 @@
       "desc": "给不会联网的模型补上搜索：免注册免 Key，返回结构化 JSON 证据",
       "source": "liustack",
       "stars": "⭐ 433",
+      "ver": "v5.10.14",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-10-28"
     },
     {
@@ -1923,6 +2376,9 @@
       "desc": "给 DSH 加 Agent 团队：多角色并行协作、任务分派与结果汇总",
       "source": "NanmiCoder",
       "stars": "⭐ 1.5k",
+      "ver": "v0.1.30",
+      "verKind": "release",
+      "verDate": "2026-11-13",
       "updated": "2026-10-28"
     },
     {
@@ -1935,6 +2391,9 @@
       "desc": "扫码/凭据把飞书、微信、钉钉、QQ、Slack、Telegram 等 9 个 IM 接进 DSH",
       "source": "xmanrui",
       "stars": "⭐ 1.2k",
+      "ver": "v5.10.0",
+      "verKind": "release",
+      "verDate": "2026-11-03",
       "updated": "2026-10-28"
     },
     {
@@ -1947,6 +2406,9 @@
       "desc": "运行时注入器 + 任务感知推理模式路由，按任务自动选思考档位（P1–P23 实测）",
       "source": "yjh051108",
       "stars": "⭐ 7k",
+      "ver": "0.0.1-rc1",
+      "verKind": "release",
+      "verDate": "2026-09-02",
       "updated": "2026-10-28"
     },
     {
@@ -1959,6 +2421,9 @@
       "desc": "把表格/文档/幻灯片/多维表搬进 DSH，产出 xlsx/docx/pptx 并支持多 Agent 协作",
       "source": "dream-num",
       "stars": "⭐ 303",
+      "ver": "v0.3.9",
+      "verKind": "release",
+      "verDate": "2026-10-30",
       "updated": "2026-10-28"
     },
     {
@@ -1971,6 +2436,9 @@
       "desc": "火山引擎自进化上下文数据库，为 DSH 提供跨会话记忆、知识 RAG 与自动召回",
       "source": "volcengine",
       "stars": "⭐ 41k",
+      "ver": "v0.5.5",
+      "verKind": "release",
+      "verDate": "2026-11-13",
       "updated": "2026-10-28"
     },
     {
@@ -1983,6 +2451,9 @@
       "desc": "腾讯开源知识平台，给 DSH 四个只读工具：列库/混合检索/文档重组/带引用作答",
       "source": "Tencent",
       "stars": "⭐ 35.7k",
+      "ver": "v0.9.0",
+      "verKind": "release",
+      "verDate": "2026-10-29",
       "updated": "2026-10-28"
     },
     {
@@ -1995,6 +2466,9 @@
       "desc": "DSH 右下角常驻小鲸鱼：API 余额、今日消耗、每轮花费，气泡可自定义",
       "source": "MeteorNOX",
       "stars": "⭐ 6.3k",
+      "ver": "v0.4.2",
+      "verKind": "release",
+      "verDate": "2026-10-11",
       "updated": "2026-10-28"
     },
     {
@@ -2007,6 +2481,9 @@
       "desc": "为 DSH 插件生态打造的桌面端，桌面本身也是插件，内置插件市场",
       "source": "anywhere-labs",
       "stars": "⭐ 33.6k",
+      "ver": "v2.0.23-next",
+      "verKind": "release",
+      "verDate": "2026-11-13",
       "updated": "2026-10-28"
     },
     {
@@ -2019,6 +2496,9 @@
       "desc": "在 DSH 里读 RSS：频道发现、原文/中文版本切换，并就当前文章向 AI 追问",
       "source": "joeseesun",
       "stars": "⭐ 54",
+      "ver": "v0.9.7",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-10-28"
     },
     {
@@ -2031,6 +2511,9 @@
       "desc": "在 DSH 中读 EPUB/PDF/TXT/Markdown，划线、听书、记生词并导出笔记",
       "source": "joeseesun",
       "stars": "⭐ 5",
+      "ver": "v1.9.4",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-10-28"
     },
     {
@@ -2043,6 +2526,9 @@
       "desc": "在 DSH 里逛 13,561 条设计参考、106 个交互标本，做审美测验并沉淀 Markdown 笔记",
       "source": "joeseesun",
       "stars": "⭐ 10",
+      "ver": "v0.1.7",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-10-28"
     },
     {
@@ -2055,6 +2541,9 @@
       "desc": "DSH 起点页：会话搜索、今日重点、待办、记录与专注计时，一打开就知道该做什么",
       "source": "joeseesun",
       "stars": "⭐ 10",
+      "ver": "v0.3.6",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-10-28"
     },
     {
@@ -2067,6 +2556,9 @@
       "desc": "可选 Bundle：在 Web/桌面 profile 管理 MCP 服务器、Chrome 连接与记忆设置",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": "v1.0.33",
+      "verKind": "release",
+      "verDate": "2026-11-03",
       "updated": "2026-10-28"
     },
     {
@@ -2079,6 +2571,9 @@
       "desc": "可选主题 Bundle：六套壁纸主题 + 配色预览，含 VIP 金色光辉玻璃风格",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": "v1.0.21",
+      "verKind": "release",
+      "verDate": "2026-11-03",
       "updated": "2026-10-28"
     },
     {
@@ -2091,6 +2586,9 @@
       "desc": "45 种编辑级图表：一句话让 Agent 产出单文件 HTML + SVG（架构/时序/ER/象限/桑基/甘特等），可拉取网站配色字体做品牌化",
       "source": "cathrynlavery",
       "stars": "⭐ 62.1k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-12",
       "updated": "2026-10-28"
     },
     {
@@ -2103,6 +2601,9 @@
       "desc": "GitHub 官方 SDD 工具包：把「规格→计划→任务→实现→收敛」固化成 Agent 命令，也能修 Bug、评估想法、自定义流程",
       "source": "GitHub 官方",
       "stars": "⭐ 143.7k",
+      "ver": "v1.4.2",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-10-29"
     },
     {
@@ -2115,6 +2616,9 @@
       "desc": "面向 AI 编码工具的设计技能合集：从提问、结构、转化文案到完整视觉系统（字体/间距/圆角/动效）搭建落地页",
       "source": "elayadesign",
       "stars": "⭐ 11.2k",
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-01",
       "updated": "2026-10-29"
     },
     {
@@ -2127,6 +2631,9 @@
       "desc": "让 Claude 做出获奖级电影感落地页：40 个示例提示词 + 媒体架 + 55 条技法配方 + 截图自检修复循环",
       "source": "Motionsites-AI",
       "stars": "⭐ 903",
+      "ver": "v1.0.0",
+      "verKind": "release",
+      "verDate": "2026-10-26",
       "updated": "2026-10-29"
     },
     {
@@ -2139,6 +2646,9 @@
       "desc": "一张照片 + 一句话，全自动产出数字人口播成片：脚本/唇形视频/修音/字幕/博主级包装，5 种剪辑风格 + 48 个包装组件",
       "source": "andyhuo520",
       "stars": "⭐ 1.3k",
+      "ver": "v1.0.0",
+      "verKind": "release",
+      "verDate": "2026-10-26",
       "updated": "2026-10-29"
     },
     {
@@ -2151,6 +2661,9 @@
       "desc": "DSH Web 可选角色预设包：猫娘理财助手 + 八位「白月光」人物预设，在 Settings → Agent presets 一键切换",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": "v1.6.4",
+      "verKind": "release",
+      "verDate": "2026-11-12",
       "updated": "2026-11-03"
     },
     {
@@ -2163,6 +2676,9 @@
       "desc": "DSH Web 插件管理面板：在 Settings → Plugins 查看插件状态/健康检查/配置来源/工具与 MCP 运行时注册，并可启停插件",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": "v1.2.3",
+      "verKind": "release",
+      "verDate": "2026-11-11",
       "updated": "2026-11-03"
     },
     {
@@ -2175,6 +2691,9 @@
       "desc": "任意消息下点「↶ 撤回」：工作区文件与对话历史一起回到该消息发送前；也可「✎ 编辑」就地改完重发，并翻页切换同句的多个版本",
       "source": "limbo947",
       "stars": "⭐ 52",
+      "ver": "v2.6.8",
+      "verKind": "release",
+      "verDate": "2026-11-17",
       "updated": "2026-11-03"
     },
     {
@@ -2187,6 +2706,9 @@
       "desc": "住在 DSH 里的透明动画桌宠：100+ 段动画、多开、拖拽物理、工作状态/余额联动，还内置 AI 素材链可自造宠物",
       "source": "PC2005-cloud",
       "stars": "⭐ 5.4k",
+      "ver": "v0.4.9",
+      "verKind": "release",
+      "verDate": "2026-11-14",
       "updated": "2026-11-03"
     },
     {
@@ -2199,6 +2721,9 @@
       "desc": "DSH 归档会话管理器：960px 居中面板统一搜索/收藏/预览/恢复/清理已归档与未归档会话，含空闲清理与孤儿子代理回收",
       "source": "MichengAI",
       "stars": "⭐ 283",
+      "ver": "v1.3.6",
+      "verKind": "release",
+      "verDate": "2026-11-14",
       "updated": "2026-11-04"
     },
     {
@@ -2211,6 +2736,9 @@
       "desc": "DeepSeek Harness 的 Android 客户端：手机本机装 Linux 环境直接跑 DSH，也能远程遥控电脑/服务器上的 DSH",
       "source": "ccch1mneyyy",
       "stars": "⭐ 8.4k",
+      "ver": "v1.1.0",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-11-04"
     },
     {
@@ -2223,6 +2751,9 @@
       "desc": "把当前 Session 的每一轮、每条消息和工具调用渲染成统一、可复制的规范化 transcript，便于归档与复盘",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": null,
+      "verDate": null,
       "updated": "2026-11-05"
     },
     {
@@ -2235,6 +2766,9 @@
       "desc": "DSH 开放插件市场：接入 dshopen.org 社区索引，分类搜索、今日推荐、收藏分组、版本切换与更新，附可选马卡龙主题",
       "source": "npm dsh-open-market（polang233）",
       "stars": null,
+      "ver": "dsh-open-market@0.4.1",
+      "verKind": "release",
+      "verDate": "2026-11-12",
       "updated": "2026-11-05"
     },
     {
@@ -2247,6 +2781,9 @@
       "desc": "让 OpenCode Zen / Go 模型在 DSH 内稳定可用：会话亲和、网关来源头、免费层工具回退、按模型路由四种协议，附实时额度计量",
       "source": "npm dsh-opencode-patch（viztor，MIT）",
       "stars": null,
+      "ver": "v1.9.2",
+      "verKind": "release",
+      "verDate": "2026-11-12",
       "updated": "2026-11-05"
     },
     {
@@ -2259,6 +2796,9 @@
       "desc": "把 Figma 原生画布接进 DSH：用自然语言读写设计、组件与变量、导出素材与截图，本地模式不消耗官方 MCP 额度",
       "source": "Duoasa",
       "stars": "⭐ 56",
+      "ver": "v0.4.1",
+      "verKind": "release",
+      "verDate": "2026-11-10",
       "updated": "2026-11-07"
     },
     {
@@ -2271,6 +2811,9 @@
       "desc": "Chrome/Edge/Firefox/MDN 共同维护的 Web 平台技能：250 个现代特性 + 203 个真实用例，引导 Agent 用原生 API 替代过时写法",
       "source": "GoogleChrome",
       "stars": "⭐ 7.6k",
+      "ver": "v1.0.1",
+      "verKind": "release",
+      "verDate": "2026-11-16",
       "updated": "2026-11-13"
     },
     {
@@ -2283,6 +2826,9 @@
       "desc": "同仓库的 Chrome 扩展技能包：Manifest V3、Service Worker、扩展 API 与 Chrome Web Store 发布规范",
       "source": "GoogleChrome",
       "stars": "⭐ 7.6k",
+      "ver": "v1.0.1",
+      "verKind": "release",
+      "verDate": "2026-11-16",
       "updated": "2026-11-13"
     },
     {
@@ -2295,6 +2841,9 @@
       "desc": "让 DSH Agent 真正操作 Windows 桌面与网页：UIA 读控件、OCR 读屏、后台点击输入、窗口管理，网页走 CDP 不抢鼠标",
       "source": "Yu-tao-Li（npm 0.5.7）",
       "stars": null,
+      "ver": "v0.6.0",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-11-14"
     },
     {
@@ -2307,6 +2856,9 @@
       "desc": "多轮对话上下文管理：松开过时判断，保留推进当前目标所需的目标、决定、约束与未完成事项",
       "source": "phoenixlucky",
       "stars": null,
+      "ver": null,
+      "verKind": "branch",
+      "verDate": "2026-11-17",
       "updated": "2026-11-17"
     },
     {
@@ -2319,6 +2871,9 @@
       "desc": "给编码 Agent 一个本地视频剪辑器：42 个 FFmpeg 工具 + 机器可读契约 + MCP server，剪片/字幕/改幅/响度/平台导出并自检",
       "source": "kajisho5",
       "stars": "⭐ 6.9k",
+      "ver": "v3.10.1",
+      "verKind": "release",
+      "verDate": "2026-11-15",
       "updated": "2026-11-17"
     }
   ]

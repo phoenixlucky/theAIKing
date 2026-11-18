@@ -449,6 +449,17 @@ a:hover { text-decoration: underline; }
   color: var(--accent);
   font-weight: 600;
 }
+.skill-ver {
+  font-size: .66rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--text-soft, #6b7280);
+  background: var(--bg-soft, rgba(107,114,128,.12));
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 6px;
+  line-height: 1.7;
+  white-space: nowrap;
+}
 .skill-cat {
   font-size: .62rem;
   color: var(--cat-color, var(--primary));

@@ -187,7 +187,7 @@
   async function loadData() {
     try {
       const [skillsResp, lspResp] = await Promise.all([
-        fetch('data/skills.json?v=570c1ebc'),
+        fetch('data/skills.json?v=e621f1c1'),
         fetch('data/lsp.json?v=1'),
       ]);
       if (!skillsResp.ok) throw new Error(`HTTP ${skillsResp.status}`);
@@ -355,6 +355,9 @@
       const key = keyOf('s', s.id);
       const isSelected = selected.has(key);
       const starBadge = s.stars ? `<span class="skill-stars">${s.stars}</span>` : '';
+      const verBadge = s.ver
+        ? `<span class="skill-ver" title="${s.verKind === 'tag' ? 'tag' : 'release'}${s.verDate ? ' · ' + s.verDate : ''}">${s.ver}</span>`
+        : '';
       const cat = catMap[s.cat];
       const catTag = cat ? (() => {
         const c = cat.color || '#4f46e5';
@@ -382,6 +385,7 @@
               <span class="skill-name">${s.name}</span>
               ${ownBadge}
               ${starBadge}
+              ${verBadge}
               ${catTag}
               <span class="skill-source">${s.source}</span>
               ${repoLink}

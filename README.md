@@ -161,20 +161,22 @@ theAIKing/
 
 ## 🔧 扩展指南
 
-想为项目贡献新 Skill？只需 4 步：
+想为项目贡献新 Skill？只需 5 步：
 
 ```mermaid
 flowchart LR
     A[编辑 skills-index.md] --> B[更新 total 字段]
     B --> C[更新一键安装区]
-    C --> D[同步 docs/data/skills.json]
-    D --> E[提交 PR 🎉]
+    C --> D[刷新最新版本字段]
+    D --> E[同步 skills.json]
+    E --> F[提交 PR 🎉]
 ```
 
 1. **编辑** [`skills-index.md`](./skills-index.md) — 在对应分类下新增条目，包含名称、来源 URL、描述和安装指令
 2. **更新** 文件头部 `total` 字段
 3. **更新** 底部「一键安装」区的列表
-4. **同步** [`docs/data/skills.json`](./docs/data/skills.json) — 确保网站数据一致
+4. **刷新版本** `node scripts/refresh-skill-versions.mjs` — 自动补上「最新版本」行
+5. **同步** [`docs/data/skills.json`](./docs/data/skills.json) — `node scripts/build-skills-json.mjs`，确保网站数据一致
 
 ---
 
