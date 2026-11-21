@@ -74,7 +74,7 @@
 | 🎬 **视频制作** | 11 | HyperFrames、Remotion、OpenMontage、seedance-2.0、Manim、FFmpeg 等 |
 | 📊 **商业与金融** | 12 | Business Data Analyst、Weiliaozi Analysis、Financial Analyst、AdMapix 等 |
 | 🔌 **集成与协作** | 14 | GitHub、Gog (Google Workspace)、Slack、Notion、Obsidian 等 |
-| 🔍 **搜索与浏览** | 8 | Multi Search Engine、browser-use (⭐ 100k)、chrome-mcp-bridge-2026-skill 等 |
+| 🔍 **搜索与浏览** | 7 | Multi Search Engine、browser-use (⭐ 100k)、browser (⭐ 3.7k) 等 |
 | 🕷️ **数据采集与爬虫** | 11 | Firecrawl (⭐ 140k)、Crawl4AI (⭐ 70k)、MediaCrawler (⭐ 54.6k)、Scrapy 等 |
 | 🖥️ **终端与自动化** | 4 | Peekaboo、tmux、scrcpy (⭐ 140k) |
 | 🎵 **生活与媒体** | 16 | family-lovers-skill、Weather、Whisper、Spotify、Gemini 等 |

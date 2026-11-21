@@ -1,5 +1,5 @@
 {
-  "total": 185,
+  "total": 184,
   "categories": [
     {
       "id": "basic",
@@ -1570,21 +1570,6 @@
       "verKind": "release",
       "verDate": "2026-08-06",
       "updated": "2026-07-04"
-    },
-    {
-      "id": 100,
-      "name": "chrome-mcp-bridge-2026-skill",
-      "cat": "search",
-      "icon": "B",
-      "repo": "https://github.com/phoenixlucky/chrome-mcp-bridge-2026-skill",
-      "npm": null,
-      "desc": "MCP Streamable HTTP 桥接工具：session ID 自动持久化，零配置连接 Chrome MCP 服务",
-      "source": "phoenixlucky",
-      "stars": null,
-      "ver": null,
-      "verKind": "branch",
-      "verDate": "2026-09-18",
-      "updated": "2026-07-29"
     },
     {
       "id": 101,

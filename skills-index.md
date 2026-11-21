@@ -1,8 +1,8 @@
 ---
 title:   "The AI King — AI 一键安装索引"
 version: "2.0"
-updated: "2026-11-18"
-total:   185
+updated: "2026-11-21"
+total:   184
 ---
 
 # 🎯 The AI King — AI 一键安装索引
@@ -2630,38 +2630,6 @@ MCP：通过 mcp/server.py 以 stdio 提供；默认 tools/list 只暴露核心 
 
 ---
 
-### 100 — chrome-mcp-bridge-2026-skill（Chrome MCP 桥接）
-
-| 字段 | 值 |
-|------|-----|
-| **来源** | phoenixlucky |
-| **分类** | 搜索与浏览 |
-| **一句话** | MCP Streamable HTTP 桥接工具：session ID 自动持久化，零配置连接 Chrome MCP 服务 |
-| **最新版本** | 默认分支（最新提交 2026-09-18，无 tag） |
-
-**安装指令：**
-
-```
-安装 chrome-mcp-bridge-2026-skill Skill。
-来源：https://github.com/phoenixlucky/chrome-mcp-bridge-2026-skill
-安装：git clone 仓库后，Reasonix 自动发现 .reasonix/skills/mcp-streamable-connect/
-前置条件：Node.js ≥ 18，MCP 服务运行于 http://127.0.0.1:12306/mcp
-
-使用示例：
-  node mcp-bridge.js init                          # 初始化连接
-  node mcp-bridge.js call tools/list               # 列出工具
-  node mcp-bridge.js call tools/call '{...}'       # 调用工具
-  node mcp-bridge.js close                         # 关闭连接
-
-安装后，Agent 获得稳定的 MCP Streamable HTTP 连接能力：
-- Session ID 自动持久化到临时文件，跨调用无缝复用
-- 超时自动重连，30 秒请求超时兜底
-- 支持 Chrome 浏览器自动化工具（导航/截图/点击/表单/数据提取等 28+ 工具）
-- 纯 Node.js 内置 fetch API，零外部依赖
-```
-
----
-
 ### 104 — browser（最强浏览器自动化）
 
 | 字段 | 值 |
@@ -4480,7 +4448,6 @@ Web 端：dsh plugin --profile web add dsh-computer-use-win，然后重启 dsh w
 51. Baidu 搜索 — ClawHub（★ 216），百度 AI 搜索
 52. Agent Browser — ClawHub（★ 424），无头浏览器自动化
 89. browser-use — browser-use（⭐ 112k），AI 浏览器自动化
-100. chrome-mcp-bridge-2026-skill — phoenixlucky，Chrome MCP 桥接
 104. browser — browserbase（⭐ 3.7k），最强浏览器自动化（CAPTCHA/住宅代理）
 107. arxiv — Hermes Agent 官方内置，arXiv 论文搜索
 141. last30days — mvanhorn（⭐ 63.9k），跨平台近 30 天舆情调研

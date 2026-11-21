@@ -187,7 +187,7 @@
   async function loadData() {
     try {
       const [skillsResp, lspResp] = await Promise.all([
-        fetch('data/skills.json?v=e621f1c1'),
+        fetch('data/skills.json?v=366599d7'),
         fetch('data/lsp.json?v=1'),
       ]);
       if (!skillsResp.ok) throw new Error(`HTTP ${skillsResp.status}`);
